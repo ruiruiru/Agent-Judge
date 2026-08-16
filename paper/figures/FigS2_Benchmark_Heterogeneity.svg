@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="7.000in" height="3.800in" viewBox="0 0 504.000 273.600" role="img" aria-labelledby="title desc">
+<title id="title">Descriptive benchmark heterogeneity</title>
+<desc id="desc">Frozen Stage A3.1 paper figure rendered from traceable source artifacts.</desc>
+<rect x="0" y="0" width="504.000" height="273.600" fill="#ffffff"/>
+<rect x="10.000" y="28.000" width="155.333" height="212.600" fill="#ffffff" stroke="#d9d9d9" stroke-width="0.800"/>
+<text x="18.000" y="40.000" text-anchor="start" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="8.000" font-weight="700" fill="#111111">A</text>
+<text x="34.000" y="40.000" text-anchor="start" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="8.000" font-weight="700" fill="#111111">Success</text>
+<line x1="84.000" y1="210.600" x2="84.000" y2="59.000" stroke="#d9d9d9" stroke-width="0.450"/>
+<text x="84.000" y="219.600" text-anchor="middle" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.800" font-weight="400" fill="#111111">0</text>
+<line x1="101.333" y1="210.600" x2="101.333" y2="59.000" stroke="#d9d9d9" stroke-width="0.450"/>
+<text x="101.333" y="219.600" text-anchor="middle" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.800" font-weight="400" fill="#111111">0.25</text>
+<line x1="118.667" y1="210.600" x2="118.667" y2="59.000" stroke="#d9d9d9" stroke-width="0.450"/>
+<text x="118.667" y="219.600" text-anchor="middle" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.800" font-weight="400" fill="#111111">0.50</text>
+<line x1="136.000" y1="210.600" x2="136.000" y2="59.000" stroke="#d9d9d9" stroke-width="0.450"/>
+<text x="136.000" y="219.600" text-anchor="middle" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.800" font-weight="400" fill="#111111">0.75</text>
+<line x1="153.333" y1="210.600" x2="153.333" y2="59.000" stroke="#d9d9d9" stroke-width="0.450"/>
+<text x="153.333" y="219.600" text-anchor="middle" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.800" font-weight="400" fill="#111111">1</text>
+<text x="78.000" y="75.000" text-anchor="end" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.900" font-weight="400" fill="#111111">AssistantBench</text>
+<circle cx="108.727" cy="75.000" r="3.600" fill="#ffffff" stroke="#1f4e79" stroke-width="1.200"/>
+<text x="114.727" y="75.000" text-anchor="start" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.800" font-weight="400" fill="#111111">0.357</text>
+<text x="78.000" y="117.533" text-anchor="end" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.900" font-weight="400" fill="#111111">VisualWebArena</text>
+<rect x="126.124" y="114.333" width="6.400" height="6.400" fill="#1f4e79" stroke="#1f4e79" stroke-width="0.800"/>
+<text x="135.324" y="117.533" text-anchor="start" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.800" font-weight="400" fill="#111111">0.654</text>
+<text x="78.000" y="160.067" text-anchor="end" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.900" font-weight="400" fill="#111111">WebArena</text>
+<polygon points="128.539,156.067 132.539,160.067 128.539,164.067 124.539,160.067" fill="#ffffff" stroke="#1f4e79" stroke-width="1.200"/>
+<text x="134.539" y="160.067" text-anchor="start" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.800" font-weight="400" fill="#111111">0.642</text>
+<text x="78.000" y="202.600" text-anchor="end" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.900" font-weight="400" fill="#111111">WorkArena</text>
+<circle cx="130.785" cy="202.600" r="3.600" fill="#ffffff" stroke="#1f4e79" stroke-width="1.200"/>
+<text x="136.785" y="202.600" text-anchor="start" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.800" font-weight="400" fill="#111111">0.675</text>
+<text x="118.667" y="227.600" text-anchor="middle" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="6.300" font-weight="400" fill="#111111">AP</text>
+<rect x="174.333" y="28.000" width="155.333" height="212.600" fill="#ffffff" stroke="#d9d9d9" stroke-width="0.800"/>
+<text x="182.333" y="40.000" text-anchor="start" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="8.000" font-weight="700" fill="#111111">B</text>
+<text x="198.333" y="40.000" text-anchor="start" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="8.000" font-weight="700" fill="#111111">Looping</text>
+<line x1="248.333" y1="210.600" x2="248.333" y2="59.000" stroke="#d9d9d9" stroke-width="0.450"/>
+<text x="248.333" y="219.600" text-anchor="middle" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.800" font-weight="400" fill="#111111">0</text>
+<line x1="265.667" y1="210.600" x2="265.667" y2="59.000" stroke="#d9d9d9" stroke-width="0.450"/>
+<text x="265.667" y="219.600" text-anchor="middle" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.800" font-weight="400" fill="#111111">0.25</text>
+<line x1="283.000" y1="210.600" x2="283.000" y2="59.000" stroke="#d9d9d9" stroke-width="0.450"/>
+<text x="283.000" y="219.600" text-anchor="middle" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.800" font-weight="400" fill="#111111">0.50</text>
+<line x1="300.333" y1="210.600" x2="300.333" y2="59.000" stroke="#d9d9d9" stroke-width="0.450"/>
+<text x="300.333" y="219.600" text-anchor="middle" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.800" font-weight="400" fill="#111111">0.75</text>
+<line x1="317.667" y1="210.600" x2="317.667" y2="59.000" stroke="#d9d9d9" stroke-width="0.450"/>
+<text x="317.667" y="219.600" text-anchor="middle" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.800" font-weight="400" fill="#111111">1</text>
+<text x="242.333" y="75.000" text-anchor="end" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.900" font-weight="400" fill="#111111">AssistantBench</text>
+<circle cx="297.746" cy="75.000" r="3.600" fill="#ffffff" stroke="#1f4e79" stroke-width="1.200"/>
+<text x="291.746" y="75.000" text-anchor="end" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.800" font-weight="400" fill="#111111">0.713</text>
+<text x="242.333" y="117.533" text-anchor="end" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.900" font-weight="400" fill="#111111">VisualWebArena</text>
+<rect x="305.402" y="114.333" width="6.400" height="6.400" fill="#1f4e79" stroke="#1f4e79" stroke-width="0.800"/>
+<text x="302.602" y="117.533" text-anchor="end" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.800" font-weight="400" fill="#111111">0.869</text>
+<text x="242.333" y="160.067" text-anchor="end" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.900" font-weight="400" fill="#111111">WebArena</text>
+<polygon points="312.851,156.067 316.851,160.067 312.851,164.067 308.851,160.067" fill="#ffffff" stroke="#1f4e79" stroke-width="1.200"/>
+<text x="306.851" y="160.067" text-anchor="end" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.800" font-weight="400" fill="#111111">0.931</text>
+<text x="242.333" y="202.600" text-anchor="end" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.900" font-weight="400" fill="#111111">WorkArena</text>
+<circle cx="315.113" cy="202.600" r="3.600" fill="#ffffff" stroke="#1f4e79" stroke-width="1.200"/>
+<text x="309.113" y="202.600" text-anchor="end" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.800" font-weight="400" fill="#111111">0.963</text>
+<text x="283.000" y="227.600" text-anchor="middle" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="6.300" font-weight="400" fill="#111111">AP</text>
+<rect x="338.667" y="28.000" width="155.333" height="212.600" fill="#ffffff" stroke="#d9d9d9" stroke-width="0.800"/>
+<text x="346.667" y="40.000" text-anchor="start" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="8.000" font-weight="700" fill="#111111">C</text>
+<text x="362.667" y="40.000" text-anchor="start" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="8.000" font-weight="700" fill="#111111">Side Effect</text>
+<line x1="341.667" y1="237.600" x2="491.000" y2="237.600" stroke="#8a5a00" stroke-width="0.700" stroke-dasharray="4,3"/>
+<line x1="341.667" y1="31.000" x2="491.000" y2="31.000" stroke="#8a5a00" stroke-width="0.700" stroke-dasharray="4,3"/>
+<line x1="341.667" y1="237.600" x2="341.667" y2="31.000" stroke="#8a5a00" stroke-width="0.700" stroke-dasharray="4,3"/>
+<line x1="491.000" y1="237.600" x2="491.000" y2="31.000" stroke="#8a5a00" stroke-width="0.700" stroke-dasharray="4,3"/>
+<text x="487.000" y="40.000" text-anchor="end" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.800" font-weight="700" fill="#8a5a00">EXPLORATORY</text>
+<line x1="412.667" y1="210.600" x2="412.667" y2="59.000" stroke="#d9d9d9" stroke-width="0.450"/>
+<text x="412.667" y="219.600" text-anchor="middle" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.800" font-weight="400" fill="#111111">0</text>
+<line x1="430.000" y1="210.600" x2="430.000" y2="59.000" stroke="#d9d9d9" stroke-width="0.450"/>
+<text x="430.000" y="219.600" text-anchor="middle" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.800" font-weight="400" fill="#111111">0.25</text>
+<line x1="447.333" y1="210.600" x2="447.333" y2="59.000" stroke="#d9d9d9" stroke-width="0.450"/>
+<text x="447.333" y="219.600" text-anchor="middle" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.800" font-weight="400" fill="#111111">0.50</text>
+<line x1="464.667" y1="210.600" x2="464.667" y2="59.000" stroke="#d9d9d9" stroke-width="0.450"/>
+<text x="464.667" y="219.600" text-anchor="middle" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.800" font-weight="400" fill="#111111">0.75</text>
+<line x1="482.000" y1="210.600" x2="482.000" y2="59.000" stroke="#d9d9d9" stroke-width="0.450"/>
+<text x="482.000" y="219.600" text-anchor="middle" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.800" font-weight="400" fill="#111111">1</text>
+<text x="406.667" y="75.000" text-anchor="end" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.900" font-weight="400" fill="#111111">AssistantBench</text>
+<circle cx="415.743" cy="75.000" r="3.600" fill="#ffffff" stroke="#8a5a00" stroke-width="1.200"/>
+<text x="421.743" y="75.000" text-anchor="start" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.800" font-weight="400" fill="#111111">0.044</text>
+<text x="406.667" y="117.533" text-anchor="end" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.900" font-weight="400" fill="#111111">VisualWebArena</text>
+<rect x="418.925" y="114.333" width="6.400" height="6.400" fill="#8a5a00" stroke="#8a5a00" stroke-width="0.800"/>
+<text x="428.125" y="117.533" text-anchor="start" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.800" font-weight="400" fill="#111111">0.136</text>
+<text x="406.667" y="160.067" text-anchor="end" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.900" font-weight="400" fill="#111111">WebArena</text>
+<polygon points="419.767,156.067 423.767,160.067 419.767,164.067 415.767,160.067" fill="#ffffff" stroke="#8a5a00" stroke-width="1.200"/>
+<text x="425.767" y="160.067" text-anchor="start" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.800" font-weight="400" fill="#111111">0.102</text>
+<text x="406.667" y="202.600" text-anchor="end" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.900" font-weight="400" fill="#111111">WorkArena</text>
+<circle cx="420.745" cy="202.600" r="3.600" fill="#ffffff" stroke="#8a5a00" stroke-width="1.200"/>
+<text x="426.745" y="202.600" text-anchor="start" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="5.800" font-weight="400" fill="#111111">0.117</text>
+<text x="447.333" y="227.600" text-anchor="middle" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="6.300" font-weight="400" fill="#111111">AP</text>
+<text x="252.000" y="15.000" text-anchor="middle" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="7.400" font-weight="700" fill="#111111">DESCRIPTIVE_ONLY - no significance marks, winner ranking, or pairwise inference</text>
+</svg>

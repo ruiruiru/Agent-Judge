@@ -1,0 +1,188 @@
+{
+  "eligibility": {
+    "join_key": "trajectory_key",
+    "required": [
+      "<target>_eligible_main == true",
+      "<target>_label in {0, 1}"
+    ]
+  },
+  "first_round_disallowed_views": [
+    "ablation_without_error_fields",
+    "sensitivity_with_reasoning"
+  ],
+  "group_key": [
+    "benchmark_original",
+    "normalized_task_id"
+  ],
+  "inner_split": {
+    "applies_identically_to_all_registered_models": true,
+    "candidate_folds_descending": [
+      5,
+      4,
+      3,
+      2
+    ],
+    "group_aware": true,
+    "outer_validation_access_allowed": false,
+    "selected_validation_fold": 1,
+    "type": "fixed_once_group_aware_split_within_each_outer_train"
+  },
+  "execution_sequence": [
+    "fit_each_registered_candidate_on_inner_train",
+    "score_each_candidate_on_inner_validation_and_select_by_pr_auc",
+    "select_positive_f1_threshold_for_selected_candidate_on_inner_validation",
+    "refit_selected_candidate_on_complete_outer_train",
+    "evaluate_complete_outer_validation_once_with_frozen_threshold"
+  ],
+  "leave_one_model_out": {
+    "authoritative_manifests": {
+      "artifacts/leave_one_model_out_manifest.csv": "5f1f64803014b6891089c18a67b41778ab0ced4f4110bcca014008675b07ac7d"
+    }
+  },
+  "lobo": {
+    "authoritative_manifests": {
+      "artifacts/lobo_primary_manifest.csv": "16735afc8defd5d91bf2d23ba7773a1f0515feafc238ad1cec2df0dc530b0191",
+      "artifacts/lobo_secondary_manifest.csv": "5872f114890e7a6c3096be0a7be6ba971528e72b1f2e6e67a3452c4575c9abfe"
+    },
+    "primary_group_field": "benchmark_group_primary",
+    "primary_groups": [
+      "assistantbench",
+      "visualwebarena",
+      "webarena",
+      "workarena"
+    ],
+    "sensitivity_group_field": "benchmark_group_secondary",
+    "sensitivity_groups": [
+      "assistantbench",
+      "visualwebarena",
+      "webarena",
+      "workarena_l1",
+      "workarena_l2"
+    ]
+  },
+  "metrics": {
+    "accuracy_is_primary": false,
+    "fold_aggregation": [
+      "raw_fold_values",
+      "mean",
+      "standard_deviation",
+      "pooled_out_of_fold"
+    ],
+    "pooled_out_of_fold": {
+      "definition": "concatenate_exactly_one_outer_validation_prediction_per_eligible_trajectory",
+      "predicted_label_uses_fold_specific_frozen_threshold": true,
+      "report_separately_from_fold_mean_and_standard_deviation": true
+    },
+    "single_class_lobo_holdout": {
+      "allowed_reports": [
+        "predicted_positive_rate",
+        "false_positive_rate_if_negatives_exist",
+        "specificity_if_negatives_exist",
+        "mean_predicted_probability"
+      ],
+      "all_other_predictive_metrics": "NA",
+      "na_fill_value_prohibited": true,
+      "known_affected_holdouts": [
+        "primary:side_effect:assistantbench",
+        "sensitivity:side_effect:assistantbench",
+        "sensitivity:side_effect:workarena_l1"
+      ]
+    },
+    "primary": [
+      "pr_auc",
+      "positive_f1"
+    ],
+    "secondary": [
+      "roc_auc",
+      "precision",
+      "recall",
+      "f2",
+      "balanced_accuracy",
+      "mcc"
+    ],
+    "uncomputable_metric_policy": "record_not_computable_never_impute"
+  },
+  "outer_cv": {
+    "algorithm": "custom_deterministic_grouped_stratification_v1",
+    "authoritative_manifests": {
+      "artifacts/evaluation_folds_looping.csv": "b950bf23e465d2f108f28281395ac8816c9916b20eaebe2d529e9d5fde74c749",
+      "artifacts/evaluation_folds_side_effect.csv": "11be1d8b803d4afffe25716519d117ce1e1909231954bcfd587347317e9b089c",
+      "artifacts/evaluation_folds_success.csv": "820599f85fd901c1b73db61cbc77c54eb8223df3f3abc14062d5a9f20bb02e65"
+    },
+    "authoritative_outputs": [
+      "artifacts/evaluation_folds_success.csv",
+      "artifacts/evaluation_folds_side_effect.csv",
+      "artifacts/evaluation_folds_looping.csv"
+    ],
+    "candidate_folds_descending": [
+      5,
+      4,
+      3
+    ],
+    "folds_by_target": {
+      "looping": 5,
+      "side_effect": 5,
+      "success": 5
+    },
+    "random_state": 2026,
+    "regeneration_allowed": false,
+    "scikit_learn_class_called": false,
+    "scikit_learn_equivalence_claimed": false,
+    "sole_authority": "recorded_manifest_bytes_and_sha256"
+  },
+  "model_configuration_selection": {
+    "direction": "maximize",
+    "primary_objective": "pr_auc",
+    "selection_data": "inner_validation_only",
+    "tie_break": "predeclared_registry_order"
+  },
+  "primary_input_view": "primary_with_natural_errors",
+  "probability_calibration": "not_registered_first_round",
+  "resampling": "prohibited",
+  "schema_version": "1.0",
+  "split_seed": 2026,
+  "stage": "A1.1",
+  "targets": [
+    "success",
+    "side_effect",
+    "looping"
+  ],
+  "test_access": {
+    "allowed": false,
+    "labels": false,
+    "metrics": false,
+    "trajectory_content": false
+  },
+  "threshold": {
+    "candidates": [
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "outer_validation_access_allowed": false,
+    "primary_objective": "positive_f1",
+    "selection_data": "inner_validation_only",
+    "side_effect_f2_is_reporting_only": true,
+    "tie_break": [
+      "higher_recall",
+      "closer_to_0.5",
+      "smaller_threshold"
+    ]
+  }
+}

@@ -1,0 +1,202 @@
+field_path,observed_type,policy_class,included_in_primary,included_in_error_ablation,included_in_reasoning_sensitivity,justification,risk_notes
+$,dict,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.agent,str,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.benchmark,str,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.experiment,str,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags,dict,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.action,dict,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.action.action_set,dict,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.action.action_set.demo_mode,str,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.action.action_set.multiaction,bool,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.action.action_set.retry_with_force,bool,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.action.action_set.strict,bool,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.action.action_set.subsets,list,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.action.action_set.subsets[],str,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.action.individual_examples,bool,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.action.is_strict,null,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.action.long_description,bool,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.action.multi_actions,null,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.add_missparsed_messages,bool,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.be_cautious,bool,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.enable_chat,bool,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.extra_instructions,null,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.flag_group,null,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.max_prompt_tokens,int,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.max_trunc_itr,int,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.obs,dict,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.obs.extract_clickable_tag,bool,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.obs.extract_coords,str,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.obs.extract_visible_tag,bool,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.obs.filter_som_only,bool,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.obs.filter_visible_elements_only,bool,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.obs.filter_with_bid_only,bool,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.obs.html_type,str,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.obs.openai_vision_detail,str,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.obs.use_action_history,bool,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.obs.use_ax_tree,bool,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.obs.use_diff,bool,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.obs.use_error_logs,bool,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.obs.use_focused_element,bool,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.obs.use_history,bool,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.obs.use_html,bool,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.obs.use_past_error_logs,bool,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.obs.use_screenshot,bool,permanent_exclude,false,false,false,"Image content, placeholders, and paths are prohibited in the text contract.",Only a derived boolean reference flag is retained.
+$.flags.obs.use_som,bool,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.obs.use_tabs,bool,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.obs.use_think_history,bool,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.use_abstract_example,bool,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.use_concrete_example,bool,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.use_criticise,bool,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.use_hints,bool,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.use_memory,bool,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.use_plan,bool,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.flags.use_thinking,bool,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.goal,str,primary_input,true,true,true,Explicitly allowlisted task/action/observation/focus/natural-error field.,Natural error text requires the frozen ablation; no official outcome fields are admitted.
+$.model,str,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.model_args,dict,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.model_args.base_url,str,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.model_args.max_input_tokens,int,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.model_args.max_new_tokens,int,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.model_args.max_total_tokens,int,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.model_args.model_name,str,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.model_args.temperature,int,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.model_args.vision_support,bool,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.package_version,str,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.seed,int,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.steps,list,primary_input,true,true,true,Explicitly allowlisted task/action/observation/focus/natural-error field.,Natural error text requires the frozen ablation; no official outcome fields are admitted.
+$.steps[],dict,primary_input,true,true,true,Explicitly allowlisted task/action/observation/focus/natural-error field.,Natural error text requires the frozen ablation; no official outcome fields are admitted.
+$.steps[].action,null,primary_input,true,true,true,Explicitly allowlisted task/action/observation/focus/natural-error field.,Natural error text requires the frozen ablation; no official outcome fields are admitted.
+$.steps[].action,str,primary_input,true,true,true,Explicitly allowlisted task/action/observation/focus/natural-error field.,Natural error text requires the frozen ablation; no official outcome fields are admitted.
+$.steps[].axtree,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj,dict,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes,list,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[],dict,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].backendDOMNodeId,int,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].browsergym_id,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].childIds,list,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].childIds[],str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].chromeRole,dict,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].chromeRole.type,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].chromeRole.value,int,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].description,dict,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].description.type,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].description.value,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].frameId,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].ignored,bool,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].ignoredReasons,list,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].ignoredReasons[],dict,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].ignoredReasons[].name,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].ignoredReasons[].value,dict,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].ignoredReasons[].value.relatedNodes,list,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].ignoredReasons[].value.relatedNodes[],dict,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].ignoredReasons[].value.relatedNodes[].backendDOMNodeId,int,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].ignoredReasons[].value.relatedNodes[].idref,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].ignoredReasons[].value.type,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].ignoredReasons[].value.value,bool,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].name,dict,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].name.sources,list,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].name.sources[],dict,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].name.sources[].attribute,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].name.sources[].attributeValue,dict,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].name.sources[].attributeValue.relatedNodes,list,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].name.sources[].attributeValue.relatedNodes[],dict,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].name.sources[].attributeValue.relatedNodes[].backendDOMNodeId,int,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].name.sources[].attributeValue.relatedNodes[].idref,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].name.sources[].attributeValue.relatedNodes[].text,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].name.sources[].attributeValue.type,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].name.sources[].attributeValue.value,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].name.sources[].nativeSource,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].name.sources[].nativeSourceValue,dict,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].name.sources[].nativeSourceValue.relatedNodes,list,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].name.sources[].nativeSourceValue.relatedNodes[],dict,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].name.sources[].nativeSourceValue.relatedNodes[].backendDOMNodeId,int,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].name.sources[].nativeSourceValue.relatedNodes[].text,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].name.sources[].nativeSourceValue.type,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].name.sources[].superseded,bool,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].name.sources[].type,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].name.sources[].value,dict,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].name.sources[].value.type,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].name.sources[].value.value,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].name.type,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].name.value,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].nodeId,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].parentId,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].properties,list,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].properties[],dict,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].properties[].name,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].properties[].value,dict,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].properties[].value.relatedNodes,list,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].properties[].value.relatedNodes[],dict,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].properties[].value.relatedNodes[].backendDOMNodeId,int,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].properties[].value.relatedNodes[].idref,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].properties[].value.relatedNodes[].text,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].properties[].value.type,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].properties[].value.value,bool,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].properties[].value.value,int,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].properties[].value.value,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].role,dict,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].role.type,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].role.value,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].value,dict,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].value.type,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_obj.nodes[].value.value,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].axtree_pruned,str,primary_input,true,true,true,Explicitly allowlisted task/action/observation/focus/natural-error field.,Natural error text requires the frozen ablation; no official outcome fields are admitted.
+$.steps[].bounding_boxes,dict,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].bounding_boxes.{*},dict,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].bounding_boxes.{*}.bbox,list,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].bounding_boxes.{*}.bbox,null,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].bounding_boxes.{*}.bbox[],float,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].bounding_boxes.{*}.bbox[],int,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].bounding_boxes.{*}.clickable,bool,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].bounding_boxes.{*}.set_of_marks,bool,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].bounding_boxes.{*}.visibility,float,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].chat_messages,list,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].chat_messages[],dict,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].chat_messages[].content,list,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].chat_messages[].content,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].chat_messages[].content[],dict,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].chat_messages[].content[].image_url,dict,permanent_exclude,false,false,false,"Image content, placeholders, and paths are prohibited in the text contract.",Only a derived boolean reference flag is retained.
+$.steps[].chat_messages[].content[].image_url.detail,str,permanent_exclude,false,false,false,"Image content, placeholders, and paths are prohibited in the text contract.",Only a derived boolean reference flag is retained.
+$.steps[].chat_messages[].content[].image_url.url,str,permanent_exclude,false,false,false,"Image content, placeholders, and paths are prohibited in the text contract.",Only a derived boolean reference flag is retained.
+$.steps[].chat_messages[].content[].text,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].chat_messages[].content[].type,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].chat_messages[].role,str,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].extra_element_properties,dict,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].extra_element_properties.{*},dict,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].extra_element_properties.{*}.bbox,list,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].extra_element_properties.{*}.bbox,null,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].extra_element_properties.{*}.bbox[],float,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].extra_element_properties.{*}.bbox[],int,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].extra_element_properties.{*}.clickable,bool,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].extra_element_properties.{*}.set_of_marks,bool,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].extra_element_properties.{*}.visibility,float,manual_review,false,false,false,Observed in A0.3 but not approved for any input view.,Unknown or unnecessary semantics default to rejection.
+$.steps[].focused_element,null,primary_input,true,true,true,Explicitly allowlisted task/action/observation/focus/natural-error field.,Natural error text requires the frozen ablation; no official outcome fields are admitted.
+$.steps[].focused_element,str,primary_input,true,true,true,Explicitly allowlisted task/action/observation/focus/natural-error field.,Natural error text requires the frozen ablation; no official outcome fields are admitted.
+$.steps[].last_action_error,str,primary_input,true,false,true,Explicitly allowlisted task/action/observation/focus/natural-error field.,Natural error text requires the frozen ablation; no official outcome fields are admitted.
+$.steps[].num,int,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.steps[].open_pages_urls,list,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.steps[].open_pages_urls[],str,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.steps[].reasoning,null,sensitivity_only,false,false,true,Reasoning is excluded from primary input and retained only in its named sensitivity view.,Availability and style can reveal model identity.
+$.steps[].reasoning,str,sensitivity_only,false,false,true,Reasoning is excluded from primary input and retained only in its named sensitivity view.,Availability and style can reveal model identity.
+$.steps[].screenshot_path,str,permanent_exclude,false,false,false,"Image content, placeholders, and paths are prohibited in the text contract.",Only a derived boolean reference flag is retained.
+$.steps[].stats,dict,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.steps[].stats,null,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.steps[].stats.busted_retry,int,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.steps[].stats.cost,float,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.steps[].stats.input_tokens,int,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.steps[].stats.n_retry,float,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.steps[].stats.n_retry_llm,int,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.steps[].stats.output_tokens,int,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.steps[].url,str,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.
+$.summary_info,dict,permanent_exclude,false,false,false,Official outcome/summary semantics are outside every input view.,"May reveal labels, rewards, scores, or evaluator output."
+$.summary_info.cum_raw_reward,int,permanent_exclude,false,false,false,Official outcome/summary semantics are outside every input view.,"May reveal labels, rewards, scores, or evaluator output."
+$.summary_info.cum_reward,float,permanent_exclude,false,false,false,Official outcome/summary semantics are outside every input view.,"May reveal labels, rewards, scores, or evaluator output."
+$.summary_info.cum_reward,int,permanent_exclude,false,false,false,Official outcome/summary semantics are outside every input view.,"May reveal labels, rewards, scores, or evaluator output."
+$.summary_info.err_msg,null,permanent_exclude,false,false,false,Official outcome/summary semantics are outside every input view.,"May reveal labels, rewards, scores, or evaluator output."
+$.summary_info.n_steps,int,permanent_exclude,false,false,false,Official outcome/summary semantics are outside every input view.,"May reveal labels, rewards, scores, or evaluator output."
+$.summary_info.stack_trace,null,permanent_exclude,false,false,false,Official outcome/summary semantics are outside every input view.,"May reveal labels, rewards, scores, or evaluator output."
+$.summary_info.terminated,bool,permanent_exclude,false,false,false,Official outcome/summary semantics are outside every input view.,"May reveal labels, rewards, scores, or evaluator output."
+$.summary_info.truncated,bool,permanent_exclude,false,false,false,Official outcome/summary semantics are outside every input view.,"May reveal labels, rewards, scores, or evaluator output."
+$.summary_info.{*},float,permanent_exclude,false,false,false,Official outcome/summary semantics are outside every input view.,"May reveal labels, rewards, scores, or evaluator output."
+$.summary_info.{*},int,permanent_exclude,false,false,false,Official outcome/summary semantics are outside every input view.,"May reveal labels, rewards, scores, or evaluator output."
+$.valid,bool,metadata_only,false,false,false,"Retained only for provenance, grouping, or audit.",Identity/format shortcut risk; never serialize into main input.

@@ -1,0 +1,25 @@
+{
+  "generated_at_utc": "2026-08-04T03:36:42+00:00",
+  "python": {
+    "version": "3.14.6",
+    "implementation": "CPython",
+    "executable": "C:\\Users\\Admin\\Documents\\Agent-Judge\\.venv-baselines\\Scripts\\python.exe"
+  },
+  "platform": "Windows-11-10.0.26200-SP0",
+  "hardware": {
+    "machine": "AMD64",
+    "processor": "AMD64 Family 26 Model 68 Stepping 0, AuthenticAMD",
+    "logical_cpu_count": 16,
+    "gpu_used": false
+  },
+  "dependencies": {
+    "joblib": "1.5.3",
+    "narwhals": "2.24.0",
+    "numpy": "2.5.1",
+    "PyYAML": "6.0.3",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.0",
+    "threadpoolctl": "3.6.0"
+  },
+  "formal_run_network_allowed": false
+}

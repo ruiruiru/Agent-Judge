@@ -1,0 +1,61 @@
+{
+  "background": "white",
+  "candidate_widths_inches": {
+    "double_column": 7.0,
+    "single_column": 3.4
+  },
+  "color_redundancy": "Direct labels, marker shape, line style, outline, and hatch; color is never the only encoding.",
+  "figure_dimensions_inches": {
+    "Fig1_Study_Pipeline": {
+      "height": 2.6,
+      "width": 7.0
+    },
+    "Fig2_Heldout_AP_Lift_CI": {
+      "height": 2.4,
+      "width": 3.4
+    },
+    "Fig3_Efficiency_Complexity": {
+      "height": 2.9,
+      "width": 7.0
+    },
+    "Fig4_Structural_Interpretation": {
+      "height": 4.2,
+      "width": 7.0
+    },
+    "Fig5_Success_Failure_Boundaries": {
+      "height": 4.8,
+      "width": 7.0
+    },
+    "FigS1_SideEffect_Exploratory_AP_Lift": {
+      "height": 2.2,
+      "width": 3.4
+    },
+    "FigS2_Benchmark_Heterogeneity": {
+      "height": 3.8,
+      "width": 7.0
+    }
+  },
+  "font_files_distributed": false,
+  "fonts": {
+    "pdf": {
+      "actual_font_name": "Helvetica",
+      "bold_font_name": "Helvetica-Bold",
+      "embedded_font_file": false,
+      "font_type": "standard PDF Type 1"
+    },
+    "png": {
+      "font_reference": "Helvetica",
+      "source": "300 dpi Poppler rasterization of PDF"
+    },
+    "svg": {
+      "font_family": "Helvetica, Arial, sans-serif",
+      "font_file_embedded": false
+    }
+  },
+  "gradients": false,
+  "grayscale_readability": "Designed in grayscale-first tones with direct labels and redundant encodings.",
+  "preview_dpi": 300,
+  "shadows": false,
+  "three_dimensional": false,
+  "version": "a3_1_journal_neutral_v1"
+}

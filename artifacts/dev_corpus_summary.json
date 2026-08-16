@@ -1,0 +1,271 @@
+{
+  "allowlisted_identity_token_audit": {
+    "by_benchmark": {
+      "workarena": 8
+    },
+    "interpretation": "tokens originate in frozen allowlisted task/step content; root identity fields remain excluded and no text was censored",
+    "records": [
+      {
+        "matched_tokens": [
+          "workarena"
+        ],
+        "trajectory_key": "workarena::workarena.servicenow.create-user::GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct"
+      },
+      {
+        "matched_tokens": [
+          "workarena"
+        ],
+        "trajectory_key": "workarena::workarena.servicenow.create-user::GenericAgent-anthropic_claude-3.7-sonnet"
+      },
+      {
+        "matched_tokens": [
+          "workarena"
+        ],
+        "trajectory_key": "workarena::workarena.servicenow.create-user::GenericAgent-gpt-4o-2024-11-20"
+      },
+      {
+        "matched_tokens": [
+          "workarena"
+        ],
+        "trajectory_key": "workarena::workarena.servicenow.create-user::GenericAgent-meta-llama_Llama-3.3-70B-Instruct"
+      },
+      {
+        "matched_tokens": [
+          "workarena"
+        ],
+        "trajectory_key": "workarena::workarena.servicenow.sort-user-list::GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct"
+      },
+      {
+        "matched_tokens": [
+          "workarena"
+        ],
+        "trajectory_key": "workarena::workarena.servicenow.sort-user-list::GenericAgent-anthropic_claude-3.7-sonnet"
+      },
+      {
+        "matched_tokens": [
+          "workarena"
+        ],
+        "trajectory_key": "workarena::workarena.servicenow.sort-user-list::GenericAgent-gpt-4o-2024-11-20"
+      },
+      {
+        "matched_tokens": [
+          "workarena"
+        ],
+        "trajectory_key": "workarena::workarena.servicenow.sort-user-list::GenericAgent-meta-llama_Llama-3.3-70B-Instruct"
+      }
+    ],
+    "trajectory_count": 8
+  },
+  "baseline_readiness": "await human review",
+  "conditions": [
+    "4 schema-drift path/type groups are excluded and require manual review.",
+    "8 trajectories contain literal identity tokens inside frozen allowlisted natural content; root identity fields are excluded, but shortcut sensitivity requires review."
+  ],
+  "generated_at_utc": "2026-08-03T07:57:03.715901+00:00",
+  "git_commit_before_build": "e302dfc2b159f295e6e3a17243fbb6c490bd5d15",
+  "grouped_step_statistics": {
+    "benchmark_original": {
+      "assistantbench": {
+        "count": 24,
+        "max": 31,
+        "mean": 19.166666666666668,
+        "median": 22.0,
+        "min": 5
+      },
+      "visualwebarena": {
+        "count": 24,
+        "max": 31,
+        "mean": 12.875,
+        "median": 7.5,
+        "min": 2
+      },
+      "webarena": {
+        "count": 88,
+        "max": 31,
+        "mean": 16.988636363636363,
+        "median": 12.0,
+        "min": 2
+      },
+      "workarena": {
+        "count": 60,
+        "max": 31,
+        "mean": 25.8,
+        "median": 31.0,
+        "min": 7
+      }
+    },
+    "benchmark_split_namespace": {
+      "assistantbench": {
+        "count": 24,
+        "max": 31,
+        "mean": 19.166666666666668,
+        "median": 22.0,
+        "min": 5
+      },
+      "visualwebarena": {
+        "count": 24,
+        "max": 31,
+        "mean": 12.875,
+        "median": 7.5,
+        "min": 2
+      },
+      "webarena": {
+        "count": 88,
+        "max": 31,
+        "mean": 16.988636363636363,
+        "median": 12.0,
+        "min": 2
+      },
+      "workarena_l1": {
+        "count": 8,
+        "max": 31,
+        "mean": 22.625,
+        "median": 24.5,
+        "min": 13
+      },
+      "workarena_l2": {
+        "count": 52,
+        "max": 31,
+        "mean": 26.28846153846154,
+        "median": 31.0,
+        "min": 7
+      }
+    },
+    "label_conditioned": "not computed: target labels are physically isolated and label/text association is prohibited in A1.0",
+    "model_name": {
+      "GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct": {
+        "count": 51,
+        "max": 31,
+        "mean": 22.568627450980394,
+        "median": 31,
+        "min": 2
+      },
+      "GenericAgent-anthropic_claude-3.7-sonnet": {
+        "count": 51,
+        "max": 31,
+        "mean": 15.294117647058824,
+        "median": 10,
+        "min": 2
+      },
+      "GenericAgent-gpt-4o-2024-11-20": {
+        "count": 51,
+        "max": 31,
+        "mean": 18.0,
+        "median": 13,
+        "min": 2
+      },
+      "GenericAgent-meta-llama_Llama-3.3-70B-Instruct": {
+        "count": 43,
+        "max": 31,
+        "mean": 22.3953488372093,
+        "median": 31,
+        "min": 4
+      }
+    }
+  },
+  "leakage_validation": {
+    "identity_metadata_not_serialized": true,
+    "labels_absent_from_all_corpus_files": true,
+    "natural_error_absent_from_error_ablation": true,
+    "outcome_keys_absent_from_input_bearing_cleaned_fields": true,
+    "reasoning_only_in_sensitivity_view": true,
+    "root_identity_fields_excluded_by_provenance": true,
+    "terminal_not_duplicated_in_serialized_text": true,
+    "test_content_not_accessed": true,
+    "unknown_fields_rejected_from_all_views": true
+  },
+  "output_sha256": {
+    "ablation_without_error_fields": "416ca5e1fd20939d146000b5e931be193c68c172c494279fda15e09ad9ece686",
+    "cleaned": "157a2f665ec33aced4e549e349012f97387961afca2da4f8629cc3472a29342e",
+    "primary_with_natural_errors": "ec2757489c04b4388711826d29a028b24585156c9dab0496d4afe394aa02398a",
+    "sensitivity_with_reasoning": "e8e98436fb804eb6dcf59d7f96f0b92cb0a5903cd3dae52bb0ea1f939f6642cb"
+  },
+  "scope": {
+    "all_views": 196,
+    "cleaned": 196,
+    "downloaded_or_verified_reused": 196,
+    "expected_dev_trajectories": 196,
+    "failures": 0,
+    "features_models_or_baselines_run": 0,
+    "located": 196,
+    "network_downloaded_files": 180,
+    "parsed": 196,
+    "screenshots_downloaded": 0,
+    "sha256_recorded": 196,
+    "size_verified": 196,
+    "skipped": 0,
+    "test_trajectory_content_accessed": 0,
+    "verified_probe_reuse_files": 16,
+    "verified_resume_cache_files": 4
+  },
+  "source": {
+    "full_repository_snapshot_used": false,
+    "individual_resolve_downloads_only": true,
+    "repository": "McGill-NLP/agent-reward-bench",
+    "revision": "b6d17e646009d6cb63d5dd7be78807b680693f61"
+  },
+  "stage": "A1.0",
+  "stage_decision": "PASS_WITH_CONDITIONS",
+  "structure": {
+    "empty_action_steps": 196,
+    "empty_focused_element_steps": 4,
+    "empty_observation_steps": 0,
+    "natural_error_by_benchmark": {
+      "assistantbench": 9,
+      "visualwebarena": 12,
+      "webarena": 47,
+      "workarena": 18
+    },
+    "natural_error_by_model": {
+      "GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct": 22,
+      "GenericAgent-anthropic_claude-3.7-sonnet": 23,
+      "GenericAgent-gpt-4o-2024-11-20": 23,
+      "GenericAgent-meta-llama_Llama-3.3-70B-Instruct": 18
+    },
+    "natural_error_steps": 307,
+    "natural_error_trajectories": 86,
+    "reasoning_steps": 3616,
+    "reasoning_trajectories": 196,
+    "schema_drift_groups": 4,
+    "schema_drift_occurrences": 12477,
+    "screenshot_reference_trajectories": 196,
+    "steps_per_trajectory": {
+      "count": 196,
+      "max": 31,
+      "mean": 19.448979591836736,
+      "median": 23.0,
+      "min": 2
+    },
+    "terminal_action_trajectories": 196,
+    "terminal_observation_trajectories": 196,
+    "termination_signals": {
+      "null": 125,
+      "report_infeasible": 10,
+      "send_msg_to_user": 61
+    },
+    "total_steps": 3812
+  },
+  "verification_contract": {
+    "actual_generated_corpus_scan_included": true,
+    "task_requirements_covered": 20,
+    "test_module": "tests/test_build_full_dev_corpus.py"
+  },
+  "volume": {
+    "cleaned_jsonl_bytes": 24174170,
+    "completed_network_payload_bytes": 3604302207,
+    "error_ablation_jsonl_bytes": 21510212,
+    "interrupted_partial_network_bytes": 16777216,
+    "local_cache_peak_bytes": 111492761,
+    "local_raw_cache_residual_bytes": 0,
+    "network_download_bytes": 3621079423,
+    "primary_jsonl_bytes": 21584687,
+    "ratios_to_raw": {
+      "cleaned_jsonl_bytes": 0.006628292586397306,
+      "error_ablation_jsonl_bytes": 0.005897864486409848,
+      "primary_jsonl_bytes": 0.005918284715537547,
+      "reasoning_sensitivity_jsonl_bytes": 0.00622919206070792
+    },
+    "raw_source_bytes": 3647118724,
+    "reasoning_sensitivity_jsonl_bytes": 22718603
+  }
+}

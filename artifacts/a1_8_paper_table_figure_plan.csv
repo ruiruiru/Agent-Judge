@@ -1,0 +1,6 @@
+item_id,item_type,title,content,evidence_sources,caveat
+Table1,table,Dataset and target support,target counts; positives; task groups; Benchmark coverage; Side Effect sparsity,A1.3 held-out statistics; manifests,Expose the 12-positive and single-class-domain limitations prominently.
+Table2,table,Primary LOBO baselines,"B0-B4 by Success, Side Effect, Looping with macro AP/F1, role, and caveat",A1.3;A1.7,B4 is a later frozen complexity control; Side Effect is descriptive.
+Table3,table,Structural ablations,S0/S1/S2/S5/S6 for Success and Looping with AP deltas and bootstrap grades,A1.5;A1.6,No causal or equivalence wording.
+Figure1,figure,Target by representation evidence map,"structural; TF-IDF; dense semantic point estimates, intervals, and support roles",A1.3;A1.6;A1.7,Do not visually imply robust Side Effect performance.
+Figure2,figure,Cross-Benchmark uncertainty,Success B2 AP lift; Looping B2 AP lift; Looping no-repetition delta; Success B4-B2/B3,A1.6 P1/P5/P6; A1.7 Q2/Q3,"Intervals are bootstrap stability summaries, not p-values."

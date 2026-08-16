@@ -1,0 +1,28 @@
+scope,split,annotation_benchmark,target,field,positive_count,negative_count,excluded_unsure_count,unknown_count,valid_binary_count,positive_rate_among_valid
+overall,ALL,ALL,Success,trajectory_success,395,1012,1,0,1407,0.28073916133617627
+overall,ALL,ALL,Side Effect,trajectory_side_effect,91,1316,1,0,1407,0.06467661691542288
+overall,ALL,ALL,Repetitiveness / Looping,trajectory_looping,711,697,0,0,1408,0.5049715909090909
+split_x_annotation_benchmark,dev,assistantbench,Success,trajectory_success,2,22,0,0,24,0.08333333333333333
+split_x_annotation_benchmark,dev,assistantbench,Side Effect,trajectory_side_effect,0,24,0,0,24,0.0
+split_x_annotation_benchmark,dev,assistantbench,Repetitiveness / Looping,trajectory_looping,11,13,0,0,24,0.4583333333333333
+split_x_annotation_benchmark,dev,visualwebarena,Success,trajectory_success,12,12,0,0,24,0.5
+split_x_annotation_benchmark,dev,visualwebarena,Side Effect,trajectory_side_effect,2,22,0,0,24,0.08333333333333333
+split_x_annotation_benchmark,dev,visualwebarena,Repetitiveness / Looping,trajectory_looping,7,17,0,0,24,0.2916666666666667
+split_x_annotation_benchmark,dev,webarena,Success,trajectory_success,33,76,1,0,109,0.30275229357798167
+split_x_annotation_benchmark,dev,webarena,Side Effect,trajectory_side_effect,9,101,0,0,110,0.08181818181818182
+split_x_annotation_benchmark,dev,webarena,Repetitiveness / Looping,trajectory_looping,44,66,0,0,110,0.4
+split_x_annotation_benchmark,dev,workarena,Success,trajectory_success,19,41,0,0,60,0.31666666666666665
+split_x_annotation_benchmark,dev,workarena,Side Effect,trajectory_side_effect,2,58,0,0,60,0.03333333333333333
+split_x_annotation_benchmark,dev,workarena,Repetitiveness / Looping,trajectory_looping,37,23,0,0,60,0.6166666666666667
+split_x_annotation_benchmark,test,assistantbench,Success,trajectory_success,8,100,0,0,108,0.07407407407407407
+split_x_annotation_benchmark,test,assistantbench,Side Effect,trajectory_side_effect,3,105,0,0,108,0.027777777777777776
+split_x_annotation_benchmark,test,assistantbench,Repetitiveness / Looping,trajectory_looping,50,58,0,0,108,0.46296296296296297
+split_x_annotation_benchmark,test,visualwebarena,Success,trajectory_success,79,197,0,0,276,0.286231884057971
+split_x_annotation_benchmark,test,visualwebarena,Side Effect,trajectory_side_effect,28,247,1,0,275,0.10181818181818182
+split_x_annotation_benchmark,test,visualwebarena,Repetitiveness / Looping,trajectory_looping,126,150,0,0,276,0.45652173913043476
+split_x_annotation_benchmark,test,webarena,Success,trajectory_success,153,238,0,0,391,0.391304347826087
+split_x_annotation_benchmark,test,webarena,Side Effect,trajectory_side_effect,27,364,0,0,391,0.06905370843989769
+split_x_annotation_benchmark,test,webarena,Repetitiveness / Looping,trajectory_looping,139,252,0,0,391,0.3554987212276215
+split_x_annotation_benchmark,test,workarena,Success,trajectory_success,89,326,0,0,415,0.21445783132530122
+split_x_annotation_benchmark,test,workarena,Side Effect,trajectory_side_effect,20,395,0,0,415,0.04819277108433735
+split_x_annotation_benchmark,test,workarena,Repetitiveness / Looping,trajectory_looping,297,118,0,0,415,0.7156626506024096

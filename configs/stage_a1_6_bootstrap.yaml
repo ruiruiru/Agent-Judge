@@ -1,0 +1,116 @@
+stage: A1.6
+protocol_name: a1_3_primary_four_group_lobo_task_group_cluster_bootstrap
+
+source:
+  github_commit: f838338886d723d40b586309465a38277803d9e6
+  huggingface_revision: b6d17e646009d6cb63d5dd7be78807b680693f61
+  data_version: dev_cleaned_v1
+  split_version: custom_deterministic_grouped_stratification_v1
+
+approved_upstream:
+  a1_3_preregistration: {commit: 6027d5e5af29a1b0143bb04024084a6c4209529e, subject: "fix: normalize primary lobo preregistration bytes"}
+  a1_3_experiment: {commit: 346bb4b3d4a90fc51c1e099618c3b7592fa76b99, subject: "experiment: run primary lobo baselines"}
+  a1_5_preregistration: {commit: fa9ef0771ea44a720ed8b900199a75ef3c863379, subject: "chore: preregister structural mechanism ablations"}
+  a1_5_experiment: {commit: e4fd9aba83cc6ed3b01b1f624c666b6cc7fce3ca, subject: "experiment: run structural mechanism ablations"}
+
+inputs:
+  source_manifest: {path: artifacts/source_manifest.json, sha256: e47c81f0b3e0cc6ee30718bc329ee92ee62ac8939e2a4bfaec7e6932ca95698d}
+  primary_lobo_manifest: {path: artifacts/lobo_primary_manifest.csv, sha256: 16735afc8defd5d91bf2d23ba7773a1f0515feafc238ad1cec2df0dc530b0191}
+  label_index: {path: artifacts/dev_analysis_index.csv, sha256: 2b29b46522b5cce32f084e6dc620ff3203f1fd474721fb001123348be0ab56d0}
+  a1_3_config: {path: configs/stage_a1_3_lobo_execution.yaml, sha256: d681a09aa7106a9679a5640b751af1000080afddc198433d4f8891ec32541549}
+  a1_3_predictions: {path: artifacts/a1_3_lobo_predictions.csv, sha256: e761f5a0d4e72faa837496a29b91db358bc03645d8b7ea695c6322aa550bfe4d}
+  a1_3_domain_metrics: {path: artifacts/a1_3_lobo_domain_metrics.csv, sha256: e648fa88feb18f8ff72a8e4ed65a1ca5315c173da17c368dbbc7366f75895222}
+  a1_3_macro_metrics: {path: artifacts/a1_3_lobo_macro_metrics.csv, sha256: cee5105e4049a1f113995b225d366f938e56d787e274e96d0b0444bb6b472ec6}
+  a1_3_pooled_metrics: {path: artifacts/a1_3_lobo_pooled_metrics.csv, sha256: 58319203d986a19ea2851a0eb4bb41bcae18e3cd5f9a017fdc32eb351a469bac}
+  a1_3_run_summary: {path: artifacts/a1_3_lobo_run_summary.json, sha256: ec4055a20fe7ab1d6df5d3e51b76962ef8ce642073ccc50563cad4c92bcc39e5}
+  a1_5_config: {path: configs/stage_a1_5_structural_ablation.yaml, sha256: e73f42d83ade649b1c658ea033cee22fb1a51f65770da97de081e449f29daa2c}
+  a1_5_predictions: {path: artifacts/a1_5_external_predictions.csv, sha256: a55abec76db6d3afb03e1936a8ae230b9b2c142e805c9b805068911820b00143}
+  a1_5_domain_metrics: {path: artifacts/a1_5_domain_metrics.csv, sha256: 8609d946fb032d497dd6ffd56020b184886516da9494be622020ef6cfc2c43a2}
+  a1_5_macro_metrics: {path: artifacts/a1_5_macro_metrics.csv, sha256: 30de6ad6fef1ab5f748a131603d128bd1eb13a1059ac633767e0d7d795a930fe}
+  a1_5_pooled_metrics: {path: artifacts/a1_5_pooled_metrics.csv, sha256: a35fce3930a9ba47483dc8e1f7ec334321b529abb67ed8517bd7c2d9d44f835a}
+  a1_5_deltas: {path: artifacts/a1_5_structural_ablation_deltas.csv, sha256: 4c5c6a6acd818800f5456c5a1cea816a72fa1938d86e641bb9a17d6c80317abf}
+  a1_5_run_summary: {path: artifacts/a1_5_run_summary.json, sha256: 00e93994896b0a2f8ff82b418fb36a8fa3cc528a856ebc41c7ef872e487dfdd1}
+
+targets: [success, side_effect, looping]
+held_out_groups: [assistantbench, visualwebarena, webarena, workarena]
+group_key_definition: [benchmark_original, normalized_task_id]
+group_key_serialization: benchmark_original::normalized_task_id
+
+methods:
+  a1_3: [B0, B1, B2, B3]
+  a1_5: [S0_full13, S1_no_termination, S2_no_repetition, S3_no_activity_volume, S4_no_error, S5_no_termination_or_repetition, S6_termination_repetition_only]
+
+bootstrap:
+  unit: task_group_cluster
+  strata: [target, held_out_group]
+  n_bootstrap_draws: 10000
+  seed: 2026
+  numpy_rng: numpy.random.Generator
+  bit_generator: numpy.random.PCG64
+  confidence_level: 0.95
+  interval_method: percentile
+  percentiles: [2.5, 97.5]
+  stratified: false
+  redraw_invalid: false
+  impute_invalid: false
+  macro_minimum_valid_mixed_domains: 2
+  prevalence_source: bootstrap_draw
+  pooled_role: secondary
+  parallel_workers: 8
+
+primary_comparisons:
+  - {id: P1, target: success, kind: positive_signal, source: a1_3, method_a: B2, scope: macro, metric: ap_lift, role: primary}
+  - {id: P2, target: success, kind: paired_delta, source: a1_3, method_a: B2, method_b: B3, scope: macro, metric: ap, role: primary}
+  - {id: P2, target: success, kind: paired_delta, source: a1_3, method_a: B2, method_b: B3, scope: macro, metric: f1, role: primary}
+  - {id: P3, target: success, kind: paired_delta, source: a1_5, method_a: S1_no_termination, method_b: S0_full13, scope: macro, metric: ap, role: primary}
+  - {id: P3, target: success, kind: paired_delta, source: a1_5, method_a: S1_no_termination, method_b: S0_full13, scope: pooled, metric: ap, role: auxiliary}
+  - {id: P3, target: success, kind: paired_delta, source: a1_5, method_a: S1_no_termination, method_b: S0_full13, scope: macro, metric: f1, role: auxiliary}
+  - {id: P4, target: success, kind: paired_delta, source: a1_5, method_a: S6_termination_repetition_only, method_b: S0_full13, scope: macro, metric: ap, role: primary}
+  - {id: P4, target: success, kind: paired_delta, source: a1_5, method_a: S6_termination_repetition_only, method_b: S0_full13, scope: pooled, metric: ap, role: auxiliary}
+  - {id: P4, target: success, kind: paired_delta, source: a1_5, method_a: S6_termination_repetition_only, method_b: S0_full13, scope: macro, metric: f1, role: auxiliary}
+  - {id: P5, target: looping, kind: positive_signal, source: a1_3, method_a: B2, scope: macro, metric: ap_lift, role: primary}
+  - {id: P6, target: looping, kind: paired_delta, source: a1_5, method_a: S2_no_repetition, method_b: S0_full13, scope: macro, metric: ap, role: primary}
+  - {id: P6, target: looping, kind: paired_delta, source: a1_5, method_a: S2_no_repetition, method_b: S0_full13, scope: pooled, metric: ap, role: auxiliary}
+  - {id: P6, target: looping, kind: paired_delta, source: a1_5, method_a: S2_no_repetition, method_b: S0_full13, scope: macro, metric: f1, role: auxiliary}
+  - {id: P7, target: looping, kind: paired_delta, source: a1_5, method_a: S6_termination_repetition_only, method_b: S0_full13, scope: macro, metric: ap, role: primary}
+  - {id: P7, target: looping, kind: paired_delta, source: a1_5, method_a: S6_termination_repetition_only, method_b: S0_full13, scope: pooled, metric: ap, role: auxiliary}
+  - {id: P7, target: looping, kind: paired_delta, source: a1_5, method_a: S6_termination_repetition_only, method_b: S0_full13, scope: macro, metric: f1, role: auxiliary}
+  - {id: P8, target: side_effect, kind: support_diagnostic, source: a1_3, method_a: B3, scope: macro, metric: ap, role: primary}
+
+grade_rules:
+  valid_fraction_low_support_lt: 0.80
+  valid_fraction_stable_positive_gte: 0.95
+  positive_ci_lower_gt: 0.0
+  delta_ci_upper_lt: 0.0
+  delta_ci_lower_gt: 0.0
+  p8_never_upgrades_side_effect: true
+
+execution:
+  required_preregistration_commit_subject: "chore: preregister group-aware bootstrap uncertainty"
+  git_worktree_must_be_clean: true
+  model_training_allowed: false
+  prediction_regeneration_allowed: false
+  config_reselection_allowed: false
+  threshold_reselection_allowed: false
+  test_access: false
+  forbidden_call_tokens: [".fit(", ".fit_transform(", "partial_fit("]
+  forbidden_experiments: [complex_model, fusion, secondary_lobo, lomo, joint_ood, test, stratified_bootstrap, trajectory_bootstrap, invalid_redraw]
+
+outputs:
+  prerun_integrity: artifacts/a1_6_prerun_integrity.json
+  draw_registry: artifacts/a1_6_bootstrap_draw_registry.csv
+  registry_summary: artifacts/a1_6_bootstrap_registry_summary.json
+  single_method_summary: artifacts/a1_6_single_method_bootstrap_summary.csv
+  primary_delta_summary: artifacts/a1_6_primary_paired_delta_summary.csv
+  domain_summary: artifacts/a1_6_domain_bootstrap_summary.csv
+  macro_summary: artifacts/a1_6_macro_bootstrap_summary.csv
+  pooled_summary: artifacts/a1_6_pooled_bootstrap_summary.csv
+  side_effect_support: artifacts/a1_6_side_effect_support_diagnostics.csv
+  primary_draw_metrics: artifacts/a1_6_primary_bootstrap_draw_metrics.parquet
+  run_summary: artifacts/a1_6_run_summary.json
+  report: docs/stage_a1_6_group_aware_bootstrap_report.md
+
+environment:
+  virtual_environment: .venv-baselines
+  lock_file: requirements/bootstrap-lock.txt
+  pyarrow_version: 25.0.0

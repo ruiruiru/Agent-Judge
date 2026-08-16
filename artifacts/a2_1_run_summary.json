@@ -1,0 +1,78 @@
+{
+  "b2_dimension": 13,
+  "b4_actual_device": "cuda:0",
+  "b4_dimension": 1024,
+  "b4_gpu_name": "NVIDIA GeForce RTX 5070",
+  "classifier_scope": {
+    "B2_additional_size_audited": "artifacts/final_models/final_looping_b2.joblib",
+    "B2_timed": "artifacts/final_models/final_success_b2.joblib",
+    "B4_timed": "artifacts/final_models/final_side_effect_b4.joblib"
+  },
+  "completed_at_utc": "2026-08-09T10:21:45+00:00",
+  "counters": {
+    "a1_metric_recomputations": 0,
+    "a1_model_changes": 0,
+    "a1_threshold_changes": 0,
+    "a2_2": 0,
+    "a2_3": 0,
+    "a3": 0,
+    "external_validation": 0,
+    "model_fits": 0,
+    "new_features": 0,
+    "official_test_access": 0,
+    "official_test_tuning": 0,
+    "second_embedding_models": 0
+  },
+  "formal_git_commit": "a67f6451dd2fb39388337c58b3fda5439290bd35",
+  "implementation_commit": "0708df64d11b6ed64d9fd6f4104f4c2de5dc8bba",
+  "implementation_commit_subject": "chore: implement A2.1 efficiency benchmark",
+  "metadata_fingerprint": "a30b2411b52a2988db865ea6e91699d807f18e396595ee4bb99217b34aabc166",
+  "output_paths": {
+    "environment": "artifacts/a2_1_environment.json",
+    "raw": "artifacts/a2_1_efficiency_raw.csv",
+    "relative": "artifacts/a2_1_efficiency_relative_cost.csv",
+    "report": "docs/stage_a2_1_efficiency_benchmark_report.md",
+    "run_summary": "artifacts/a2_1_run_summary.json",
+    "summary": "artifacts/a2_1_efficiency_summary.csv"
+  },
+  "preregistration_commit": "2ca01ec9bf8c2fdcb129f4a1737406510fe21645",
+  "qwen_revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+  "repetitions": {
+    "B2": {
+      "measured": 5,
+      "warmup": 1
+    },
+    "B4": {
+      "measured": 3,
+      "warmup": 1
+    },
+    "summary": "median"
+  },
+  "run_directory": "runs/a2_1_efficiency_20260809T095033Z_a67f6451",
+  "run_id": "a2_1_efficiency_20260809T095033Z_a67f6451",
+  "stage": "A2.1",
+  "stage_determination": "PASS",
+  "started_from_clean_git": true,
+  "trajectory_count": 196,
+  "verified_hashes": {
+    ".semantic-cache/models/Qwen3-Embedding-0.6B-97b0c614/model.safetensors": "0437e45c94563b09e13cb7a64478fc406947a93cb34a7e05870fc8dcd48e23fd",
+    "artifacts/a1_11_final_claim_matrix.csv": "2fc929e242e614244940d6d96d8ff1e3935e059925cff0b36b009a86b04f3175",
+    "artifacts/a1_11_table_main_test_results.csv": "c60ff992487e7a05d70c39de7db9364c31529a6b4334739e59045783ec3e9947",
+    "artifacts/a1_7_embedding_model_manifest.json": "801893709711d55b2310daad2ae7571122570bcbebb08553e3b92c10c870cf54",
+    "artifacts/a1_7_qwen3_embedding_0p6b.npy": "26a52ea14c7538c87527bd129880ff795e10640355474688e6297a9407ad7037",
+    "artifacts/dev_structural_features.csv": "2dcd9f5a5a22c40d318f2a7fe1303cdcc0c27832d2ab443c0f3dbe2a1f631556",
+    "artifacts/final_models/final_looping_b2.joblib": "862b7ff2b0cbcb5faf88908f5fe5824c7f4e52c2c21521e41bb5fb71b011660c",
+    "artifacts/final_models/final_side_effect_b4.joblib": "5eb29646c10a8193b8492ffe26a41a63414dc9da884890813273c43d17a7de59",
+    "artifacts/final_models/final_success_b2.joblib": "afbdb0a60205d7c6bd40232a8c8a1b1ad3b0910d6b65fecf894cca1a040123c1",
+    "data/processed/dev_cleaned_trajectories.jsonl": "157a2f665ec33aced4e549e349012f97387961afca2da4f8629cc3472a29342e",
+    "data/processed/dev_serialized_primary.jsonl": "ec2757489c04b4388711826d29a028b24585156c9dab0496d4afe394aa02398a",
+    "docs/tasks/STAGE_A2_1_EFFICIENCY_COST_BENCHMARK.md": "f9f1bee466b41e2ffbf5144267adc1b2fdd342b108b7929c9a015926649b3b45"
+  },
+  "warnings": [
+    {
+      "impact": "none on the frozen contract: tokenizer.encode returned the full payload and A1.7 payload_chunks applied deterministic no-overlap 8191-token chunks before every forward pass",
+      "message": "Token indices sequence length is longer than the tokenizer model_max_length advisory (146534 > 131072)",
+      "type": "TOKENIZER_MODEL_MAX_LENGTH_ADVISORY"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+# Python bytecode and environments
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+.venv/
+.venv-baselines/
+.venv-semantic/
+.semantic-cache/
+venv/
+env/
+
+# Tooling and test caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local secrets and machine-specific settings
+.env
+.env.*
+!.env.example
+*.local
+
+# Large, reproducible artifacts only; retain manifests and small research records
+data/raw/*
+!data/raw/.gitkeep
+# Stage A0.3/A0.4 probe source JSON stays local and immutable.
+data/raw_probe/
+# Stage A1.0 downloads one approved dev JSON at a time and retains only ignored
+# resumable intermediates; neither raw payloads nor temporary records enter Git.
+data/dev_download_cache/
+data/dev_build_temp/
+# Stage A1.10a streams official test JSON one file at a time. Raw payloads and
+# resumable compact records remain local; only frozen blind artifacts are tracked.
+data/test_download_cache/
+data/test_build_temp/
+data/processed/*
+!data/processed/.gitkeep
+runs/*
+!runs/.gitkeep
+
+# Interrupted atomic writes must never enter a commit.
+*.tmp
+
+# Python packaging
+build/
+dist/
+*.egg-info/

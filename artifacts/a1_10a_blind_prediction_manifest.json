@@ -1,0 +1,83 @@
+{
+  "blind_prediction_path": "artifacts/a1_10a_blind_predictions.csv",
+  "blind_prediction_sha256": "a3a232484716ee455a604f03ffd40e6f734a1925ffdfb93e4a3d04118de27c3d",
+  "counts": {
+    "duplicate_row_keys": 0,
+    "duplicate_trajectory_target_pairs": 0,
+    "probability_finite": true,
+    "probability_range": [
+      5.526379599254569e-05,
+      0.9999996851078529
+    ],
+    "rows": 3318,
+    "target_counts": {
+      "looping": 1106,
+      "side_effect": 1106,
+      "success": 1106
+    },
+    "unique_row_keys": 3318,
+    "unique_trajectory_target_pairs": 3318
+  },
+  "eligibility_present": false,
+  "embedding_index_sha256": "06871e9e07b10df50cdf8abb6bc37dba46e6d2e3869b7f6e76e9624a7f6ffff1",
+  "embedding_sha256": "8590b9cb6129bc79181febeaa18e709551743fd271e579c5c78f833edf4b1c42",
+  "forbidden_columns_present": [],
+  "generated_at_utc": "2026-08-08T15:06:58.869522+00:00",
+  "identifier_manifest_sha256": "97a1366ec31efd7bfe86d8f2a5e95c85cc248bd22ead5dfe47993c79aeb4d550",
+  "labels_present": false,
+  "metrics_present": false,
+  "models": {
+    "looping": "862b7ff2b0cbcb5faf88908f5fe5824c7f4e52c2c21521e41bb5fb71b011660c",
+    "side_effect": "5eb29646c10a8193b8492ffe26a41a63414dc9da884890813273c43d17a7de59",
+    "success": "afbdb0a60205d7c6bd40232a8c8a1b1ad3b0910d6b65fecf894cca1a040123c1"
+  },
+  "prohibited_experiments": {
+    "b3_final_method": 0,
+    "calibration": 0,
+    "config_selection": 0,
+    "dev_embedding_regeneration": 0,
+    "estimator_refit": 0,
+    "feature_change": 0,
+    "fusion": 0,
+    "label_guided_debugging": 0,
+    "llm_judge": 0,
+    "new_model_family": 0,
+    "s6_final_method": 0,
+    "second_embedding_model": 0,
+    "threshold_tuning": 0
+  },
+  "schema": [
+    "trajectory_key",
+    "benchmark_original",
+    "benchmark_group_primary",
+    "normalized_task_id",
+    "model_name",
+    "target",
+    "method_id",
+    "role",
+    "model_sha256",
+    "probability",
+    "frozen_threshold",
+    "predicted_label",
+    "row_key",
+    "inference_status"
+  ],
+  "stage": "A1.10a",
+  "status": "FROZEN_BLIND_NOT_SCORED",
+  "structural_features_sha256": "e39994f35815b2b5131e0b1bf1e5e81c86e430a1f6bdfe1fc9448a5b847faa6d",
+  "test_access": {
+    "content": 1106,
+    "eligibility": 0,
+    "embeddings": 1106,
+    "features": 1106,
+    "labels": 0,
+    "manifest": 1106,
+    "metrics": 0,
+    "predictions": 3318
+  },
+  "thresholds": {
+    "looping": 0.55,
+    "side_effect": 0.4,
+    "success": 0.55
+  }
+}

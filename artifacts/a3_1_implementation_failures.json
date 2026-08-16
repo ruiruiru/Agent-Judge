@@ -1,0 +1,35 @@
+{
+  "failures": [
+    {
+      "affected_artifacts": [
+        "paper/figures/Fig4_Structural_Interpretation.*",
+        "paper/figures/FigS2_Benchmark_Heterogeneity.*"
+      ],
+      "failure_type": "label_overlap",
+      "finding": "Fig4 rank-1 Success coefficient text overlapped its feature label; two high-AP FigS2 Looping labels intersected markers.",
+      "outputs_reused": false,
+      "phase": "post-render manual visual QA",
+      "resolution": "independent layout-only fix commit followed by complete A3.1 regeneration",
+      "scientific_values_affected": false
+    }
+  ],
+  "fix_commits": [
+    "aef41ac5879ffc31488dd527da51e632c1677433"
+  ],
+  "initial_formal_git_commit": "7de956b676af2fdcc5177b054ebe3e07beb4ede7",
+  "scientific_operation_counters": {
+    "A1_metric_recomputations": 0,
+    "bootstrap_reruns": 0,
+    "eligibility_changes": 0,
+    "external_dataset_runs": 0,
+    "final_model_changes": 0,
+    "new_embedding_runs": 0,
+    "new_inference_runs": 0,
+    "new_model_fits": 0,
+    "new_significance_tests": 0,
+    "official_test_tuning": 0,
+    "threshold_changes": 0
+  },
+  "stage": "A3.1",
+  "status": "RESOLVED_BY_INDEPENDENT_FIX_COMMIT"
+}

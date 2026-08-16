@@ -1,0 +1,22 @@
+{
+  "failures": [
+    {
+      "a1_metric_recomputations": 0,
+      "b2_cold_outputs_completed": 1,
+      "b2_measured_extraction_runs": 0,
+      "b4_embedding_forwards": 0,
+      "b4_model_loads": 0,
+      "error": "IntegrityError: GetProcessMemoryInfo failed",
+      "fit_count": 0,
+      "formal_commit": "0708df64d11b6ed64d9fd6f4104f4c2de5dc8bba",
+      "inference_count": 0,
+      "invocation_started_at_utc": "2026-08-09T09:48:40+00:00",
+      "official_test_access": 0,
+      "run_directory": "runs/a2_1_efficiency_20260809T094840Z_0708df64",
+      "status": "INVALIDATED_BEFORE_MEASURED_RUNS",
+      "summary_outputs_generated": 0
+    }
+  ],
+  "stage": "A2.1",
+  "status": "PRESERVED_IMPLEMENTATION_FAILURE"
+}

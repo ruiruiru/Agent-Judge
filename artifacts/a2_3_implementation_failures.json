@@ -1,0 +1,26 @@
+{
+  "events": [
+    {
+      "date": "2026-08-11",
+      "disposition": "All outputs from the first invocation were invalidated and removed. The builder and tests require claim_status_counts, followed by a complete rebuild from a clean independent fix commit.",
+      "event_id": "A2_3_IMPL_001",
+      "failed_invocation_head": "583ef6eec683151f08b458b1976da62b36accc9f",
+      "failure_type": "machine_summary_contract_omission",
+      "observed": "artifacts/a2_3_run_summary.json omitted the taskbook-required claim_status_counts field even though frozen_claims and evidence_location_counts were present.",
+      "reuse_allowed": false,
+      "scientific_consequence": "No scientific computation, claim upgrade, metric change, or source mutation occurred. The incomplete paper-package outputs are not reusable.",
+      "scientific_operation_counters": {
+        "A1_metric_recomputations": 0,
+        "bootstrap_reruns": 0,
+        "eligibility_changes": 0,
+        "final_model_changes": 0,
+        "new_embedding_runs": 0,
+        "new_inference_runs": 0,
+        "new_model_fits": 0,
+        "official_test_tuning": 0,
+        "threshold_changes": 0
+      },
+      "stage": "A2.3"
+    }
+  ]
+}

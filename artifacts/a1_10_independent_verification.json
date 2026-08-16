@@ -1,0 +1,24 @@
+{
+  "blind_prediction_sha256": "a3a232484716ee455a604f03ffd40e6f734a1925ffdfb93e4a3d04118de27c3d",
+  "bootstrap_draws_byte_exact": true,
+  "bootstrap_draws_per_target": 10000,
+  "bootstrap_summary_byte_exact": true,
+  "claims_byte_exact": true,
+  "draw_rows_recomputed": 30000,
+  "eligibility_source_access_during_verify": 0,
+  "generated_at_utc": "2026-08-09T04:19:07.248054+00:00",
+  "grades_byte_exact": true,
+  "invalid_redraw": false,
+  "label_source_access_during_verify": 0,
+  "label_stratification": false,
+  "metric_tables_byte_exact": true,
+  "scored_prediction_sha256": "22883f32ad22ecd2de6e7a3056a0f165d7aa4c03ab4ec847a535dbff7defb704",
+  "seed": 2027,
+  "stage": "A1.10b_independent_verification",
+  "static_boundary_counts": {
+    "estimator_or_embedding_imports": 0,
+    "estimator_training_calls": 0,
+    "inference_calls": 0
+  },
+  "status": "PASS"
+}

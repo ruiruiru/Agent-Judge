@@ -1,0 +1,41 @@
+{
+  "chunks": 6016,
+  "completed_at_utc": "2026-08-08T15:06:48.589857+00:00",
+  "deterministic_setup": {
+    "cublas_workspace_config": ":4096:8",
+    "deterministic_algorithms": true,
+    "seed": 2026,
+    "tf32_cudnn": false,
+    "tf32_matmul": false
+  },
+  "dev_embedding_regeneration": 0,
+  "dtype": "float32",
+  "elapsed_seconds": 2851.1028678000002,
+  "eligibility_access": 0,
+  "embedding_index_sha256": "06871e9e07b10df50cdf8abb6bc37dba46e6d2e3869b7f6e76e9624a7f6ffff1",
+  "embedding_sha256": "8590b9cb6129bc79181febeaa18e709551743fd271e579c5c78f833edf4b1c42",
+  "finite": true,
+  "fresh_forwards": 1106,
+  "labels_access": 0,
+  "local_files_only": true,
+  "maximum_chunk_payload_tokens": 8191,
+  "metrics_access": 0,
+  "model": {
+    "immutable_revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+    "repo_id": "Qwen/Qwen3-Embedding-0.6B",
+    "weight_sha256": "0437e45c94563b09e13cb7a64478fc406947a93cb34a7e05870fc8dcd48e23fd"
+  },
+  "network_access": 0,
+  "norm_max": 1.0000001192092896,
+  "norm_min": 0.9999998807907104,
+  "payload_tokens": 44801606,
+  "resumed_vectors": 0,
+  "shape": [
+    1106,
+    1024
+  ],
+  "stage": "A1.10a_embedding_extraction",
+  "status": "PASS",
+  "tokenization_audit_sha256": "de792e170e03c56f9d8e2860ebf03ea6a8d47f298c3c65375d2aea38a9959f8f",
+  "total_unique_test_forwards": 1106
+}

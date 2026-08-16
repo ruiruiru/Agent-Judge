@@ -1,0 +1,628 @@
+{
+  "annotation_status_counts": {
+    "looping": {
+      "contains_unsure": 0,
+      "duplicate_agreement": 95,
+      "duplicate_disagreement": 11,
+      "single_annotation": 1196
+    },
+    "side_effect": {
+      "contains_unsure": 1,
+      "duplicate_agreement": 102,
+      "duplicate_disagreement": 4,
+      "single_annotation": 1195
+    },
+    "success": {
+      "contains_unsure": 1,
+      "duplicate_agreement": 93,
+      "duplicate_disagreement": 12,
+      "single_annotation": 1196
+    }
+  },
+  "benchmark_groups": {
+    "all_trajectories_mapped": true,
+    "primary": [
+      "assistantbench",
+      "visualwebarena",
+      "webarena",
+      "workarena"
+    ],
+    "secondary": [
+      "assistantbench",
+      "visualwebarena",
+      "webarena",
+      "workarena_l1",
+      "workarena_l2"
+    ]
+  },
+  "known_limitations": [
+    "Official primary labels are fixed by CSV encounter order and are audit-only.",
+    "WorkArena L1/L2 remain separate in the required secondary sensitivity grouping.",
+    "No full-trajectory or model readiness conclusion is made in Stage A0.2."
+  ],
+  "overall_label_counts": {
+    "looping": {
+      "negative_count": 622,
+      "positive_count": 669,
+      "positive_rate": 0.5182029434546863,
+      "trajectory_count": 1302,
+      "unavailable_count": 11,
+      "valid_count": 1291
+    },
+    "side_effect": {
+      "negative_count": 1214,
+      "positive_count": 83,
+      "positive_rate": 0.06399383191981496,
+      "trajectory_count": 1302,
+      "unavailable_count": 5,
+      "valid_count": 1297
+    },
+    "success": {
+      "negative_count": 940,
+      "positive_count": 349,
+      "positive_rate": 0.2707525213343677,
+      "trajectory_count": 1302,
+      "unavailable_count": 13,
+      "valid_count": 1289
+    }
+  },
+  "resolution_policy": {
+    "contains_unsure": "target unavailable",
+    "duplicate_agreement": "fold to one trajectory",
+    "duplicate_disagreement": "main label unavailable; official primary retained for audit only",
+    "main_eligibility_rule": "eligible_main is true only for single_annotation or duplicate_agreement with a binary label",
+    "official_primary_rule_url": "https://github.com/McGill-NLP/agent-reward-bench/blob/f838338886d723d40b586309465a38277803d9e6/agent_reward_bench/judge/utils.py",
+    "official_scoring_rule_url": "https://github.com/McGill-NLP/agent-reward-bench/blob/f838338886d723d40b586309465a38277803d9e6/scripts/score_judgments.py",
+    "strategy": "consensus_only_main_eligibility"
+  },
+  "schema_version": "1.0",
+  "source_revision": {
+    "github_commit": "f838338886d723d40b586309465a38277803d9e6",
+    "huggingface_revision": "b6d17e646009d6cb63d5dd7be78807b680693f61"
+  },
+  "stage": "A0.2",
+  "stage_decision": "PASS",
+  "statistics": {
+    "by_benchmark_group_primary": {
+      "assistantbench": {
+        "looping": {
+          "negative_count": 71,
+          "positive_count": 61,
+          "positive_rate": 0.4621212121212121,
+          "trajectory_count": 132,
+          "unavailable_count": 0,
+          "valid_count": 132
+        },
+        "side_effect": {
+          "negative_count": 129,
+          "positive_count": 3,
+          "positive_rate": 0.022727272727272728,
+          "trajectory_count": 132,
+          "unavailable_count": 0,
+          "valid_count": 132
+        },
+        "success": {
+          "negative_count": 122,
+          "positive_count": 10,
+          "positive_rate": 0.07575757575757576,
+          "trajectory_count": 132,
+          "unavailable_count": 0,
+          "valid_count": 132
+        }
+      },
+      "visualwebarena": {
+        "looping": {
+          "negative_count": 167,
+          "positive_count": 133,
+          "positive_rate": 0.44333333333333336,
+          "trajectory_count": 300,
+          "unavailable_count": 0,
+          "valid_count": 300
+        },
+        "side_effect": {
+          "negative_count": 269,
+          "positive_count": 30,
+          "positive_rate": 0.10033444816053512,
+          "trajectory_count": 300,
+          "unavailable_count": 1,
+          "valid_count": 299
+        },
+        "success": {
+          "negative_count": 209,
+          "positive_count": 91,
+          "positive_rate": 0.30333333333333334,
+          "trajectory_count": 300,
+          "unavailable_count": 0,
+          "valid_count": 300
+        }
+      },
+      "webarena": {
+        "looping": {
+          "negative_count": 243,
+          "positive_count": 144,
+          "positive_rate": 0.37209302325581395,
+          "trajectory_count": 398,
+          "unavailable_count": 11,
+          "valid_count": 387
+        },
+        "side_effect": {
+          "negative_count": 366,
+          "positive_count": 28,
+          "positive_rate": 0.07106598984771574,
+          "trajectory_count": 398,
+          "unavailable_count": 4,
+          "valid_count": 394
+        },
+        "success": {
+          "negative_count": 245,
+          "positive_count": 140,
+          "positive_rate": 0.36363636363636365,
+          "trajectory_count": 398,
+          "unavailable_count": 13,
+          "valid_count": 385
+        }
+      },
+      "workarena": {
+        "looping": {
+          "negative_count": 141,
+          "positive_count": 331,
+          "positive_rate": 0.701271186440678,
+          "trajectory_count": 472,
+          "unavailable_count": 0,
+          "valid_count": 472
+        },
+        "side_effect": {
+          "negative_count": 450,
+          "positive_count": 22,
+          "positive_rate": 0.046610169491525424,
+          "trajectory_count": 472,
+          "unavailable_count": 0,
+          "valid_count": 472
+        },
+        "success": {
+          "negative_count": 364,
+          "positive_count": 108,
+          "positive_rate": 0.2288135593220339,
+          "trajectory_count": 472,
+          "unavailable_count": 0,
+          "valid_count": 472
+        }
+      }
+    },
+    "by_benchmark_group_secondary": {
+      "assistantbench": {
+        "looping": {
+          "negative_count": 71,
+          "positive_count": 61,
+          "positive_rate": 0.4621212121212121,
+          "trajectory_count": 132,
+          "unavailable_count": 0,
+          "valid_count": 132
+        },
+        "side_effect": {
+          "negative_count": 129,
+          "positive_count": 3,
+          "positive_rate": 0.022727272727272728,
+          "trajectory_count": 132,
+          "unavailable_count": 0,
+          "valid_count": 132
+        },
+        "success": {
+          "negative_count": 122,
+          "positive_count": 10,
+          "positive_rate": 0.07575757575757576,
+          "trajectory_count": 132,
+          "unavailable_count": 0,
+          "valid_count": 132
+        }
+      },
+      "visualwebarena": {
+        "looping": {
+          "negative_count": 167,
+          "positive_count": 133,
+          "positive_rate": 0.44333333333333336,
+          "trajectory_count": 300,
+          "unavailable_count": 0,
+          "valid_count": 300
+        },
+        "side_effect": {
+          "negative_count": 269,
+          "positive_count": 30,
+          "positive_rate": 0.10033444816053512,
+          "trajectory_count": 300,
+          "unavailable_count": 1,
+          "valid_count": 299
+        },
+        "success": {
+          "negative_count": 209,
+          "positive_count": 91,
+          "positive_rate": 0.30333333333333334,
+          "trajectory_count": 300,
+          "unavailable_count": 0,
+          "valid_count": 300
+        }
+      },
+      "webarena": {
+        "looping": {
+          "negative_count": 243,
+          "positive_count": 144,
+          "positive_rate": 0.37209302325581395,
+          "trajectory_count": 398,
+          "unavailable_count": 11,
+          "valid_count": 387
+        },
+        "side_effect": {
+          "negative_count": 366,
+          "positive_count": 28,
+          "positive_rate": 0.07106598984771574,
+          "trajectory_count": 398,
+          "unavailable_count": 4,
+          "valid_count": 394
+        },
+        "success": {
+          "negative_count": 245,
+          "positive_count": 140,
+          "positive_rate": 0.36363636363636365,
+          "trajectory_count": 398,
+          "unavailable_count": 13,
+          "valid_count": 385
+        }
+      },
+      "workarena_l1": {
+        "looping": {
+          "negative_count": 46,
+          "positive_count": 26,
+          "positive_rate": 0.3611111111111111,
+          "trajectory_count": 72,
+          "unavailable_count": 0,
+          "valid_count": 72
+        },
+        "side_effect": {
+          "negative_count": 70,
+          "positive_count": 2,
+          "positive_rate": 0.027777777777777776,
+          "trajectory_count": 72,
+          "unavailable_count": 0,
+          "valid_count": 72
+        },
+        "success": {
+          "negative_count": 31,
+          "positive_count": 41,
+          "positive_rate": 0.5694444444444444,
+          "trajectory_count": 72,
+          "unavailable_count": 0,
+          "valid_count": 72
+        }
+      },
+      "workarena_l2": {
+        "looping": {
+          "negative_count": 95,
+          "positive_count": 305,
+          "positive_rate": 0.7625,
+          "trajectory_count": 400,
+          "unavailable_count": 0,
+          "valid_count": 400
+        },
+        "side_effect": {
+          "negative_count": 380,
+          "positive_count": 20,
+          "positive_rate": 0.05,
+          "trajectory_count": 400,
+          "unavailable_count": 0,
+          "valid_count": 400
+        },
+        "success": {
+          "negative_count": 333,
+          "positive_count": 67,
+          "positive_rate": 0.1675,
+          "trajectory_count": 400,
+          "unavailable_count": 0,
+          "valid_count": 400
+        }
+      }
+    },
+    "by_model": {
+      "GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct": {
+        "looping": {
+          "negative_count": 125,
+          "positive_count": 225,
+          "positive_rate": 0.6428571428571429,
+          "trajectory_count": 351,
+          "unavailable_count": 1,
+          "valid_count": 350
+        },
+        "side_effect": {
+          "negative_count": 318,
+          "positive_count": 32,
+          "positive_rate": 0.09142857142857143,
+          "trajectory_count": 351,
+          "unavailable_count": 1,
+          "valid_count": 350
+        },
+        "success": {
+          "negative_count": 268,
+          "positive_count": 81,
+          "positive_rate": 0.23209169054441262,
+          "trajectory_count": 351,
+          "unavailable_count": 2,
+          "valid_count": 349
+        }
+      },
+      "GenericAgent-anthropic_claude-3.7-sonnet": {
+        "looping": {
+          "negative_count": 231,
+          "positive_count": 120,
+          "positive_rate": 0.3418803418803419,
+          "trajectory_count": 351,
+          "unavailable_count": 0,
+          "valid_count": 351
+        },
+        "side_effect": {
+          "negative_count": 329,
+          "positive_count": 22,
+          "positive_rate": 0.06267806267806268,
+          "trajectory_count": 351,
+          "unavailable_count": 0,
+          "valid_count": 351
+        },
+        "success": {
+          "negative_count": 232,
+          "positive_count": 119,
+          "positive_rate": 0.33903133903133903,
+          "trajectory_count": 351,
+          "unavailable_count": 0,
+          "valid_count": 351
+        }
+      },
+      "GenericAgent-gpt-4o-2024-11-20": {
+        "looping": {
+          "negative_count": 177,
+          "positive_count": 164,
+          "positive_rate": 0.4809384164222874,
+          "trajectory_count": 351,
+          "unavailable_count": 10,
+          "valid_count": 341
+        },
+        "side_effect": {
+          "negative_count": 328,
+          "positive_count": 19,
+          "positive_rate": 0.05475504322766571,
+          "trajectory_count": 351,
+          "unavailable_count": 4,
+          "valid_count": 347
+        },
+        "success": {
+          "negative_count": 236,
+          "positive_count": 104,
+          "positive_rate": 0.3058823529411765,
+          "trajectory_count": 351,
+          "unavailable_count": 11,
+          "valid_count": 340
+        }
+      },
+      "GenericAgent-meta-llama_Llama-3.3-70B-Instruct": {
+        "looping": {
+          "negative_count": 89,
+          "positive_count": 160,
+          "positive_rate": 0.642570281124498,
+          "trajectory_count": 249,
+          "unavailable_count": 0,
+          "valid_count": 249
+        },
+        "side_effect": {
+          "negative_count": 239,
+          "positive_count": 10,
+          "positive_rate": 0.040160642570281124,
+          "trajectory_count": 249,
+          "unavailable_count": 0,
+          "valid_count": 249
+        },
+        "success": {
+          "negative_count": 204,
+          "positive_count": 45,
+          "positive_rate": 0.18072289156626506,
+          "trajectory_count": 249,
+          "unavailable_count": 0,
+          "valid_count": 249
+        }
+      }
+    },
+    "by_official_split": {
+      "dev": {
+        "looping": {
+          "negative_count": 104,
+          "positive_count": 92,
+          "positive_rate": 0.46938775510204084,
+          "trajectory_count": 196,
+          "unavailable_count": 0,
+          "valid_count": 196
+        },
+        "side_effect": {
+          "negative_count": 183,
+          "positive_count": 12,
+          "positive_rate": 0.06153846153846154,
+          "trajectory_count": 196,
+          "unavailable_count": 1,
+          "valid_count": 195
+        },
+        "success": {
+          "negative_count": 134,
+          "positive_count": 58,
+          "positive_rate": 0.3020833333333333,
+          "trajectory_count": 196,
+          "unavailable_count": 4,
+          "valid_count": 192
+        }
+      },
+      "test": {
+        "looping": {
+          "negative_count": 518,
+          "positive_count": 577,
+          "positive_rate": 0.5269406392694064,
+          "trajectory_count": 1106,
+          "unavailable_count": 11,
+          "valid_count": 1095
+        },
+        "side_effect": {
+          "negative_count": 1031,
+          "positive_count": 71,
+          "positive_rate": 0.06442831215970962,
+          "trajectory_count": 1106,
+          "unavailable_count": 4,
+          "valid_count": 1102
+        },
+        "success": {
+          "negative_count": 806,
+          "positive_count": 291,
+          "positive_rate": 0.2652689152233364,
+          "trajectory_count": 1106,
+          "unavailable_count": 9,
+          "valid_count": 1097
+        }
+      }
+    }
+  },
+  "test_sealing": {
+    "aggregate_audit_exposure_statement": "Test labels received aggregate, audit-only exposure during Stage A0.1. No model, feature, threshold, hyperparameter, or research decision was tuned using test performance.",
+    "test_manifest_contains_target_labels": false,
+    "test_metrics_computed": false
+  },
+  "trajectory_counts": {
+    "after_collapse": 1302,
+    "annotation_rows_before_collapse": 1408,
+    "dev": 196,
+    "duplicate_groups": 106,
+    "extra_annotation_rows": 106,
+    "test": 1106
+  },
+  "trajectory_key": {
+    "fields": [
+      "benchmark_original",
+      "normalized_task_id",
+      "model_name"
+    ],
+    "key_validation": {
+      "keys_with_more_than_two_annotations": 0,
+      "keys_with_multiple_exp_name": 0,
+      "keys_with_multiple_raw_task_id": 0,
+      "keys_with_repeated_annotator": 0,
+      "unmatched_split_keys": 0
+    },
+    "official_primary_key_order": [
+      "benchmark",
+      "model_name",
+      "task_id"
+    ],
+    "serialization": "benchmark_original::normalized_task_id::model_name"
+  },
+  "workarena": {
+    "label_counts_after_benchmark_group_merge": {
+      "looping": {
+        "negative_count": 141,
+        "positive_count": 331,
+        "positive_rate": 0.701271186440678,
+        "trajectory_count": 472,
+        "unavailable_count": 0,
+        "valid_count": 472
+      },
+      "side_effect": {
+        "negative_count": 450,
+        "positive_count": 22,
+        "positive_rate": 0.046610169491525424,
+        "trajectory_count": 472,
+        "unavailable_count": 0,
+        "valid_count": 472
+      },
+      "success": {
+        "negative_count": 364,
+        "positive_count": 108,
+        "positive_rate": 0.2288135593220339,
+        "trajectory_count": 472,
+        "unavailable_count": 0,
+        "valid_count": 472
+      }
+    },
+    "label_counts_before_merge": {
+      "workarena_l1": {
+        "looping": {
+          "negative_count": 46,
+          "positive_count": 26,
+          "positive_rate": 0.3611111111111111,
+          "trajectory_count": 72,
+          "unavailable_count": 0,
+          "valid_count": 72
+        },
+        "side_effect": {
+          "negative_count": 70,
+          "positive_count": 2,
+          "positive_rate": 0.027777777777777776,
+          "trajectory_count": 72,
+          "unavailable_count": 0,
+          "valid_count": 72
+        },
+        "success": {
+          "negative_count": 31,
+          "positive_count": 41,
+          "positive_rate": 0.5694444444444444,
+          "trajectory_count": 72,
+          "unavailable_count": 0,
+          "valid_count": 72
+        }
+      },
+      "workarena_l2": {
+        "looping": {
+          "negative_count": 95,
+          "positive_count": 305,
+          "positive_rate": 0.7625,
+          "trajectory_count": 400,
+          "unavailable_count": 0,
+          "valid_count": 400
+        },
+        "side_effect": {
+          "negative_count": 380,
+          "positive_count": 20,
+          "positive_rate": 0.05,
+          "trajectory_count": 400,
+          "unavailable_count": 0,
+          "valid_count": 400
+        },
+        "success": {
+          "negative_count": 333,
+          "positive_count": 67,
+          "positive_rate": 0.1675,
+          "trajectory_count": 400,
+          "unavailable_count": 0,
+          "valid_count": 400
+        }
+      }
+    },
+    "models": {
+      "workarena_l1": [
+        "GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct",
+        "GenericAgent-anthropic_claude-3.7-sonnet",
+        "GenericAgent-gpt-4o-2024-11-20",
+        "GenericAgent-meta-llama_Llama-3.3-70B-Instruct"
+      ],
+      "workarena_l2": [
+        "GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct",
+        "GenericAgent-anthropic_claude-3.7-sonnet",
+        "GenericAgent-gpt-4o-2024-11-20",
+        "GenericAgent-meta-llama_Llama-3.3-70B-Instruct"
+      ]
+    },
+    "official_semantics": {
+      "finding": "The fixed official code identifies L2 via the WorkArena 'level' field and scores L1/L2 as WorkArena/WorkArena++; both use the WorkArena ServiceNow environment.",
+      "scoring_rule_url": "https://github.com/McGill-NLP/agent-reward-bench/blob/f838338886d723d40b586309465a38277803d9e6/scripts/score_judgments.py",
+      "workarena_rule_url": "https://github.com/McGill-NLP/agent-reward-bench/blob/f838338886d723d40b586309465a38277803d9e6/agent_reward_bench/processing/filter_workarena.py"
+    },
+    "overlapping_task_ids": [],
+    "task_counts": {
+      "workarena_l1": 18,
+      "workarena_l2": 100
+    },
+    "unique_trajectory_counts": {
+      "workarena_l1": 72,
+      "workarena_l2": 400
+    }
+  }
+}

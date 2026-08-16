@@ -1,0 +1,36 @@
+{
+  "bit_generator": "PCG64",
+  "group_counts": {
+    "looping": {
+      "assistantbench": 6,
+      "visualwebarena": 8,
+      "webarena": 22,
+      "workarena": 15
+    },
+    "side_effect": {
+      "assistantbench": 6,
+      "visualwebarena": 8,
+      "webarena": 22,
+      "workarena": 15
+    },
+    "success": {
+      "assistantbench": 6,
+      "visualwebarena": 8,
+      "webarena": 22,
+      "workarena": 15
+    }
+  },
+  "invalid_redraw": false,
+  "n_draws": 10000,
+  "registry_row_count": 1530000,
+  "registry_sha256": "3f875ca8a32fdb99c5754c69daac741b960ac84e742c1eabd4135bb246420a0f",
+  "resampling_unit": "group_key=(benchmark_original, normalized_task_id)",
+  "rng": "numpy.random.Generator(numpy.random.PCG64(2026))",
+  "seed": 2026,
+  "stage": "A1.6a",
+  "strata": [
+    "target",
+    "held_out_group"
+  ],
+  "stratified_bootstrap": false
+}

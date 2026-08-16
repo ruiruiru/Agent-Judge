@@ -1,0 +1,83 @@
+{
+  "stage": "A1.9",
+  "status": "FROZEN_NOT_EXECUTED",
+  "requires_explicit_human_authorization": true,
+  "a1_9_test_access": {
+    "manifest": 0,
+    "content": 0,
+    "labels": 0,
+    "eligibility": 0,
+    "features": 0,
+    "embeddings": 0,
+    "predictions": 0,
+    "metrics": 0
+  },
+  "a1_10a_blind_inference": {
+    "allowed_only_after_human_approval": true,
+    "allowed_inputs": ["test_identifiers", "test_raw_trajectory_content"],
+    "forbidden_inputs": ["test_labels", "test_annotations", "test_eligibility", "test_metrics"],
+    "ordered_steps": [
+      "confirm_identifier_only_manifest_count_against_prior_provenance",
+      "build_primary_input_with_frozen_A0_4_A1_0_whitelist",
+      "extract_B2_features_with_frozen_A1_2_extractor",
+      "extract_B4_embedding_with_exact_A1_7_pinned_contract",
+      "predict_success_with_FINAL_SUCCESS_B2",
+      "predict_looping_with_FINAL_LOOPING_B2",
+      "predict_side_effect_with_FINAL_SIDE_EFFECT_B4",
+      "freeze_blind_prediction_bytes_and_sha256",
+      "commit_blind_predictions",
+      "confirm_git_clean"
+    ],
+    "prior_provenance_only": {
+      "trajectory_count": 1106,
+      "prediction_row_count": 3318,
+      "must_be_confirmed_from_identifier_only_manifest_in_A1_10a": true,
+      "mismatch_action": "STOP"
+    },
+    "label_access_before_blind_prediction_commit": 0
+  },
+  "a1_10b_one_time_label_unlock": {
+    "preconditions": ["blind_prediction_artifact_committed", "blind_prediction_sha256_frozen", "git_clean"],
+    "first_allowed_access": ["test_labels", "test_eligibility"],
+    "allowed_operations": ["join_by_trajectory_key", "filter_by_frozen_target_eligibility", "score_frozen_predictions", "run_preregistered_bootstrap", "write_one_time_report"],
+    "probabilities_must_not_be_overwritten": true
+  },
+  "primary_metrics": {
+    "confirmatory_targets": ["success", "looping"],
+    "point": ["pooled_average_precision", "pooled_ap_lift", "positive_f1_at_frozen_dev_threshold"],
+    "uncertainty": "pooled_ap_lift_95_percent_task_group_cluster_bootstrap_ci",
+    "side_effect_role": "exploratory_only"
+  },
+  "secondary_metrics": ["precision", "recall", "f2", "roc_auc", "balanced_accuracy", "mcc", "per_benchmark_ap", "per_benchmark_f1", "macro_benchmark_ap", "macro_benchmark_f1"],
+  "bootstrap": {
+    "n_draws": 10000,
+    "seed": 2027,
+    "rng": "numpy.random.Generator(numpy.random.PCG64(2027))",
+    "interval": "percentile_95",
+    "resampling_unit": ["benchmark_original", "normalized_task_id"],
+    "strata": "benchmark_group_primary",
+    "cluster_all_model_trajectories_together": true,
+    "label_stratification": false,
+    "trajectory_bootstrap": false,
+    "invalid_redraw": false,
+    "side_effect_single_class_draw_policy": "retain_and_report_valid_fraction"
+  },
+  "grading": {
+    "CONFIRMED_HELDOUT_SIGNAL": "pooled_ap_lift_point_gt_0_and_ci_lower_gt_0",
+    "DIRECTIONAL_BUT_NOT_CONFIRMED": "pooled_ap_lift_point_gt_0_and_ci_includes_0",
+    "NOT_CONFIRMED": "pooled_ap_lift_point_le_0",
+    "side_effect": "EXPLORATORY_TEST_RESULT",
+    "descriptive_metrics_do_not_change_grade": true
+  },
+  "interpretation_scope": {
+    "allowed": "held_out_official_tasks_and_trajectories",
+    "forbidden": ["new_unseen_benchmark_generalization", "joint_task_model_ood", "new_dataset_transfer", "cross_annotation_policy_transfer"]
+  },
+  "post_label_unlock_permanent_prohibitions": [
+    "threshold_change", "C_change", "class_weight_change", "structural_feature_change",
+    "qwen_revision_change", "chunking_or_pooling_change", "calibration", "fusion",
+    "second_embedding", "llm_judge", "drop_unfavorable_benchmark", "drop_unfavorable_trajectory",
+    "eligibility_change", "primary_metric_change", "success_criterion_change"
+  ],
+  "side_effect_confirmatory_upgrade_allowed": false
+}

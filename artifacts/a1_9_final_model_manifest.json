@@ -1,0 +1,136 @@
+{
+  "claim_freeze_sha256": "e9fa0da68351cfc5e773984e6fd72e2290a426f4cbe9b4eedba496203be9bbec",
+  "estimator_fit_count": 93,
+  "generated_at_utc": "2026-08-08T06:01:40+00:00",
+  "models": [
+    {
+      "artifact_path": "artifacts/final_models/final_success_b2.joblib",
+      "artifact_sha256": "afbdb0a60205d7c6bd40232a8c8a1b1ad3b0910d6b65fecf894cca1a040123c1",
+      "confirmatory_eligible": true,
+      "dev_eligibility_count": 192,
+      "dev_positive_count": 58,
+      "final_oof_average_precision": 0.5465428107647715,
+      "final_oof_positive_f1": 0.6612903225806451,
+      "full_dev_prediction_sha256": "d526d5e8f5d268cedc8020b7dfd592f59c99560c776985b7d661529634619d9e",
+      "input_contract": "A1.2 frozen full13 structural features; StandardScaler pipeline",
+      "input_sha256": "2dcd9f5a5a22c40d318f2a7fe1303cdcc0c27832d2ab443c0f3dbe2a1f631556",
+      "method_id": "FINAL_SUCCESS_B2",
+      "reload_max_absolute_error": 0.0,
+      "reload_prediction_sha256": "d526d5e8f5d268cedc8020b7dfd592f59c99560c776985b7d661529634619d9e",
+      "role": "confirmatory_primary",
+      "selected_config": {
+        "C": 10.0,
+        "class_weight": "balanced",
+        "config_id": "B2_C10p0_cw_balanced"
+      },
+      "selected_threshold": 0.55,
+      "selection_fold_path": "artifacts/evaluation_folds_success.csv",
+      "selection_fold_sha256": "820599f85fd901c1b73db61cbc77c54eb8223df3f3abc14062d5a9f20bb02e65",
+      "target": "success",
+      "training_commit": "4944df46be45d8ad52d57a051e04b59c4a1a82ee"
+    },
+    {
+      "artifact_path": "artifacts/final_models/final_looping_b2.joblib",
+      "artifact_sha256": "862b7ff2b0cbcb5faf88908f5fe5824c7f4e52c2c21521e41bb5fb71b011660c",
+      "confirmatory_eligible": true,
+      "dev_eligibility_count": 196,
+      "dev_positive_count": 92,
+      "final_oof_average_precision": 0.9140810084290651,
+      "final_oof_positive_f1": 0.9109947643979057,
+      "full_dev_prediction_sha256": "14016ff6aadbeb46fc9f48b528829bdb974deb1c8e833bc91857195ac7367dbd",
+      "input_contract": "A1.2 frozen full13 structural features; StandardScaler pipeline",
+      "input_sha256": "2dcd9f5a5a22c40d318f2a7fe1303cdcc0c27832d2ab443c0f3dbe2a1f631556",
+      "method_id": "FINAL_LOOPING_B2",
+      "reload_max_absolute_error": 0.0,
+      "reload_prediction_sha256": "14016ff6aadbeb46fc9f48b528829bdb974deb1c8e833bc91857195ac7367dbd",
+      "role": "confirmatory_primary",
+      "selected_config": {
+        "C": 1.0,
+        "class_weight": "balanced",
+        "config_id": "B2_C1p0_cw_balanced"
+      },
+      "selected_threshold": 0.55,
+      "selection_fold_path": "artifacts/evaluation_folds_looping.csv",
+      "selection_fold_sha256": "b950bf23e465d2f108f28281395ac8816c9916b20eaebe2d529e9d5fde74c749",
+      "target": "looping",
+      "training_commit": "4944df46be45d8ad52d57a051e04b59c4a1a82ee"
+    },
+    {
+      "artifact_path": "artifacts/final_models/final_side_effect_b4.joblib",
+      "artifact_sha256": "5eb29646c10a8193b8492ffe26a41a63414dc9da884890813273c43d17a7de59",
+      "confirmatory_eligible": false,
+      "dev_eligibility_count": 195,
+      "dev_positive_count": 12,
+      "final_oof_average_precision": 0.18987790304420496,
+      "final_oof_positive_f1": 0.32558139534883723,
+      "full_dev_prediction_sha256": "91abb7b7de8e4e616d7c56aa5b2ccfdce93c59cbee13f8d97ecb10aa675f8ca9",
+      "input_contract": "A1.7 frozen 1024-d dense embedding; no StandardScaler",
+      "input_sha256": "26a52ea14c7538c87527bd129880ff795e10640355474688e6297a9407ad7037",
+      "method_id": "FINAL_SIDE_EFFECT_B4",
+      "qwen": {
+        "embedding_extraction_contract": "a1_7_exact_tokenizer_chunking_last_eos_weighted_pooling",
+        "immutable_revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+        "repo_id": "Qwen/Qwen3-Embedding-0.6B",
+        "weight_sha256": "0437e45c94563b09e13cb7a64478fc406947a93cb34a7e05870fc8dcd48e23fd"
+      },
+      "reload_max_absolute_error": 0.0,
+      "reload_prediction_sha256": "91abb7b7de8e4e616d7c56aa5b2ccfdce93c59cbee13f8d97ecb10aa675f8ca9",
+      "role": "exploratory_only",
+      "selected_config": {
+        "C": 10.0,
+        "class_weight": "balanced",
+        "config_id": "B4_C10p0_cw_balanced"
+      },
+      "selected_threshold": 0.4,
+      "selection_fold_path": "artifacts/evaluation_folds_side_effect.csv",
+      "selection_fold_sha256": "11be1d8b803d4afffe25716519d117ce1e1909231954bcfd587347317e9b089c",
+      "target": "side_effect",
+      "training_commit": "4944df46be45d8ad52d57a051e04b59c4a1a82ee"
+    }
+  ],
+  "prohibited_experiments": {
+    "b3_final_method": 0,
+    "embedding_regeneration": 0,
+    "fusion": 0,
+    "joint_ood": 0,
+    "llm_judge": 0,
+    "new_model_family": 0,
+    "qwen_forward": 0,
+    "s6_final_method": 0,
+    "second_embedding_model": 0,
+    "secondary_lobo": 0
+  },
+  "source_hashes_before_and_after_identical": true,
+  "stage": "A1.9b",
+  "status": "FROZEN",
+  "test_access": {
+    "content": 0,
+    "eligibility": 0,
+    "embeddings": 0,
+    "features": 0,
+    "labels": 0,
+    "manifest": 0,
+    "metrics": 0,
+    "predictions": 0
+  },
+  "test_preregistration_sha256": "d9a98936f0469f75f6d186c2505481939900bdd895355c0f471b48a73eb86bbc",
+  "training_commit": "4944df46be45d8ad52d57a051e04b59c4a1a82ee",
+  "training_environment": {
+    "dependencies": {
+      "PyYAML": "6.0.3",
+      "joblib": "1.5.3",
+      "numpy": "2.5.1",
+      "scikit-learn": "1.9.0",
+      "scipy": "1.18.0",
+      "threadpoolctl": "3.6.0"
+    },
+    "gpu_used": false,
+    "logical_cpu_count": 16,
+    "machine": "AMD64",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": {
+      "executable": "C:\\Users\\Admin\\Documents\\Agent-Judge\\.venv-baselines\\Scripts\\python.exe",
+      "version": "3.14.6"
+    }
+  }
+}

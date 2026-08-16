@@ -1,0 +1,215 @@
+{
+  "a2_3_result_commit": "ad0576c488fafed243b464e0b8f903e9bb233b43",
+  "formal_git_commit": "aef41ac5879ffc31488dd527da51e632c1677433",
+  "inputs": [
+    {
+      "evidence_status": "PREREGISTERED_PROTOCOL",
+      "path": "docs/tasks/STAGE_A3_1_FINAL_FIGURES_TABLES.md",
+      "role": "approved taskbook",
+      "sha256": "20bb183ecdb5025cb44b1937f6d7b42a77ef4710af0a0029ee5b66293f0d337e",
+      "source_stage": "A3.1",
+      "verified": true
+    },
+    {
+      "evidence_status": "CLAIM_FREEZE",
+      "path": "artifacts/a1_11_final_claim_matrix.csv",
+      "role": "frozen claim identities",
+      "sha256": "2fc929e242e614244940d6d96d8ff1e3935e059925cff0b36b009a86b04f3175",
+      "source_stage": "A1.11",
+      "verified": true
+    },
+    {
+      "evidence_status": "CONFIRMATORY_AND_EXPLORATORY",
+      "path": "artifacts/a1_11_table_main_test_results.csv",
+      "role": "exact main held-out source",
+      "sha256": "c60ff992487e7a05d70c39de7db9364c31529a6b4334739e59045783ec3e9947",
+      "source_stage": "A1.11",
+      "verified": true
+    },
+    {
+      "evidence_status": "DESCRIPTIVE_ONLY",
+      "path": "artifacts/a1_11_table_benchmark_results.csv",
+      "role": "benchmark heterogeneity source",
+      "sha256": "3df5b511d0cf29472ccfba5c63ea28caf4b58407285109231f176871668d77a2",
+      "source_stage": "A1.11",
+      "verified": true
+    },
+    {
+      "evidence_status": "INTEGRITY_ONLY",
+      "path": "artifacts/a1_11_evidence_registry.csv",
+      "role": "pipeline provenance",
+      "sha256": "98c8f66e7d53bdecaef201c362565279a2a81630f73a3c5970c725433c0cd0a8",
+      "source_stage": "A1.11",
+      "verified": true
+    },
+    {
+      "evidence_status": "INTEGRITY_ONLY",
+      "path": "artifacts/a1_9_run_summary.json",
+      "role": "method-freeze provenance",
+      "sha256": "3dd5e65c0e5ba022065f20d71131cb7b22c160375d1d093007091f3796e43f3a",
+      "source_stage": "A1.9",
+      "verified": true
+    },
+    {
+      "evidence_status": "INTEGRITY_ONLY",
+      "path": "artifacts/a1_10a_run_summary.json",
+      "role": "blind-prediction provenance",
+      "sha256": "d314cc0e0c0d028b9e02fc4995e0a7de036f761383018b0d456d9830cf57ab69",
+      "source_stage": "A1.10a",
+      "verified": true
+    },
+    {
+      "evidence_status": "INTEGRITY_ONLY",
+      "path": "artifacts/a1_10_run_summary.json",
+      "role": "unlock and held-out provenance",
+      "sha256": "523c9d01fd60d2d35fb083011a6f30ebc8dbfb9fb265ecf4753d81c6040a4ed2",
+      "source_stage": "A1.10b",
+      "verified": true
+    },
+    {
+      "evidence_status": "EFFICIENCY_BENCHMARK",
+      "path": "artifacts/a2_1_efficiency_summary.csv",
+      "role": "efficiency measurements",
+      "sha256": "7d37fddef61b526f4b054483ba900ba72a69b0c4c98cd2b31b7ce725043df0c3",
+      "source_stage": "A2.1",
+      "verified": true
+    },
+    {
+      "evidence_status": "EFFICIENCY_BENCHMARK",
+      "path": "artifacts/a2_1_efficiency_relative_cost.csv",
+      "role": "relative-cost provenance",
+      "sha256": "fb8619c1914b4a23308800bd3aaf2dd256701820443f3b0a171f7508c4fa3d1f",
+      "source_stage": "A2.1",
+      "verified": true
+    },
+    {
+      "evidence_status": "ENVIRONMENT_SPECIFIC",
+      "path": "artifacts/a2_1_environment.json",
+      "role": "measured environment",
+      "sha256": "7ffa7812b67a6ab4faaf1d08caadb105d1f8391ffe7af2688c4ffbf1c9fdf1ec",
+      "source_stage": "A2.1",
+      "verified": true
+    },
+    {
+      "evidence_status": "POST_FREEZE_DIAGNOSTIC",
+      "path": "artifacts/a2_2_structural_coefficients.csv",
+      "role": "signed structural coefficients",
+      "sha256": "cd762d7975566f2d107cddff82e8e2d2a58738ee8dbf74f13ee8cffad1ec29d2",
+      "source_stage": "A2.2",
+      "verified": true
+    },
+    {
+      "evidence_status": "DEV_ONLY",
+      "path": "artifacts/a2_2_feature_group_evidence.csv",
+      "role": "feature-group evidence",
+      "sha256": "8160dc969d6043b8da8ee294b8cabb8811c5d4171af24cad6ec0f35efd881af8",
+      "source_stage": "A2.2",
+      "verified": true
+    },
+    {
+      "evidence_status": "POST_FREEZE_DIAGNOSTIC",
+      "path": "artifacts/a2_2_metadata_baseline_summary.csv",
+      "role": "metadata diagnostic summary",
+      "sha256": "f5bf2aa3c71e81f2025de01c38d93be0af1a0038e772a5d282649bccd33df967",
+      "source_stage": "A2.2",
+      "verified": true
+    },
+    {
+      "evidence_status": "POST_FREEZE_DESCRIPTIVE",
+      "path": "artifacts/a2_2_error_case_manifest.csv",
+      "role": "deterministic error selection",
+      "sha256": "0372151a32b24fb9f5b53acc802dc23d480ff2bc813c2d394b7faeca33e70cf0",
+      "source_stage": "A2.2",
+      "verified": true
+    },
+    {
+      "evidence_status": "POST_FREEZE_DESCRIPTIVE",
+      "path": "artifacts/a2_2_error_case_notes.csv",
+      "role": "deterministic error notes",
+      "sha256": "ec060f556d6402dfa7a333c4c7498a20d1b2e5d067002a9bfdcb2225e3b1b6ee",
+      "source_stage": "A2.2",
+      "verified": true
+    },
+    {
+      "evidence_status": "CONFIRMATORY_AND_EXPLORATORY",
+      "path": "artifacts/a2_3_table_1_main_heldout_results.csv",
+      "role": "Table 1 exact source",
+      "sha256": "297a1f59c34fc7f29864d722e8e2a233945dba061527848e31b4d7411b2964a5",
+      "source_stage": "A2.3",
+      "verified": true
+    },
+    {
+      "evidence_status": "ENVIRONMENT_SPECIFIC",
+      "path": "artifacts/a2_3_table_2_efficiency_tradeoff.csv",
+      "role": "Table 2 exact source",
+      "sha256": "bbf36c09827819fbf49aaa7487db66b34077052d8a29cb093c72001bee66f02a",
+      "source_stage": "A2.3",
+      "verified": true
+    },
+    {
+      "evidence_status": "DEV_ONLY",
+      "path": "artifacts/a2_3_table_3_dev_representation_summary.csv",
+      "role": "Table 3 exact source",
+      "sha256": "f0e15e670e3f9592c167c57adaf41a63d56bce0fc9bc37a1945a8ed3f3431c1e",
+      "source_stage": "A2.3",
+      "verified": true
+    },
+    {
+      "evidence_status": "DESCRIPTIVE_ONLY",
+      "path": "artifacts/a2_3_table_4_benchmark_heterogeneity.csv",
+      "role": "Table 4 exact source",
+      "sha256": "de0cbc94d114eab5677d1ff620a5f0d976883ae8515d3cb24e873f9f213ac511",
+      "source_stage": "A2.3",
+      "verified": true
+    },
+    {
+      "evidence_status": "ASSOCIATIVE_AND_DESCRIPTIVE",
+      "path": "artifacts/a2_3_table_5_interpretability_error_summary.csv",
+      "role": "Table 5 exact source",
+      "sha256": "037a8b3200377093bf1abb5ea0cf9b82db74fb162e27971690d10f7d9cdf4a0f",
+      "source_stage": "A2.3",
+      "verified": true
+    },
+    {
+      "evidence_status": "EVIDENCE_MAP",
+      "path": "artifacts/a2_3_evidence_to_paper_map.csv",
+      "role": "evidence-to-paper mapping",
+      "sha256": "8f471d50d4b1e8d53e4946aadcbd3541d81ebb4c27b6d93b9fbf56e4859cf60a",
+      "source_stage": "A2.3",
+      "verified": true
+    },
+    {
+      "evidence_status": "CLAIM_FREEZE",
+      "path": "docs/a2_3_publication_results_story.md",
+      "role": "frozen narrative boundary",
+      "sha256": "5b68968cdf43061cef044ce1e969883178bd7fa50a691cbcedde5c3215f86827",
+      "source_stage": "A2.3",
+      "verified": true
+    },
+    {
+      "evidence_status": "FIGURE_SPEC",
+      "path": "docs/a2_3_publication_figure_spec.md",
+      "role": "figure specification",
+      "sha256": "96cbd15126bec73ac6a644b2be14a6a940728257ee678bde4f8e93b4bb295a58",
+      "source_stage": "A2.3",
+      "verified": true
+    },
+    {
+      "evidence_status": "LIMITATION_FREEZE",
+      "path": "docs/a2_3_final_limitations_ledger.md",
+      "role": "limitations boundary",
+      "sha256": "80490f81318903267bfe117a0cadae9192ba35db50a352329aac4a01094d8255",
+      "source_stage": "A2.3",
+      "verified": true
+    },
+    {
+      "evidence_status": "INTEGRITY_ONLY",
+      "path": "artifacts/a2_3_publication_package_index.csv",
+      "role": "package provenance",
+      "sha256": "0777f29536cf0f698138b41c26ff448cc7000304423224e5443a010662a39c65",
+      "source_stage": "A2.3",
+      "verified": true
+    }
+  ],
+  "stage": "A3.1"
+}

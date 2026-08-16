@@ -1,0 +1,393 @@
+{
+  "conditions": [
+    "Explicit terminal action semantics are present for only part of the probe; null remains the required representation elsewhere.",
+    "Natural error fields occur in a minority of trajectories and remain subject to the frozen error-field ablation."
+  ],
+  "field_character_totals": {
+    "action": 3701,
+    "focused_element": 259,
+    "natural_error": 3374,
+    "observation": 275641,
+    "reasoning": 25199,
+    "task_instruction": 2412,
+    "terminal_last_nonempty_action": 1671,
+    "terminal_last_nonempty_observation": 36093,
+    "terminal_termination_signal": 130
+  },
+  "identity_policy": "management metadata only; absent from all serialized view strings",
+  "input_views": [
+    "primary_with_natural_errors",
+    "ablation_without_error_fields",
+    "sensitivity_with_reasoning"
+  ],
+  "per_trajectory": [
+    {
+      "cleaned_jsonl_bytes": 49713,
+      "empty_action_count": 1,
+      "empty_observation_count": 0,
+      "natural_error_available": true,
+      "parse_memory_estimate_bytes": 14559287,
+      "raw_bytes": 3629715,
+      "reasoning_available": true,
+      "screenshot_reference": true,
+      "step_count": 31,
+      "trajectory_key": "assistantbench::assistantbench.validation.11::GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct",
+      "unknown_field_count": 0,
+      "view_text_bytes": {
+        "ablation_without_error_fields": 32671,
+        "primary_with_natural_errors": 36219,
+        "sensitivity_with_reasoning": 44994
+      }
+    },
+    {
+      "cleaned_jsonl_bytes": 15912,
+      "empty_action_count": 1,
+      "empty_observation_count": 0,
+      "natural_error_available": false,
+      "parse_memory_estimate_bytes": 11912748,
+      "raw_bytes": 2763971,
+      "reasoning_available": true,
+      "screenshot_reference": true,
+      "step_count": 5,
+      "trajectory_key": "assistantbench::assistantbench.validation.25::GenericAgent-meta-llama_Llama-3.3-70B-Instruct",
+      "unknown_field_count": 0,
+      "view_text_bytes": {
+        "ablation_without_error_fields": 11608,
+        "primary_with_natural_errors": 11608,
+        "sensitivity_with_reasoning": 13502
+      }
+    },
+    {
+      "cleaned_jsonl_bytes": 9687,
+      "empty_action_count": 1,
+      "empty_observation_count": 0,
+      "natural_error_available": false,
+      "parse_memory_estimate_bytes": 7232657,
+      "raw_bytes": 1689993,
+      "reasoning_available": true,
+      "screenshot_reference": true,
+      "step_count": 7,
+      "trajectory_key": "assistantbench::assistantbench.validation.3::GenericAgent-anthropic_claude-3.7-sonnet",
+      "unknown_field_count": 0,
+      "view_text_bytes": {
+        "ablation_without_error_fields": 6757,
+        "primary_with_natural_errors": 6757,
+        "sensitivity_with_reasoning": 7642
+      }
+    },
+    {
+      "cleaned_jsonl_bytes": 16765,
+      "empty_action_count": 1,
+      "empty_observation_count": 0,
+      "natural_error_available": false,
+      "parse_memory_estimate_bytes": 10398438,
+      "raw_bytes": 2429614,
+      "reasoning_available": true,
+      "screenshot_reference": true,
+      "step_count": 5,
+      "trajectory_key": "assistantbench::assistantbench.validation.5::GenericAgent-gpt-4o-2024-11-20",
+      "unknown_field_count": 0,
+      "view_text_bytes": {
+        "ablation_without_error_fields": 12988,
+        "primary_with_natural_errors": 12988,
+        "sensitivity_with_reasoning": 14181
+      }
+    },
+    {
+      "cleaned_jsonl_bytes": 12005,
+      "empty_action_count": 1,
+      "empty_observation_count": 0,
+      "natural_error_available": false,
+      "parse_memory_estimate_bytes": 4015453,
+      "raw_bytes": 932162,
+      "reasoning_available": true,
+      "screenshot_reference": true,
+      "step_count": 4,
+      "trajectory_key": "visualwebarena::visualwebarena.118::GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct",
+      "unknown_field_count": 0,
+      "view_text_bytes": {
+        "ablation_without_error_fields": 9345,
+        "primary_with_natural_errors": 9345,
+        "sensitivity_with_reasoning": 10031
+      }
+    },
+    {
+      "cleaned_jsonl_bytes": 10730,
+      "empty_action_count": 1,
+      "empty_observation_count": 0,
+      "natural_error_available": false,
+      "parse_memory_estimate_bytes": 3524865,
+      "raw_bytes": 815733,
+      "reasoning_available": true,
+      "screenshot_reference": true,
+      "step_count": 3,
+      "trajectory_key": "visualwebarena::visualwebarena.118::GenericAgent-anthropic_claude-3.7-sonnet",
+      "unknown_field_count": 0,
+      "view_text_bytes": {
+        "ablation_without_error_fields": 8667,
+        "primary_with_natural_errors": 8667,
+        "sensitivity_with_reasoning": 8873
+      }
+    },
+    {
+      "cleaned_jsonl_bytes": 9863,
+      "empty_action_count": 1,
+      "empty_observation_count": 0,
+      "natural_error_available": false,
+      "parse_memory_estimate_bytes": 2831999,
+      "raw_bytes": 653766,
+      "reasoning_available": true,
+      "screenshot_reference": true,
+      "step_count": 3,
+      "trajectory_key": "visualwebarena::visualwebarena.118::GenericAgent-gpt-4o-2024-11-20",
+      "unknown_field_count": 0,
+      "view_text_bytes": {
+        "ablation_without_error_fields": 7600,
+        "primary_with_natural_errors": 7600,
+        "sensitivity_with_reasoning": 8176
+      }
+    },
+    {
+      "cleaned_jsonl_bytes": 10134,
+      "empty_action_count": 1,
+      "empty_observation_count": 0,
+      "natural_error_available": false,
+      "parse_memory_estimate_bytes": 2584099,
+      "raw_bytes": 622838,
+      "reasoning_available": true,
+      "screenshot_reference": true,
+      "step_count": 3,
+      "trajectory_key": "webarena::webarena.370::GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct",
+      "unknown_field_count": 0,
+      "view_text_bytes": {
+        "ablation_without_error_fields": 7823,
+        "primary_with_natural_errors": 7823,
+        "sensitivity_with_reasoning": 8277
+      }
+    },
+    {
+      "cleaned_jsonl_bytes": 10117,
+      "empty_action_count": 1,
+      "empty_observation_count": 0,
+      "natural_error_available": false,
+      "parse_memory_estimate_bytes": 2584196,
+      "raw_bytes": 622917,
+      "reasoning_available": true,
+      "screenshot_reference": true,
+      "step_count": 3,
+      "trajectory_key": "webarena::webarena.370::GenericAgent-gpt-4o-2024-11-20",
+      "unknown_field_count": 0,
+      "view_text_bytes": {
+        "ablation_without_error_fields": 7823,
+        "primary_with_natural_errors": 7823,
+        "sensitivity_with_reasoning": 8300
+      }
+    },
+    {
+      "cleaned_jsonl_bytes": 12954,
+      "empty_action_count": 1,
+      "empty_observation_count": 0,
+      "natural_error_available": false,
+      "parse_memory_estimate_bytes": 3422393,
+      "raw_bytes": 828909,
+      "reasoning_available": true,
+      "screenshot_reference": true,
+      "step_count": 4,
+      "trajectory_key": "webarena::webarena.370::GenericAgent-meta-llama_Llama-3.3-70B-Instruct",
+      "unknown_field_count": 0,
+      "view_text_bytes": {
+        "ablation_without_error_fields": 9363,
+        "primary_with_natural_errors": 9363,
+        "sensitivity_with_reasoning": 10850
+      }
+    },
+    {
+      "cleaned_jsonl_bytes": 9010,
+      "empty_action_count": 1,
+      "empty_observation_count": 0,
+      "natural_error_available": false,
+      "parse_memory_estimate_bytes": 2550923,
+      "raw_bytes": 614012,
+      "reasoning_available": true,
+      "screenshot_reference": true,
+      "step_count": 3,
+      "trajectory_key": "webarena::webarena.427::GenericAgent-anthropic_claude-3.7-sonnet",
+      "unknown_field_count": 0,
+      "view_text_bytes": {
+        "ablation_without_error_fields": 7099,
+        "primary_with_natural_errors": 7099,
+        "sensitivity_with_reasoning": 7191
+      }
+    },
+    {
+      "cleaned_jsonl_bytes": 28994,
+      "empty_action_count": 1,
+      "empty_observation_count": 0,
+      "natural_error_available": false,
+      "parse_memory_estimate_bytes": 10110762,
+      "raw_bytes": 2315234,
+      "reasoning_available": true,
+      "screenshot_reference": true,
+      "step_count": 11,
+      "trajectory_key": "webarena::webarena.583::GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct",
+      "unknown_field_count": 0,
+      "view_text_bytes": {
+        "ablation_without_error_fields": 22231,
+        "primary_with_natural_errors": 22231,
+        "sensitivity_with_reasoning": 24600
+      }
+    },
+    {
+      "cleaned_jsonl_bytes": 52145,
+      "empty_action_count": 1,
+      "empty_observation_count": 0,
+      "natural_error_available": false,
+      "parse_memory_estimate_bytes": 26936690,
+      "raw_bytes": 5934786,
+      "reasoning_available": true,
+      "screenshot_reference": true,
+      "step_count": 8,
+      "trajectory_key": "workarena::workarena.servicenow.navigate-and-order-apple-mac-book-pro15-l2::GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct",
+      "unknown_field_count": 0,
+      "view_text_bytes": {
+        "ablation_without_error_fields": 42303,
+        "primary_with_natural_errors": 42303,
+        "sensitivity_with_reasoning": 44265
+      }
+    },
+    {
+      "cleaned_jsonl_bytes": 49095,
+      "empty_action_count": 1,
+      "empty_observation_count": 0,
+      "natural_error_available": false,
+      "parse_memory_estimate_bytes": 25556720,
+      "raw_bytes": 5625391,
+      "reasoning_available": true,
+      "screenshot_reference": true,
+      "step_count": 7,
+      "trajectory_key": "workarena::workarena.servicenow.navigate-and-order-apple-mac-book-pro15-l2::GenericAgent-anthropic_claude-3.7-sonnet",
+      "unknown_field_count": 0,
+      "view_text_bytes": {
+        "ablation_without_error_fields": 41036,
+        "primary_with_natural_errors": 41036,
+        "sensitivity_with_reasoning": 41310
+      }
+    },
+    {
+      "cleaned_jsonl_bytes": 62705,
+      "empty_action_count": 1,
+      "empty_observation_count": 0,
+      "natural_error_available": false,
+      "parse_memory_estimate_bytes": 27848635,
+      "raw_bytes": 6149647,
+      "reasoning_available": true,
+      "screenshot_reference": true,
+      "step_count": 8,
+      "trajectory_key": "workarena::workarena.servicenow.navigate-and-order-apple-mac-book-pro15-l2::GenericAgent-meta-llama_Llama-3.3-70B-Instruct",
+      "unknown_field_count": 0,
+      "view_text_bytes": {
+        "ablation_without_error_fields": 50145,
+        "primary_with_natural_errors": 50145,
+        "sensitivity_with_reasoning": 53202
+      }
+    },
+    {
+      "cleaned_jsonl_bytes": 60661,
+      "empty_action_count": 1,
+      "empty_observation_count": 0,
+      "natural_error_available": false,
+      "parse_memory_estimate_bytes": 32578825,
+      "raw_bytes": 7187829,
+      "reasoning_available": true,
+      "screenshot_reference": true,
+      "step_count": 9,
+      "trajectory_key": "workarena::workarena.servicenow.navigate-and-order-loaner-laptop-l2::GenericAgent-gpt-4o-2024-11-20",
+      "unknown_field_count": 0,
+      "view_text_bytes": {
+        "ablation_without_error_fields": 49690,
+        "primary_with_natural_errors": 49690,
+        "sensitivity_with_reasoning": 51678
+      }
+    }
+  ],
+  "permanent_exclusions": [
+    "$.summary_info (entire subtree, including cum_reward and cum_raw_reward)",
+    "all reward/score/label/judge/annotation outcome semantics",
+    "all screenshot/image/base64 fields and path values",
+    "every future unknown field until human approval"
+  ],
+  "probe_statistics": {
+    "average_parse_memory_estimate_bytes": 11790543.125,
+    "empty_action_count": 16,
+    "empty_observation_count": 0,
+    "max_parse_memory_estimate_bytes": 32578825,
+    "memory_estimate_method": "recursive sys.getsizeof of parsed JSON objects; excludes parser buffers and interpreter overhead outside the object graph",
+    "natural_error_trajectory_count": 1,
+    "natural_error_trajectory_rate": 0.0625,
+    "reasoning_trajectory_count": 16,
+    "reasoning_trajectory_rate": 1.0,
+    "screenshot_reference_count": 16,
+    "screenshot_reference_rate": 1.0,
+    "step_count": 114,
+    "termination_signal_count": 8,
+    "termination_signal_rate": 0.5,
+    "trajectory_count": 16
+  },
+  "projected_full_dev": {
+    "cleaned_jsonl_bytes": 35817415,
+    "estimate_basis": "A0.3 fixed-revision dev file metadata multiplied by A0.4 16-probe byte ratios",
+    "permanent_raw_retention_required": false,
+    "raw_bytes": 3647118724,
+    "serialized_jsonl_bytes": 96473712,
+    "streaming_feasible": true,
+    "trajectory_count": 196,
+    "view_text_bytes": {
+      "ablation_without_error_fields": 27866611,
+      "primary_with_natural_errors": 28168831,
+      "sensitivity_with_reasoning": 30415458
+    }
+  },
+  "reasoning_policy": "missing remains null; text appears only in sensitivity_with_reasoning",
+  "scope": {
+    "existing_dev_probe_files_only": true,
+    "features_or_models_run": 0,
+    "new_downloads": 0,
+    "screenshots_processed": 0,
+    "test_files_processed": 0
+  },
+  "source_revision": "b6d17e646009d6cb63d5dd7be78807b680693f61",
+  "stage": "A0.4",
+  "stage_decision": "PASS_WITH_CONDITIONS",
+  "terminal_policy": {
+    "final_response_created": false,
+    "last_nonempty_action": "exact last nonempty allowlisted raw action",
+    "last_nonempty_observation": "exact last nonempty allowlisted raw axtree_pruned",
+    "last_step_index": "maximum 1-based source position contributing terminal action/observation",
+    "termination_signal": "literal send_msg_to_user/report_infeasible action name only; otherwise null"
+  },
+  "unknown_fields": {
+    "count": 0,
+    "items": [],
+    "unique_count": 0
+  },
+  "volume": {
+    "cleaned_jsonl_bytes": 420490,
+    "cleaned_to_raw_ratio": 0.009820742775504135,
+    "raw_bytes": 42816517,
+    "serialized_jsonl_bytes": 1132584,
+    "serialized_to_raw_ratio": 0.02645203485374581,
+    "view_text_bytes": {
+      "ablation_without_error_fields": 327149,
+      "primary_with_natural_errors": 330697,
+      "sensitivity_with_reasoning": 357072
+    }
+  },
+  "whitelist": {
+    "reasoning_sensitivity_only": "$.steps[].reasoning",
+    "step_action": "$.steps[].action",
+    "step_focused_element": "$.steps[].focused_element",
+    "step_natural_error": "$.steps[].last_action_error",
+    "step_observation": "$.steps[].axtree_pruned",
+    "task_instruction": "$.goal"
+  }
+}

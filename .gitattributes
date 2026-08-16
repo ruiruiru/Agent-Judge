@@ -1,0 +1,69 @@
+.gitattributes text eol=lf
+
+# Stage A1.7 generated scientific artifacts are hash-locked as LF bytes.
+artifacts/a1_7_* text eol=lf
+artifacts/a1_7_*.npy -text
+artifacts/a1_7_*.parquet -text
+configs/stage_a1_7_dense_semantic.yaml text eol=lf
+docs/stage_a1_7_frozen_dense_semantic_baseline_report.md text eol=lf
+docs/tasks/STAGE_A1_7_RUN_FROZEN_DENSE_SEMANTIC_BASELINE.md text eol=lf
+requirements/semantic-lock.txt text eol=lf
+scripts/extract_stage_a1_7_embeddings.py text eol=lf
+scripts/run_stage_a1_7_dense_semantic.py text eol=lf
+tests/test_stage_a1_7_dense_semantic.py text eol=lf
+
+# Stage A1.8 evidence-audit sources and generated records are hash-locked as LF bytes.
+artifacts/a1_8_* text eol=lf
+configs/stage_a1_8_evidence_audit.yaml text eol=lf
+docs/stage_a1_8_evidence_audit_report.md text eol=lf
+docs/paper_claims_allowed_and_forbidden.md text eol=lf
+docs/paper_evidence_snapshot_a1_8.md text eol=lf
+docs/tasks/STAGE_A1_8_EVIDENCE_AUDIT_AND_PAPER_CLAIM_MATRIX.md text eol=lf
+scripts/run_stage_a1_8_evidence_audit.py text eol=lf
+tests/test_stage_a1_8_evidence_audit.py text eol=lf
+
+# Stage A1.9 preregistration, final-selection records, and binary models.
+artifacts/a1_9_* text eol=lf
+artifacts/final_models/*.joblib -text
+configs/stage_a1_9_final_freeze.yaml text eol=lf
+docs/stage_a1_9_final_method_freeze_report.md text eol=lf
+docs/tasks/STAGE_A1_9_FINAL_METHOD_FREEZE_AND_TEST_PREREGISTRATION.md text eol=lf
+scripts/run_stage_a1_9_final_freeze.py text eol=lf
+tests/test_stage_a1_9_final_freeze.py text eol=lf
+
+# Stage A2.1 efficiency benchmark implementation and generated evidence.
+artifacts/a2_1_* text eol=lf
+docs/stage_a2_1_efficiency_benchmark_report.md text eol=lf
+scripts/run_a2_1_efficiency_benchmark.py text eol=lf
+tests/test_stage_a2_1_efficiency_benchmark.py text eol=lf
+
+# Stage A2.2 diagnostic implementation and generated evidence.
+artifacts/a2_2_* text eol=lf
+docs/a2_2_* text eol=lf
+docs/stage_a2_2_interpretability_confounder_error_analysis_report.md text eol=lf
+scripts/build_a2_2_interpretability_package.py text eol=lf
+scripts/run_a2_2_metadata_confounder_audit.py text eol=lf
+tests/test_stage_a2_2_interpretability_confounder_error_analysis.py text eol=lf
+
+# Stage A3.1 renderer, contracts, tables, figures, and review artifacts.
+artifacts/a3_1_* text eol=lf
+docs/a3_1_* text eol=lf
+docs/stage_a3_1_final_figures_tables_report.md text eol=lf
+paper/tables/*.md text eol=lf
+paper/tables/*.tex text eol=lf
+paper/figures/*.svg text eol=lf
+paper/figures/*.pdf -text
+paper/figures/*.png -text
+scripts/a3_1_rendering.py text eol=lf
+scripts/build_a3_1_final_figures_tables.py text eol=lf
+tests/test_stage_a3_1_final_figures_tables.py text eol=lf
+
+# RISK-0 audit implementation and hash-locked evidence package.
+artifacts/risk_0_* text eol=lf
+docs/risk_0_publication_risk_audit_report.md text eol=lf
+docs/tasks/RISK_0_PUBLICATION_RISK_AUDIT.md text eol=lf
+scripts/run_risk_0_publication_audit.py text eol=lf
+tests/test_risk_0_publication_audit.py text eol=lf
+
+# GitHub publication snapshot: store the oversized A1.6 draw registry in LFS.
+artifacts/a1_6_bootstrap_draw_registry.csv filter=lfs diff=lfs merge=lfs -text

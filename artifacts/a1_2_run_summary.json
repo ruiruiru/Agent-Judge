@@ -1,0 +1,3155 @@
+{
+  "stage": "A1.2",
+  "stage_determination": "PASS_WITH_CONDITIONS",
+  "conditions": [
+    "1 learned-baseline outer folds predicted no positives.",
+    "Low positive-class support remains a stability limitation for: side_effect."
+  ],
+  "run_id": "stage_a1_2_grouped_minimal_dev_20260804T034000Z",
+  "status": "completed",
+  "hypothesis_id": "H1",
+  "git_preregistration_commit": "b4fef6f63d55ccd4ed2cdf4feb2dcab1cd5b6d20",
+  "data_version": "dev_cleaned_v1",
+  "split_version": "custom_deterministic_grouped_stratification_v1",
+  "config_path": "configs/stage_a1_2_execution.yaml",
+  "command": "C:\\Users\\Admin\\Documents\\Agent-Judge\\.venv-baselines\\Scripts\\python.exe C:\\Users\\Admin\\Documents\\Agent-Judge\\scripts\\run_stage_a1_2_baselines.py --config configs/stage_a1_2_execution.yaml --run --run-id stage_a1_2_grouped_minimal_dev_20260804T034000Z",
+  "random_seed": 2026,
+  "start_time": "2026-08-04T03:38:35+00:00",
+  "end_time": "2026-08-04T03:39:34+00:00",
+  "environment": {
+    "generated_at_utc": "2026-08-04T03:36:42+00:00",
+    "python": {
+      "version": "3.14.6",
+      "implementation": "CPython",
+      "executable": "C:\\Users\\Admin\\Documents\\Agent-Judge\\.venv-baselines\\Scripts\\python.exe"
+    },
+    "platform": "Windows-11-10.0.26200-SP0",
+    "hardware": {
+      "machine": "AMD64",
+      "processor": "AMD64 Family 26 Model 68 Stepping 0, AuthenticAMD",
+      "logical_cpu_count": 16,
+      "gpu_used": false
+    },
+    "dependencies": {
+      "joblib": "1.5.3",
+      "narwhals": "2.24.0",
+      "numpy": "2.5.1",
+      "PyYAML": "6.0.3",
+      "scikit-learn": "1.9.0",
+      "scipy": "1.18.0",
+      "threadpoolctl": "3.6.0"
+    },
+    "formal_run_network_allowed": false
+  },
+  "verified_input_hashes_before": {
+    "data/processed/dev_cleaned_trajectories.jsonl": "157a2f665ec33aced4e549e349012f97387961afca2da4f8629cc3472a29342e",
+    "data/processed/dev_serialized_primary.jsonl": "ec2757489c04b4388711826d29a028b24585156c9dab0496d4afe394aa02398a",
+    "artifacts/dev_analysis_index.csv": "2b29b46522b5cce32f084e6dc620ff3203f1fd474721fb001123348be0ab56d0",
+    "artifacts/test_manifest.csv": "a52cb55a9c7679b10a6f5ba5958dda2418759c5798adb5d959615f2f4ad3012a",
+    "artifacts/evaluation_folds_success.csv": "820599f85fd901c1b73db61cbc77c54eb8223df3f3abc14062d5a9f20bb02e65",
+    "artifacts/evaluation_folds_side_effect.csv": "11be1d8b803d4afffe25716519d117ce1e1909231954bcfd587347317e9b089c",
+    "artifacts/evaluation_folds_looping.csv": "b950bf23e465d2f108f28281395ac8816c9916b20eaebe2d529e9d5fde74c749"
+  },
+  "verified_input_hashes_after": {
+    "data/processed/dev_cleaned_trajectories.jsonl": "157a2f665ec33aced4e549e349012f97387961afca2da4f8629cc3472a29342e",
+    "data/processed/dev_serialized_primary.jsonl": "ec2757489c04b4388711826d29a028b24585156c9dab0496d4afe394aa02398a",
+    "artifacts/dev_analysis_index.csv": "2b29b46522b5cce32f084e6dc620ff3203f1fd474721fb001123348be0ab56d0",
+    "artifacts/test_manifest.csv": "a52cb55a9c7679b10a6f5ba5958dda2418759c5798adb5d959615f2f4ad3012a",
+    "artifacts/evaluation_folds_success.csv": "820599f85fd901c1b73db61cbc77c54eb8223df3f3abc14062d5a9f20bb02e65",
+    "artifacts/evaluation_folds_side_effect.csv": "11be1d8b803d4afffe25716519d117ce1e1909231954bcfd587347317e9b089c",
+    "artifacts/evaluation_folds_looping.csv": "b950bf23e465d2f108f28281395ac8816c9916b20eaebe2d529e9d5fde74c749"
+  },
+  "prerun_integrity_sha256": "e1843b05c053ef527f1b1e67f82135cf8db04139837fb04d6a5a735b9ddc0cd8",
+  "expected_oof_counts": {
+    "success": 192,
+    "side_effect": 195,
+    "looping": 196
+  },
+  "actual_prediction_rows": 2332,
+  "oof_complete_exactly_once": true,
+  "outer_validation_probability_evaluations": 60,
+  "configuration_selection_data": "inner_validation_only",
+  "configuration_selection_metric": "average_precision_score",
+  "threshold_selection_data": "inner_validation_only",
+  "threshold_selection_metric": "positive_f1",
+  "convergence_warnings": [],
+  "all_warnings": [
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 1,
+      "config_id": "B2_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 1,
+      "config_id": "B2_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 1,
+      "config_id": "B2_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 1,
+      "config_id": "B2_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 1,
+      "config_id": "B2_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 1,
+      "config_id": "B2_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 1,
+      "config_id": "B2_C0p1_cw_balanced",
+      "phase": "outer_refit",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 2,
+      "config_id": "B2_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 2,
+      "config_id": "B2_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 2,
+      "config_id": "B2_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 2,
+      "config_id": "B2_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 2,
+      "config_id": "B2_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 2,
+      "config_id": "B2_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 2,
+      "config_id": "B2_C10p0_cw_balanced",
+      "phase": "outer_refit",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 3,
+      "config_id": "B2_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 3,
+      "config_id": "B2_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 3,
+      "config_id": "B2_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 3,
+      "config_id": "B2_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 3,
+      "config_id": "B2_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 3,
+      "config_id": "B2_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 3,
+      "config_id": "B2_C1p0_cw_balanced",
+      "phase": "outer_refit",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 4,
+      "config_id": "B2_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 4,
+      "config_id": "B2_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 4,
+      "config_id": "B2_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 4,
+      "config_id": "B2_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 4,
+      "config_id": "B2_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 4,
+      "config_id": "B2_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 4,
+      "config_id": "B2_C10p0_cw_balanced",
+      "phase": "outer_refit",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 5,
+      "config_id": "B2_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 5,
+      "config_id": "B2_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 5,
+      "config_id": "B2_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 5,
+      "config_id": "B2_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 5,
+      "config_id": "B2_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 5,
+      "config_id": "B2_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B2",
+      "outer_fold": 5,
+      "config_id": "B2_C10p0_cw_balanced",
+      "phase": "outer_refit",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T1_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T1_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T1_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T1_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T1_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T1_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T2_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T2_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T2_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T2_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T2_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T2_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T2_C0p1_cw_balanced",
+      "phase": "outer_refit",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T1_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T1_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T1_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T1_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T1_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T1_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T2_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T2_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T2_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T2_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T2_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T2_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T1_C1p0_cw_balanced",
+      "phase": "outer_refit",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T1_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T1_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T1_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T1_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T1_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T1_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T2_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T2_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T2_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T2_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T2_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T2_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T2_C0p1_cw_none",
+      "phase": "outer_refit",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T1_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T1_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T1_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T1_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T1_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T1_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T2_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T2_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T2_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T2_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T2_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T2_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T2_C10p0_cw_none",
+      "phase": "outer_refit",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T1_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T1_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T1_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T1_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T1_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T1_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T2_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T2_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T2_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T2_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T2_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T2_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "success",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T2_C0p1_cw_balanced",
+      "phase": "outer_refit",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 1,
+      "config_id": "B2_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 1,
+      "config_id": "B2_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 1,
+      "config_id": "B2_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 1,
+      "config_id": "B2_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 1,
+      "config_id": "B2_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 1,
+      "config_id": "B2_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 1,
+      "config_id": "B2_C10p0_cw_none",
+      "phase": "outer_refit",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 2,
+      "config_id": "B2_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 2,
+      "config_id": "B2_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 2,
+      "config_id": "B2_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 2,
+      "config_id": "B2_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 2,
+      "config_id": "B2_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 2,
+      "config_id": "B2_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 2,
+      "config_id": "B2_C0p1_cw_none",
+      "phase": "outer_refit",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 3,
+      "config_id": "B2_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 3,
+      "config_id": "B2_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 3,
+      "config_id": "B2_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 3,
+      "config_id": "B2_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 3,
+      "config_id": "B2_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 3,
+      "config_id": "B2_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 3,
+      "config_id": "B2_C0p1_cw_balanced",
+      "phase": "outer_refit",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 4,
+      "config_id": "B2_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 4,
+      "config_id": "B2_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 4,
+      "config_id": "B2_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 4,
+      "config_id": "B2_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 4,
+      "config_id": "B2_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 4,
+      "config_id": "B2_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 4,
+      "config_id": "B2_C0p1_cw_none",
+      "phase": "outer_refit",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 5,
+      "config_id": "B2_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 5,
+      "config_id": "B2_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 5,
+      "config_id": "B2_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 5,
+      "config_id": "B2_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 5,
+      "config_id": "B2_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 5,
+      "config_id": "B2_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B2",
+      "outer_fold": 5,
+      "config_id": "B2_C1p0_cw_balanced",
+      "phase": "outer_refit",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T1_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T1_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T1_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T1_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T1_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T1_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T2_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T2_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T2_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T2_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T2_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T2_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T2_C1p0_cw_balanced",
+      "phase": "outer_refit",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T1_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T1_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T1_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T1_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T1_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T1_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T2_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T2_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T2_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T2_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T2_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T2_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T1_C10p0_cw_balanced",
+      "phase": "outer_refit",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T1_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T1_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T1_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T1_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T1_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T1_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T2_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T2_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T2_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T2_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T2_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T2_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T1_C10p0_cw_balanced",
+      "phase": "outer_refit",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T1_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T1_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T1_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T1_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T1_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T1_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T2_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T2_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T2_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T2_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T2_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T2_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T1_C10p0_cw_none",
+      "phase": "outer_refit",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T1_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T1_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T1_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T1_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T1_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T1_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T2_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T2_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T2_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T2_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T2_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T2_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "side_effect",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T1_C10p0_cw_none",
+      "phase": "outer_refit",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 1,
+      "config_id": "B2_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 1,
+      "config_id": "B2_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 1,
+      "config_id": "B2_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 1,
+      "config_id": "B2_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 1,
+      "config_id": "B2_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 1,
+      "config_id": "B2_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 1,
+      "config_id": "B2_C10p0_cw_none",
+      "phase": "outer_refit",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 2,
+      "config_id": "B2_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 2,
+      "config_id": "B2_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 2,
+      "config_id": "B2_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 2,
+      "config_id": "B2_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 2,
+      "config_id": "B2_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 2,
+      "config_id": "B2_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 2,
+      "config_id": "B2_C10p0_cw_none",
+      "phase": "outer_refit",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 3,
+      "config_id": "B2_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 3,
+      "config_id": "B2_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 3,
+      "config_id": "B2_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 3,
+      "config_id": "B2_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 3,
+      "config_id": "B2_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 3,
+      "config_id": "B2_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 3,
+      "config_id": "B2_C10p0_cw_none",
+      "phase": "outer_refit",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 4,
+      "config_id": "B2_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 4,
+      "config_id": "B2_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 4,
+      "config_id": "B2_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 4,
+      "config_id": "B2_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 4,
+      "config_id": "B2_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 4,
+      "config_id": "B2_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 4,
+      "config_id": "B2_C10p0_cw_none",
+      "phase": "outer_refit",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 5,
+      "config_id": "B2_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 5,
+      "config_id": "B2_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 5,
+      "config_id": "B2_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 5,
+      "config_id": "B2_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 5,
+      "config_id": "B2_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 5,
+      "config_id": "B2_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B2",
+      "outer_fold": 5,
+      "config_id": "B2_C0p1_cw_none",
+      "phase": "outer_refit",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T1_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T1_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T1_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T1_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T1_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T1_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T2_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T2_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T2_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T2_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T2_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T2_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 1,
+      "config_id": "B3_T1_C10p0_cw_none",
+      "phase": "outer_refit",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T1_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T1_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T1_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T1_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T1_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T1_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T2_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T2_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T2_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T2_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T2_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T2_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 2,
+      "config_id": "B3_T2_C10p0_cw_none",
+      "phase": "outer_refit",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T1_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T1_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T1_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T1_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T1_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T1_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T2_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T2_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T2_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T2_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T2_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T2_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 3,
+      "config_id": "B3_T2_C0p1_cw_balanced",
+      "phase": "outer_refit",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T1_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T1_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T1_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T1_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T1_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T1_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T2_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T2_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T2_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T2_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T2_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T2_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 4,
+      "config_id": "B3_T1_C0p1_cw_balanced",
+      "phase": "outer_refit",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T1_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T1_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T1_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T1_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T1_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T1_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T2_C0p1_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T2_C1p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T2_C10p0_cw_none",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T2_C0p1_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T2_C1p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T2_C10p0_cw_balanced",
+      "phase": "inner_candidate",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    },
+    {
+      "target": "looping",
+      "baseline_id": "B3",
+      "outer_fold": 5,
+      "config_id": "B3_T1_C0p1_cw_none",
+      "phase": "outer_refit",
+      "category": "FutureWarning",
+      "message": "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.",
+      "is_convergence_warning": false
+    }
+  ],
+  "signal_grades": {
+    "success": "clear_provisional_signal",
+    "side_effect": "clear_provisional_signal",
+    "looping": "clear_provisional_signal"
+  },
+  "test_access": {
+    "sealed_identifier_manifest_overlap_checks": 1,
+    "trajectory_content": 0,
+    "labels": 0,
+    "predictions": 0,
+    "metrics": 0
+  },
+  "forbidden_experiments_executed": [],
+  "output_hashes": {
+    "artifacts/dev_structural_features.csv": "2dcd9f5a5a22c40d318f2a7fe1303cdcc0c27832d2ab443c0f3dbe2a1f631556",
+    "artifacts/a1_2_inner_config_selection.csv": "8de21044a309440934053d81643134aa2fdf52e68baf3ddfcb01c809a87dc49e",
+    "artifacts/a1_2_threshold_selection.csv": "6d389b1f771912c4442ef0c7bde53190a2607b6afabcf071ac16c5106e57fb38",
+    "artifacts/a1_2_oof_predictions.csv": "a57eb138fb7d89f6319f3540055fad9930fa700c1af551199b5d361d50c163c4",
+    "artifacts/a1_2_fold_metrics.csv": "cb654ec99b7aa7bbf039b89444ae0c30d60baa56d9418d77e09cd4b7d24ac01e",
+    "artifacts/a1_2_pooled_metrics.csv": "8ce01c2be0cf73e94c1a5fc085d28d92fd57bf40f450e4dfbd33f8912d5713bc",
+    "artifacts/a1_2_config_frequency.csv": "d71f6acea47308c18627865c101f47cc80405e3e3bc255d3416baeed5f53cfe8",
+    "docs/stage_a1_2_minimal_baseline_report.md": "dc86540c97b5ee0e536e40eb0afa9be1727d226036709aa00ef6ffdc5b65e672"
+  },
+  "formal_run_code_changed_after_start": false,
+  "preregistration_integrity": {
+    "stage": "A1.2a",
+    "status": "PASS",
+    "generated_at_utc": "2026-08-04T03:36:42+00:00",
+    "real_dev_estimator_fit_count": 0,
+    "verified_hashes": {
+      "data/processed/dev_cleaned_trajectories.jsonl": "157a2f665ec33aced4e549e349012f97387961afca2da4f8629cc3472a29342e",
+      "data/processed/dev_serialized_primary.jsonl": "ec2757489c04b4388711826d29a028b24585156c9dab0496d4afe394aa02398a",
+      "artifacts/dev_analysis_index.csv": "2b29b46522b5cce32f084e6dc620ff3203f1fd474721fb001123348be0ab56d0",
+      "artifacts/test_manifest.csv": "a52cb55a9c7679b10a6f5ba5958dda2418759c5798adb5d959615f2f4ad3012a",
+      "artifacts/evaluation_folds_success.csv": "820599f85fd901c1b73db61cbc77c54eb8223df3f3abc14062d5a9f20bb02e65",
+      "artifacts/evaluation_folds_side_effect.csv": "11be1d8b803d4afffe25716519d117ce1e1909231954bcfd587347317e9b089c",
+      "artifacts/evaluation_folds_looping.csv": "b950bf23e465d2f108f28281395ac8816c9916b20eaebe2d529e9d5fde74c749"
+    },
+    "script_sha256": "524a3127961d628709b96230ed6430fc55e2223564d1790e7de4820026df5cca",
+    "config_sha256": "ab09e851b43c6a3f98cc18be571f0786dff7e21f5a74e3c5b37f41023af9ee28",
+    "requirements_lock_sha256": "6ad6b9933a8d435a95415903296d6c6d0aaf186a5f7f27812640c0e0b0f4e971",
+    "environment_artifact_sha256": "f6b830c652bd75149651cd8ab9390a9a318e2bf963f79dcbd8a5ba6c2c9b0a7b",
+    "eligible_counts": {
+      "success": {
+        "samples": 192,
+        "positive": 58,
+        "negative": 134
+      },
+      "side_effect": {
+        "samples": 195,
+        "positive": 12,
+        "negative": 183
+      },
+      "looping": {
+        "samples": 196,
+        "positive": 92,
+        "negative": 104
+      }
+    },
+    "oof_membership_verified_exactly_once": true,
+    "outer_and_inner_group_leakage": 0,
+    "primary_input_view": "primary_with_natural_errors",
+    "baseline_ids": [
+      "B0",
+      "B1",
+      "B2",
+      "B3"
+    ],
+    "test_access": {
+      "sealed_identifier_manifest_overlap_checks": 1,
+      "trajectory_content": 0,
+      "labels": 0,
+      "predictions": 0,
+      "metrics": 0
+    },
+    "forbidden_experiments_executed": []
+  }
+}

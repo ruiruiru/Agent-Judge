@@ -1,0 +1,61 @@
+{
+  "a1_10a_access": {
+    "eligibility": 0,
+    "labels": 0,
+    "metrics": 0
+  },
+  "a1_10a_commit": "cead3cbaa362da4a9918dab32e41b58fffb987d9",
+  "authorization": "AUTHORIZE A1.10b TEST LABEL UNLOCK",
+  "checked_at_utc": "2026-08-09T04:17:57.730548+00:00",
+  "committed_byte_identity": {
+    "blind_manifest": {
+      "committed_oid": "db1295b2a9a1add75b70ad6bff7e89ea39e48b47",
+      "working_oid": "db1295b2a9a1add75b70ad6bff7e89ea39e48b47"
+    },
+    "blind_predictions": {
+      "committed_oid": "78fcdbe27f0de8f7a3bbe50f09fdf2dd3b8ca24f",
+      "working_oid": "78fcdbe27f0de8f7a3bbe50f09fdf2dd3b8ca24f"
+    },
+    "embedding": {
+      "committed_oid": "2522f7f76c515b899fa65efcfaadbf29ea72b796",
+      "working_oid": "2522f7f76c515b899fa65efcfaadbf29ea72b796"
+    },
+    "identifier_manifest": {
+      "committed_oid": "256f469add531a796da32361758f16e5f47426f9",
+      "working_oid": "256f469add531a796da32361758f16e5f47426f9"
+    },
+    "structural_features": {
+      "committed_oid": "f624a7f4a9d9623d48683ea6143a6aad862c1da9",
+      "working_oid": "f624a7f4a9d9623d48683ea6143a6aad862c1da9"
+    }
+  },
+  "eligibility_access": 0,
+  "frozen_hashes": {
+    "blind_manifest": "f0289ca40e138390d00920cf28a59721aa48f0a11305a79f33eb66022aa050a0",
+    "blind_predictions": "a3a232484716ee455a604f03ffd40e6f734a1925ffdfb93e4a3d04118de27c3d",
+    "embedding": "8590b9cb6129bc79181febeaa18e709551743fd271e579c5c78f833edf4b1c42",
+    "identifier_manifest": "97a1366ec31efd7bfe86d8f2a5e95c85cc248bd22ead5dfe47993c79aeb4d550",
+    "structural_features": "e39994f35815b2b5131e0b1bf1e5e81c86e430a1f6bdfe1fc9448a5b847faa6d"
+  },
+  "git_clean": true,
+  "head": "3f0bc4da460652a74ae4767ff6d482fd4116ec9f",
+  "label_access": 0,
+  "label_source_opened": false,
+  "metrics_access": 0,
+  "model_hashes": {
+    "looping": "862b7ff2b0cbcb5faf88908f5fe5824c7f4e52c2c21521e41bb5fb71b011660c",
+    "side_effect": "5eb29646c10a8193b8492ffe26a41a63414dc9da884890813273c43d17a7de59",
+    "success": "afbdb0a60205d7c6bd40232a8c8a1b1ad3b0910d6b65fecf894cca1a040123c1"
+  },
+  "static_boundary_counts": {
+    "estimator_or_embedding_imports": 0,
+    "estimator_training_calls": 0,
+    "inference_calls": 0
+  },
+  "status": "PASS",
+  "thresholds": {
+    "looping": 0.55,
+    "side_effect": 0.4,
+    "success": 0.55
+  }
+}

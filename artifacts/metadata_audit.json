@@ -1,0 +1,286 @@
+{
+  "annotations": {
+    "benchmark_count": 4,
+    "benchmark_counts": {
+      "assistantbench": {
+        "annotation_rows": 132,
+        "unique_trajectories": 132
+      },
+      "visualwebarena": {
+        "annotation_rows": 300,
+        "unique_trajectories": 300
+      },
+      "webarena": {
+        "annotation_rows": 501,
+        "unique_trajectories": 398
+      },
+      "workarena": {
+        "annotation_rows": 475,
+        "unique_trajectories": 472
+      }
+    },
+    "columns": [
+      "annotator_name",
+      "benchmark",
+      "task_id",
+      "model_name",
+      "exp_name",
+      "trajectory_success",
+      "trajectory_side_effect",
+      "trajectory_optimality",
+      "trajectory_looping"
+    ],
+    "field_profiles": {
+      "annotator_name": {
+        "data_type": "string",
+        "max_length": 1,
+        "min_length": 1,
+        "missing_or_empty_count": 0,
+        "missing_or_empty_rate": 0.0,
+        "row_count": 1408,
+        "unique_value_count": 8
+      },
+      "benchmark": {
+        "data_type": "string",
+        "max_length": 14,
+        "min_length": 8,
+        "missing_or_empty_count": 0,
+        "missing_or_empty_rate": 0.0,
+        "row_count": 1408,
+        "unique_value_count": 4
+      },
+      "exp_name": {
+        "data_type": "string",
+        "max_length": 84,
+        "min_length": 42,
+        "missing_or_empty_count": 0,
+        "missing_or_empty_rate": 0.0,
+        "row_count": 1408,
+        "unique_value_count": 15
+      },
+      "model_name": {
+        "data_type": "string",
+        "max_length": 46,
+        "min_length": 30,
+        "missing_or_empty_count": 0,
+        "missing_or_empty_rate": 0.0,
+        "row_count": 1408,
+        "unique_value_count": 4
+      },
+      "task_id": {
+        "data_type": "string",
+        "max_length": 106,
+        "min_length": 11,
+        "missing_or_empty_count": 0,
+        "missing_or_empty_rate": 0.0,
+        "row_count": 1408,
+        "unique_value_count": 451
+      },
+      "trajectory_looping": {
+        "data_type": "string",
+        "max_length": 3,
+        "min_length": 2,
+        "missing_or_empty_count": 0,
+        "missing_or_empty_rate": 0.0,
+        "row_count": 1408,
+        "unique_value_count": 2
+      },
+      "trajectory_optimality": {
+        "data_type": "string",
+        "max_length": 21,
+        "min_length": 6,
+        "missing_or_empty_count": 0,
+        "missing_or_empty_rate": 0.0,
+        "row_count": 1408,
+        "unique_value_count": 5
+      },
+      "trajectory_side_effect": {
+        "data_type": "string",
+        "max_length": 6,
+        "min_length": 2,
+        "missing_or_empty_count": 0,
+        "missing_or_empty_rate": 0.0,
+        "row_count": 1408,
+        "unique_value_count": 3
+      },
+      "trajectory_success": {
+        "data_type": "string",
+        "max_length": 12,
+        "min_length": 6,
+        "missing_or_empty_count": 0,
+        "missing_or_empty_rate": 0.0,
+        "row_count": 1408,
+        "unique_value_count": 3
+      }
+    },
+    "model_count": 4,
+    "model_counts": {
+      "GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct": {
+        "annotation_rows": 354,
+        "unique_trajectories": 351
+      },
+      "GenericAgent-anthropic_claude-3.7-sonnet": {
+        "annotation_rows": 351,
+        "unique_trajectories": 351
+      },
+      "GenericAgent-gpt-4o-2024-11-20": {
+        "annotation_rows": 451,
+        "unique_trajectories": 351
+      },
+      "GenericAgent-meta-llama_Llama-3.3-70B-Instruct": {
+        "annotation_rows": 252,
+        "unique_trajectories": 249
+      }
+    },
+    "row_count": 1408,
+    "unique_normalized_task_count": 351
+  },
+  "duplicates": {
+    "all_duplicate_groups_have_distinct_annotators": true,
+    "all_duplicate_groups_share_one_exp_name": true,
+    "duplicate_group_label_disagreements": {
+      "Optimality": 42,
+      "Repetitiveness / Looping": 11,
+      "Side Effect": 4,
+      "Success": 13
+    },
+    "duplicate_trajectory_group_count": 106,
+    "extra_annotation_row_count": 106,
+    "trajectory_key_definition": [
+      "benchmark",
+      "normalized_task_id",
+      "model_name"
+    ],
+    "unexpected_duplicate_groups": [],
+    "unique_trajectory_count": 1302
+  },
+  "labels": {
+    "distribution_file": "artifacts/label_distribution.csv",
+    "optimality_distribution_only": {
+      "field": "trajectory_optimality",
+      "raw_value_counts": {
+        "1. Complete Failure": 435,
+        "2. Suboptimal": 505,
+        "3. Somewhat Optimal": 202,
+        "4. Completely Optimal": 265,
+        "Unsure": 1
+      }
+    },
+    "targets": [
+      {
+        "excluded_unsure_count": 1,
+        "field": "trajectory_success",
+        "negative_count": 1012,
+        "positive_count": 395,
+        "positive_rate_among_valid": 0.28073916133617627,
+        "raw_value_counts": {
+          "Successful": 395,
+          "Unsuccessful": 1012,
+          "Unsure": 1
+        },
+        "target": "Success",
+        "unknown_count": 0,
+        "valid_binary_count": 1407
+      },
+      {
+        "excluded_unsure_count": 1,
+        "field": "trajectory_side_effect",
+        "negative_count": 1316,
+        "positive_count": 91,
+        "positive_rate_among_valid": 0.06467661691542288,
+        "raw_value_counts": {
+          "No": 1316,
+          "Unsure": 1,
+          "Yes": 91
+        },
+        "target": "Side Effect",
+        "unknown_count": 0,
+        "valid_binary_count": 1407
+      },
+      {
+        "excluded_unsure_count": 0,
+        "field": "trajectory_looping",
+        "negative_count": 697,
+        "positive_count": 711,
+        "positive_rate_among_valid": 0.5049715909090909,
+        "raw_value_counts": {
+          "No": 697,
+          "Yes": 711
+        },
+        "target": "Repetitiveness / Looping",
+        "unknown_count": 0,
+        "valid_binary_count": 1408
+      }
+    ],
+    "unit": "annotation rows; repeated annotators are not collapsed"
+  },
+  "license": {
+    "declared_standard_license": null,
+    "status": "No standard license identifier declared; custom Terms of Use apply",
+    "terms_of_use_present": true,
+    "terms_of_use_url": "https://huggingface.co/datasets/McGill-NLP/agent-reward-bench/blob/b6d17e646009d6cb63d5dd7be78807b680693f61/README.md#terms-of-use"
+  },
+  "mapping": {
+    "annotation_rows_matched_to_split": 1408,
+    "annotation_rows_total": 1408,
+    "annotation_rows_unmatched": 0,
+    "unmatched_rows": []
+  },
+  "normalization": {
+    "annotation_task_ids_with_improved_marker": 132,
+    "annotation_task_ids_with_resized_marker": 200,
+    "rules": [
+      "strip leading/trailing whitespace",
+      "lowercase",
+      "replace '.improved.' with '.'",
+      "replace '.resized.' with '.'"
+    ],
+    "unmatched_annotation_rows": 0
+  },
+  "risks": [
+    "No standard license identifier is declared in Hugging Face card metadata.",
+    "Repeated human annotations are not yet governed by an approved aggregation rule.",
+    "Annotation benchmark 'workarena' maps to split namespaces workarena_l1/workarena_l2.",
+    "Full trajectory parsing and leakage safety are outside Stage A0.1 scope."
+  ],
+  "schema_version": "1.0",
+  "source_revision": {
+    "github_commit": "f838338886d723d40b586309465a38277803d9e6",
+    "huggingface_revision": "b6d17e646009d6cb63d5dd7be78807b680693f61"
+  },
+  "splits": {
+    "allowed_values": [
+      "dev",
+      "test"
+    ],
+    "benchmark_count": 5,
+    "benchmark_counts": {
+      "assistantbench": 33,
+      "visualwebarena": 100,
+      "webarena": 100,
+      "workarena_l1": 18,
+      "workarena_l2": 100
+    },
+    "columns": [
+      "task_id",
+      "benchmark",
+      "split"
+    ],
+    "duplicate_normalized_task_ids": [],
+    "invalid_split_rows": [],
+    "row_count": 351,
+    "split_counts": {
+      "dev": {
+        "rows": 51,
+        "unique_tasks": 51
+      },
+      "test": {
+        "rows": 300,
+        "unique_tasks": 300
+      }
+    },
+    "unique_task_count": 351
+  },
+  "stage": "A0.1",
+  "status": "PASS_WITH_DOCUMENTED_LIMITATIONS"
+}

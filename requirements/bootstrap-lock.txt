@@ -1,0 +1,3 @@
+# Stage A1.6 additive runtime lock. The A1.3/A1.5 baseline lock is immutable.
+-r baseline-lock.txt
+pyarrow==25.0.0

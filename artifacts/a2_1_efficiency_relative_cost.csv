@@ -1,0 +1,2 @@
+dimension_ratio_B4_over_B2,representation_size_ratio_B4_over_B2,extraction_time_ratio_B4_over_B2,classifier_inference_ratio_B4_over_B2,peak_memory_ratio_B4_over_B2,ratio_direction,notes
+78.76923076923077,39.14508580343214,176469.13508812647,2.5664488846279356,13.946203248961089,B4 divided by B2; values above 1 mean B4 is more costly,CPU peak ratio uses fresh-process PeakWorkingSetSize; B4 VRAM is separate

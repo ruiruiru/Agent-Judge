@@ -1,0 +1,26 @@
+\begin{table*}[t]
+\centering
+\small
+\caption{Attribute-based positioning of verified related work. This is not a cross-paper result ranking; no audited work met the direct-comparability gate.}
+\label{tab:related_work_positioning}
+\begin{tabular}{p{0.15\textwidth}p{0.12\textwidth}p{0.07\textwidth}p{0.13\textwidth}p{0.11\textwidth}p{0.08\textwidth}p{0.09\textwidth}p{0.14\textwidth}}
+\hline
+Work & Level & Web & Signal & Task scope & Large model & Training & Primary use \\
+\hline
+AgentRewardBench & trajectory & yes & expert dimensions + judge & five web families & judge: yes & no dedicated & benchmark/judges \\
+Agent-as-a-Judge & requirement/task & no & agentic judgment & code tasks & yes & no dedicated & code-agent evaluation \\
+CUARewardBench & trajectory/step & yes & outcome/process reward & OSWorld & yes & proposed: yes & reward benchmark \\
+Web-Shepherd & step/search & yes & process reward & selected web tasks & yes & yes & guided search \\
+AgentRM & trajectory candidate & partly & reward score & mixed tasks & yes & yes & rollout selection \\
+WebArbiter & step/search & yes & reasoned process reward & selected web tasks & yes & yes & action/search guidance \\
+AgentProcessBench & step & partly & ternary process label & tool-agent data & judges: yes & benchmark: no & error diagnosis \\
+Boosting Virtual Agent Learning and Reasoning: A Step-Wise, Multi-Dimensional, and Generalist Reward Model with Benchmark & step/dimension & partly & multidimensional reward & virtual agents & yes & yes & Similar reward modeling \\
+WebGraphEval: Multi-Turn Trajectory Evaluation for Web Agents using Graph Representation & cross-trajectory graph & yes & weighted action graph & WebArena & annotation: yes & no evaluator training & structural analysis \\
+Where Did It Go Wrong? Process-Level Evaluation of Web Agents with Semantic State Tracking (WebStep) & trajectory/step & yes & semantic MDP trace & WebStep sites & evaluator: no & no evaluator training & failure diagnosis \\
+THIS\_WORK & trajectory & studied setting & structural prediction & studied benchmark & no & lightweight & offline evaluation \\
+\hline
+\end{tabular}
+\begin{flushleft}
+\footnotesize Attribute comparison only; this is not a performance leaderboard. All external rows are non-direct: AgentRewardBench, CUARewardBench, and WebGraphEval are partially comparable; the remainder are context only. \texttt{NO\_VALID\_CROSS\_PAPER\_HEAD\_TO\_HEAD}. Side Effect evidence for THIS\_WORK remains exploratory.
+\end{flushleft}
+\end{table*}

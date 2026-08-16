@@ -1,0 +1,118 @@
+{
+  "commands": [
+    ".venv-baselines/Scripts/python.exe scripts/run_a2_2_metadata_confounder_audit.py",
+    ".venv-baselines/Scripts/python.exe scripts/build_a2_2_interpretability_package.py"
+  ],
+  "completed_at_utc": "2026-08-11T06:30:25.8265382Z",
+  "counts": {
+    "coefficient_rows": 26,
+    "error_case_manifest_rows": 12,
+    "error_case_note_rows": 12,
+    "feature_group_evidence_rows": 10,
+    "looping_metadata_oof_rows": 196,
+    "selected_context_cases": 12,
+    "success_metadata_oof_rows": 192,
+    "unselected_case_human_reviews": 0
+  },
+  "evidence_identity": {
+    "coefficients": "POST_FREEZE_DIAGNOSTIC",
+    "error_analysis": "POST_FREEZE_DESCRIPTIVE",
+    "feature_group_synthesis": "DEV_ONLY",
+    "metadata_baseline": "POST_FREEZE_DIAGNOSTIC"
+  },
+  "fix_commits": [],
+  "formal_git_commit": "ce2a40d0263e522d1a0f4e1482a8694a75aba1e2",
+  "implementation_commit": "ce2a40d0263e522d1a0f4e1482a8694a75aba1e2",
+  "intermediate_selected_context": {
+    "path": "runs/a2_2_selected_error_context.json",
+    "sha256": "dcb4866b316dcdb1f93de25a5fea7b4ea86913d964c26ee35f728fb3ae7dabb1"
+  },
+  "metadata_diagnostic": {
+    "features": [
+      "benchmark_group_primary",
+      "model_name"
+    ],
+    "fits": 10,
+    "looping": {
+      "ap_lift": 0.0993111687407236,
+      "b2_frozen_dev_ap": 0.9140810084290651,
+      "b2_frozen_dev_f1": 0.9109947643979057,
+      "f1_at_0_5": 0.5654450261780105,
+      "pooled_ap": 0.5686989238427644,
+      "prevalence": 0.46938775510204084
+    },
+    "official_test_use": 0,
+    "success": {
+      "ap_lift": 0.0685080524709854,
+      "b2_frozen_dev_ap": 0.5465428107647715,
+      "b2_frozen_dev_f1": 0.6612903225806451,
+      "f1_at_0_5": 0.43356643356643354,
+      "pooled_ap": 0.3705913858043187,
+      "prevalence": 0.3020833333333333
+    },
+    "threshold": 0.5
+  },
+  "output_hashes": {
+    "artifacts/a2_2_error_case_manifest.csv": "0372151a32b24fb9f5b53acc802dc23d480ff2bc813c2d394b7faeca33e70cf0",
+    "artifacts/a2_2_error_case_notes.csv": "ec060f556d6402dfa7a333c4c7498a20d1b2e5d067002a9bfdcb2225e3b1b6ee",
+    "artifacts/a2_2_feature_group_evidence.csv": "8160dc969d6043b8da8ee294b8cabb8811c5d4171af24cad6ec0f35efd881af8",
+    "artifacts/a2_2_metadata_baseline_predictions.csv": "f4b78ef4cedb6ef47b5a8f2dc6056d6697a32237a2ed302119f8b1d426d5719f",
+    "artifacts/a2_2_metadata_baseline_summary.csv": "f5bf2aa3c71e81f2025de01c38d93be0af1a0038e772a5d282649bccd33df967",
+    "artifacts/a2_2_metadata_config.json": "7976fa8ea322a0567ea60ca6207819eed62d6c8be156d8f4d77c852dd144f670",
+    "artifacts/a2_2_structural_coefficients.csv": "cd762d7975566f2d107cddff82e8e2d2a58738ee8dbf74f13ee8cffad1ec29d2",
+    "docs/a2_2_error_analysis.md": "e0e6431fdc869e9e53e6660529f21699507efe27229093b797311da2b866eef0",
+    "docs/a2_2_interpretability_and_confounder_report.md": "e2543406c20abbef4e3f6b93ff750614b6de9c0ac655c0263459ae32954204a1",
+    "docs/stage_a2_2_interpretability_confounder_error_analysis_report.md": "bba21ad289be5cc7127c840c1eb90f8349c3bf43623a75a2f1a318f7ccb6649f"
+  },
+  "preregistration_commit": "587ffec6a1c19ee8948e795044032365d84acc74",
+  "result_commit": "recorded_by_enclosing_result_commit",
+  "runtime": {
+    "joblib": "1.5.3",
+    "numpy": "2.5.1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.14.6",
+    "scikit_learn": "1.9.0"
+  },
+  "scope_counters": {
+    "A1_metric_recomputations": 0,
+    "A2_3": 0,
+    "embedding_runs": 0,
+    "external_validation": 0,
+    "final_model_changes": 0,
+    "final_model_fits": 0,
+    "final_threshold_changes": 0,
+    "metadata_diagnostic_fits": 10,
+    "official_test_tuning": 0,
+    "stage_A3": 0,
+    "test_inference_runs": 0
+  },
+  "stage": "A2.2",
+  "stage_determination": "PASS_WITH_CONDITIONS",
+  "started_from_clean_git": true,
+  "tests_and_verifiers": {
+    "a1_10b_regression_tests": "23/23 passed",
+    "a2_2_unit_tests": "11/11 passed",
+    "coefficient_schema_and_rank": "PASS",
+    "deterministic_error_reselection": "exact",
+    "metadata_summary_recomputation": "2/2 exact within 1e-15",
+    "safe_context_allowlist": "12/12 passed"
+  },
+  "verified_frozen_hashes": {
+    "artifacts/a1_11_final_claim_matrix.csv": "2fc929e242e614244940d6d96d8ff1e3935e059925cff0b36b009a86b04f3175",
+    "artifacts/a1_11_table_main_test_results.csv": "c60ff992487e7a05d70c39de7db9364c31529a6b4334739e59045783ec3e9947",
+    "artifacts/final_models/final_looping_b2.joblib": "862b7ff2b0cbcb5faf88908f5fe5824c7f4e52c2c21521e41bb5fb71b011660c",
+    "artifacts/final_models/final_success_b2.joblib": "afbdb0a60205d7c6bd40232a8c8a1b1ad3b0910d6b65fecf894cca1a040123c1"
+  },
+  "warnings": [
+    {
+      "count": 10,
+      "impact": "none; fixed preregistered estimator completed all folds with no convergence warning",
+      "type": "SKLEARN_PENALTY_L2_DEPRECATION"
+    },
+    {
+      "count": 1,
+      "impact": "retained as UNCLEAR; no prohibited field was accessed to force an explanation",
+      "type": "INSUFFICIENT_ALLOWLISTED_ERROR_EVIDENCE"
+    }
+  ]
+}

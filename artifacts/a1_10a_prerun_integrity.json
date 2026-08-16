@@ -1,0 +1,137 @@
+{
+  "authorization": "AUTHORIZE A1.10a BLIND TEST INFERENCE",
+  "commits": {
+    "a1_9a": "4944df46be45d8ad52d57a051e04b59c4a1a82ee",
+    "a1_9b": "8f96a6f032ee9b4dd0272164d60230303612043b",
+    "taskbook_docs": "ce31d8767de3fa45d436191ab8faf6aff126eb0d"
+  },
+  "generated_at_utc": "2026-08-08T08:13:53.038692+00:00",
+  "git": {
+    "clean": true,
+    "head": "d32f9e215f27425ce907493344e4c65c835e91f6",
+    "status_porcelain": ""
+  },
+  "identifier_output_sha256": "97a1366ec31efd7bfe86d8f2a5e95c85cc248bd22ead5dfe47993c79aeb4d550",
+  "identifier_source_sha256": "a52cb55a9c7679b10a6f5ba5958dda2418759c5798adb5d959615f2f4ad3012a",
+  "identifier_stats": {
+    "benchmark_group_primary": {
+      "assistantbench": 108,
+      "visualwebarena": 276,
+      "webarena": 310,
+      "workarena": 412
+    },
+    "benchmark_group_secondary": {
+      "assistantbench": 108,
+      "visualwebarena": 276,
+      "webarena": 310,
+      "workarena_l1": 64,
+      "workarena_l2": 348
+    },
+    "benchmark_original": {
+      "assistantbench": 108,
+      "visualwebarena": 276,
+      "webarena": 310,
+      "workarena": 412
+    },
+    "duplicate_trajectory_keys": 0,
+    "model_name": {
+      "GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct": 300,
+      "GenericAgent-anthropic_claude-3.7-sonnet": 300,
+      "GenericAgent-gpt-4o-2024-11-20": 300,
+      "GenericAgent-meta-llama_Llama-3.3-70B-Instruct": 206
+    },
+    "normalized_task_ids": 300,
+    "rows": 1106,
+    "task_groups": 300,
+    "unique_trajectory_keys": 1106
+  },
+  "models": {
+    "looping": {
+      "coef_shape": [
+        1,
+        13
+      ],
+      "sha256": "862b7ff2b0cbcb5faf88908f5fe5824c7f4e52c2c21521e41bb5fb71b011660c",
+      "steps": [
+        "standard_scaler",
+        "classifier"
+      ]
+    },
+    "side_effect": {
+      "coef_shape": [
+        1,
+        1024
+      ],
+      "sha256": "5eb29646c10a8193b8492ffe26a41a63414dc9da884890813273c43d17a7de59",
+      "steps": []
+    },
+    "success": {
+      "coef_shape": [
+        1,
+        13
+      ],
+      "sha256": "afbdb0a60205d7c6bd40232a8c8a1b1ad3b0910d6b65fecf894cca1a040123c1",
+      "steps": [
+        "standard_scaler",
+        "classifier"
+      ]
+    }
+  },
+  "prohibited_experiments": {
+    "b3_final_method": 0,
+    "calibration": 0,
+    "config_selection": 0,
+    "dev_embedding_regeneration": 0,
+    "estimator_refit": 0,
+    "feature_change": 0,
+    "fusion": 0,
+    "label_guided_debugging": 0,
+    "llm_judge": 0,
+    "new_model_family": 0,
+    "s6_final_method": 0,
+    "second_embedding_model": 0,
+    "threshold_tuning": 0
+  },
+  "qwen": {
+    "immutable_revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+    "repo_id": "Qwen/Qwen3-Embedding-0.6B",
+    "snapshot_file_count": 12,
+    "weight_sha256": "0437e45c94563b09e13cb7a64478fc406947a93cb34a7e05870fc8dcd48e23fd"
+  },
+  "raw_mapping": {
+    "declared_bytes": 26757955707,
+    "mapped": 1106,
+    "missing": 0,
+    "unique_paths": 1106
+  },
+  "run": {
+    "formal_start_commit": "d32f9e215f27425ce907493344e4c65c835e91f6",
+    "run_directory": "runs/a1_10a_blind_20260808T081353Z_d32f9e21",
+    "run_id": "a1_10a_blind_20260808T081353Z_d32f9e21",
+    "started_at_utc": "2026-08-08T08:13:53.010728+00:00"
+  },
+  "source_revisions": {
+    "github_commit": "f838338886d723d40b586309465a38277803d9e6",
+    "huggingface_revision": "b6d17e646009d6cb63d5dd7be78807b680693f61"
+  },
+  "stage": "A1.10a_pretest",
+  "status": "PASS",
+  "test_access": {
+    "content": 0,
+    "eligibility": 0,
+    "embeddings": 0,
+    "features": 0,
+    "labels": 0,
+    "manifest": 1106,
+    "metrics": 0,
+    "predictions": 0
+  },
+  "verified_hashes": {
+    "artifacts/a1_8_claim_matrix.csv": "264678a325f1680c8cfdad3631e6f5209a29a91e6ab8dd5b9683adb857810590",
+    "artifacts/a1_9_final_claim_freeze.csv": "e9fa0da68351cfc5e773984e6fd72e2290a426f4cbe9b4eedba496203be9bbec",
+    "artifacts/a1_9_final_model_manifest.json": "44d7fce8e2b3cef51fd8c1d2e46bae7838dcd92e8c664a31c48962ff2070881f",
+    "artifacts/a1_9_prerun_integrity.json": "ac47b479be4dbdd93fe04da063c6db0c5454d8ee5c3f8df7997e7c0999707a4b",
+    "artifacts/a1_9_test_preregistration.json": "d9a98936f0469f75f6d186c2505481939900bdd895355c0f471b48a73eb86bbc",
+    "docs/tasks/STAGE_A1_10_BLIND_FIRST_OFFICIAL_TEST_EVALUATION.md": "fdf83ec4ded9fb9e91a6b62ba92916154b75b19f088dbf0d8cd93dbd130c0913"
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "a3_2_entered": false,
+  "appendix_figures_generated": [
+    "FigS1_SideEffect_Exploratory_AP_Lift",
+    "FigS2_Benchmark_Heterogeneity"
+  ],
+  "artifact_registry": "artifacts/a3_1_artifact_registry.csv",
+  "commits": {
+    "a2_3_result": "ad0576c488fafed243b464e0b8f903e9bb233b43",
+    "a3_1_preregistration": "32a2d6f4d82e2c0541595fdb416142855189a4c8",
+    "amend": false,
+    "fix_commits": [
+      "aef41ac5879ffc31488dd527da51e632c1677433"
+    ],
+    "implementation": "7de956b676af2fdcc5177b054ebe3e07beb4ede7",
+    "result": "recorded_by_enclosing_result_commit"
+  },
+  "conditions": [
+    "Human review may choose journal-specific resize/reflow without scientific changes.",
+    "Tier 4 caption context remains deferred to separately authorized A3.2 literature verification."
+  ],
+  "display_contract": "a3_1_display_contract_v1",
+  "figure_dimensions_inches": {
+    "Fig1_Study_Pipeline": {
+      "height": 2.6,
+      "width": 7.0
+    },
+    "Fig2_Heldout_AP_Lift_CI": {
+      "height": 2.4,
+      "width": 3.4
+    },
+    "Fig3_Efficiency_Complexity": {
+      "height": 2.9,
+      "width": 7.0
+    },
+    "Fig4_Structural_Interpretation": {
+      "height": 4.2,
+      "width": 7.0
+    },
+    "Fig5_Success_Failure_Boundaries": {
+      "height": 4.8,
+      "width": 7.0
+    },
+    "FigS1_SideEffect_Exploratory_AP_Lift": {
+      "height": 2.2,
+      "width": 3.4
+    },
+    "FigS2_Benchmark_Heterogeneity": {
+      "height": 3.8,
+      "width": 7.0
+    }
+  },
+  "figures_generated": [
+    "Fig1_Study_Pipeline",
+    "Fig2_Heldout_AP_Lift_CI",
+    "Fig3_Efficiency_Complexity",
+    "Fig4_Structural_Interpretation",
+    "Fig5_Success_Failure_Boundaries"
+  ],
+  "font": {
+    "embedded_font_files": false,
+    "pdf": "Helvetica",
+    "svg": "Helvetica, Arial, sans-serif"
+  },
+  "frozen_claims": {
+    "Looping": "CONFIRMATORY_SUPPORTED",
+    "Side Effect": "EXPLORATORY_SUPPORTED",
+    "Success": "CONFIRMATORY_SUPPORTED"
+  },
+  "implementation_failures": "artifacts/a3_1_implementation_failures.json",
+  "input_hashes": {
+    "artifacts/a1_10_run_summary.json": "523c9d01fd60d2d35fb083011a6f30ebc8dbfb9fb265ecf4753d81c6040a4ed2",
+    "artifacts/a1_10a_run_summary.json": "d314cc0e0c0d028b9e02fc4995e0a7de036f761383018b0d456d9830cf57ab69",
+    "artifacts/a1_11_evidence_registry.csv": "98c8f66e7d53bdecaef201c362565279a2a81630f73a3c5970c725433c0cd0a8",
+    "artifacts/a1_11_final_claim_matrix.csv": "2fc929e242e614244940d6d96d8ff1e3935e059925cff0b36b009a86b04f3175",
+    "artifacts/a1_11_table_benchmark_results.csv": "3df5b511d0cf29472ccfba5c63ea28caf4b58407285109231f176871668d77a2",
+    "artifacts/a1_11_table_main_test_results.csv": "c60ff992487e7a05d70c39de7db9364c31529a6b4334739e59045783ec3e9947",
+    "artifacts/a1_9_run_summary.json": "3dd5e65c0e5ba022065f20d71131cb7b22c160375d1d093007091f3796e43f3a",
+    "artifacts/a2_1_efficiency_relative_cost.csv": "fb8619c1914b4a23308800bd3aaf2dd256701820443f3b0a171f7508c4fa3d1f",
+    "artifacts/a2_1_efficiency_summary.csv": "7d37fddef61b526f4b054483ba900ba72a69b0c4c98cd2b31b7ce725043df0c3",
+    "artifacts/a2_1_environment.json": "7ffa7812b67a6ab4faaf1d08caadb105d1f8391ffe7af2688c4ffbf1c9fdf1ec",
+    "artifacts/a2_2_error_case_manifest.csv": "0372151a32b24fb9f5b53acc802dc23d480ff2bc813c2d394b7faeca33e70cf0",
+    "artifacts/a2_2_error_case_notes.csv": "ec060f556d6402dfa7a333c4c7498a20d1b2e5d067002a9bfdcb2225e3b1b6ee",
+    "artifacts/a2_2_feature_group_evidence.csv": "8160dc969d6043b8da8ee294b8cabb8811c5d4171af24cad6ec0f35efd881af8",
+    "artifacts/a2_2_metadata_baseline_summary.csv": "f5bf2aa3c71e81f2025de01c38d93be0af1a0038e772a5d282649bccd33df967",
+    "artifacts/a2_2_structural_coefficients.csv": "cd762d7975566f2d107cddff82e8e2d2a58738ee8dbf74f13ee8cffad1ec29d2",
+    "artifacts/a2_3_evidence_to_paper_map.csv": "8f471d50d4b1e8d53e4946aadcbd3541d81ebb4c27b6d93b9fbf56e4859cf60a",
+    "artifacts/a2_3_publication_package_index.csv": "0777f29536cf0f698138b41c26ff448cc7000304423224e5443a010662a39c65",
+    "artifacts/a2_3_table_1_main_heldout_results.csv": "297a1f59c34fc7f29864d722e8e2a233945dba061527848e31b4d7411b2964a5",
+    "artifacts/a2_3_table_2_efficiency_tradeoff.csv": "bbf36c09827819fbf49aaa7487db66b34077052d8a29cb093c72001bee66f02a",
+    "artifacts/a2_3_table_3_dev_representation_summary.csv": "f0e15e670e3f9592c167c57adaf41a63d56bce0fc9bc37a1945a8ed3f3431c1e",
+    "artifacts/a2_3_table_4_benchmark_heterogeneity.csv": "de0cbc94d114eab5677d1ff620a5f0d976883ae8515d3cb24e873f9f213ac511",
+    "artifacts/a2_3_table_5_interpretability_error_summary.csv": "037a8b3200377093bf1abb5ea0cf9b82db74fb162e27971690d10f7d9cdf4a0f",
+    "docs/a2_3_final_limitations_ledger.md": "80490f81318903267bfe117a0cadae9192ba35db50a352329aac4a01094d8255",
+    "docs/a2_3_publication_figure_spec.md": "96cbd15126bec73ac6a644b2be14a6a940728257ee678bde4f8e93b4bb295a58",
+    "docs/a2_3_publication_results_story.md": "5b68968cdf43061cef044ce1e969883178bd7fa50a691cbcedde5c3215f86827",
+    "docs/tasks/STAGE_A3_1_FINAL_FIGURES_TABLES.md": "20bb183ecdb5025cb44b1937f6d7b42a77ef4710af0a0029ee5b66293f0d337e"
+  },
+  "next_status": "WAIT_FOR_HUMAN_A3_1_REVIEW",
+  "output_hashes": {
+    "artifacts/a3_1_artifact_registry.csv": "abddd001eccf5f43d8890f6ee270cd5d71bfe8fa03a87242a77f6e96f15cd455",
+    "artifacts/a3_1_display_contract.json": "45e218f2421d9d21027d44a7631ea5909e79e3d49ec7200e56ba090ef0de7c5e",
+    "artifacts/a3_1_display_value_map.csv": "f9d04b038a06e41627cf4f4eb745afdeed06a44c8fafe7a68a6bbedbce7145ee",
+    "artifacts/a3_1_figure_data_manifest.csv": "1a96619006457b756bf7b69253df9ab95244c164e3146e1042d47948c4f883d4",
+    "artifacts/a3_1_implementation_failures.json": "6937f61f9432e34c0abf4a59fc572f84e7cd6bacb9d9402307a56ef0b10b744e",
+    "artifacts/a3_1_input_manifest.json": "fb6a2f0f4744edce577148293433f3641e0aeeb3390997417c0bd9b52eaf44d1",
+    "artifacts/a3_1_visual_style.json": "edad12e1c737105cc1a4fc28554f44f69be95661457e58b45a1c6c0008539ca3",
+    "docs/a3_1_figure_table_caption_contract.md": "88f3e383a77879c4115d492c1f007626a79db5860b72337787a10cc18c0c2aec",
+    "docs/stage_a3_1_final_figures_tables_report.md": "2a067b304f6ca9299f5ff69293f20f0ddc4f967e61ce4cfaa5ed14dc4ea013bc",
+    "paper/figures/A3_1_Figure_Contact_Sheet.pdf": "e8a0ed15da9a28f0c671c649afa0a9b58eeab78702d691f569ef9f745384588c",
+    "paper/figures/Fig1_Study_Pipeline.pdf": "53323520f4943b6bac4f9e52e8d040554482ad2157d868f72804a7230e27fb7a",
+    "paper/figures/Fig1_Study_Pipeline.png": "06dfa02cbdd5e7858d8e45b4798a8a223cba711168ab93327e0d3145b46399da",
+    "paper/figures/Fig1_Study_Pipeline.svg": "5c6908e5a76e03010ebbcda43de8d6eb050779bfda4557c6a8f8aac241c19e14",
+    "paper/figures/Fig2_Heldout_AP_Lift_CI.pdf": "fba8e7bc8b37d387e7ec898a756b3d6cf0687e788e3593643345ef983adf9ff1",
+    "paper/figures/Fig2_Heldout_AP_Lift_CI.png": "ad0eef55b4f0af6055d00503069ece9257e773523eb52be68bde6a722dc24a9d",
+    "paper/figures/Fig2_Heldout_AP_Lift_CI.svg": "a0fffab76658afe002359ff5487ee727557e08158928eaf1d47c31031a2f4ca7",
+    "paper/figures/Fig3_Efficiency_Complexity.pdf": "a29dd6c0cdb9485fe4cbc3c2b3cbb81f325dabc3f6f7ff6726b02925c94d198b",
+    "paper/figures/Fig3_Efficiency_Complexity.png": "f726f8b43ea09a7d7131f815b9b669980be863927fcbb9d4b5fe63a36bae9aad",
+    "paper/figures/Fig3_Efficiency_Complexity.svg": "6858ab4783855e7038ef0a91d1675185deda283d15818a440e1dbad95d59daec",
+    "paper/figures/Fig4_Structural_Interpretation.pdf": "362ce48ece4f273512a82a30c4dd8f07419838f4e1229eff6233cacb91fc9ffc",
+    "paper/figures/Fig4_Structural_Interpretation.png": "b2f1c5b84178f650092fd37e9179519b3d6e8e5c487a4b8f0c076376a2b26bcc",
+    "paper/figures/Fig4_Structural_Interpretation.svg": "0cf07456f7ec736e2db0c565a4e58056865f675e656373dff8a48e4f507ea892",
+    "paper/figures/Fig5_Success_Failure_Boundaries.pdf": "3130bb96bdba6c36559c768d91eeb37d9e5cab0aa4e43bb25fa793f2fb67581d",
+    "paper/figures/Fig5_Success_Failure_Boundaries.png": "c5178da0397c93dc6fcf2f014bf3dd7d16e7d750bcb5bbdc494baa4ec4f47456",
+    "paper/figures/Fig5_Success_Failure_Boundaries.svg": "a88e0bb465476c3807abd06f8e9efaaa55e93b8bf425b43090f0ac217d33d83d",
+    "paper/figures/FigS1_SideEffect_Exploratory_AP_Lift.pdf": "8547e7012f9035bba298eaeed8493bc326b7752bd7047fe2441650d082c971fd",
+    "paper/figures/FigS1_SideEffect_Exploratory_AP_Lift.png": "7cf09300345a0c2d57e45c68dbe6aeb6f95a5d8df5ff43e7097e03e6e7d19376",
+    "paper/figures/FigS1_SideEffect_Exploratory_AP_Lift.svg": "dd52a6cd1fc8b96a95b38d48b3be94e1090ad0ff71cb89c9570d0c7aec67b67b",
+    "paper/figures/FigS2_Benchmark_Heterogeneity.pdf": "c29fc5b45a9d6af66df6458a552a48d03cf068b5f8c339048439dbabf298abb9",
+    "paper/figures/FigS2_Benchmark_Heterogeneity.png": "cf632bb29938a8c05bdd83579fe8801d1441116afc778a54f93859c3c57d5145",
+    "paper/figures/FigS2_Benchmark_Heterogeneity.svg": "ffdfc8c03edaf764ea1bd6e6986ffe9fbfcd4e0b09663ee2cef442e5f8b0b21c",
+    "paper/tables/A3_1_Table_Preview.md": "0ecbb0529eecafba544c0df862bc91c433d8982250ea67592beda61120fd71ec",
+    "paper/tables/Table1_Main_Heldout_Results.md": "31f1993bb72695e3dbc1e23be995282b9895c78b2287e6e49c10d9311bc47e35",
+    "paper/tables/Table1_Main_Heldout_Results.tex": "369e55bda390271d0f5aad0f423d4bb8a44ef464250fe55dde6923e875b859fc",
+    "paper/tables/Table2_Efficiency_Complexity.md": "30e364fa4c47318821a1ea5fd9f1ac6a91e1d1eff71f58af0a1f11bf2fc719fc",
+    "paper/tables/Table2_Efficiency_Complexity.tex": "b7a0029422b0c011f8ff359be0c09aeb8ad58b048a3030dcd1c90718579ad165",
+    "paper/tables/Table3_Dev_Representation_Robustness.md": "882770581ad97bbbd61dc8953abffde78e5f0b79d11e98aa18e807d24570b8f9",
+    "paper/tables/Table3_Dev_Representation_Robustness.tex": "a4d08db7fbae5df12423625626376bc808e14eefab56a4dfcc650d0d13e72348",
+    "paper/tables/Table4_Benchmark_Heterogeneity.md": "0723b84c08cf9755bcbce9f901075266534d3c89944d191a2ae0942f608e922e",
+    "paper/tables/Table4_Benchmark_Heterogeneity.tex": "582d533bc346951444016d9c0e06e9a1d432b46bff85e40c4b6fb26944e8de18",
+    "paper/tables/Table5_Interpretability_Failure_Summary.md": "f5f0f8ded010681f562b9b7e4a7c2c8665f134b2477cdc99412a99594ad5ff08",
+    "paper/tables/Table5_Interpretability_Failure_Summary.tex": "2027b2b40a83fe7057847b4a331eee049bf5de291a967d11043661c424fafde9"
+  },
+  "qa_results": {
+    "artifact_registry_hashes_exact": true,
+    "benchmark_heterogeneity_descriptive_only": true,
+    "caption_boundaries_complete": true,
+    "contact_sheet_complete": true,
+    "fig2_ci_exact": true,
+    "fig3_efficiency_exact": true,
+    "fig4_coefficients_exact": true,
+    "fig5_exactly_six_success_cases": true,
+    "figure_dimensions_recorded_and_exact": true,
+    "figure_values_trace_to_source": true,
+    "fonts_recorded_and_not_embedded": true,
+    "frozen_source_hashes_exact": true,
+    "grayscale_readability_documented": true,
+    "legends_or_direct_labels_visible": true,
+    "no_3d_gradient_or_shadow": true,
+    "no_blank_figures": true,
+    "no_clipped_labels_by_geometry_guard": true,
+    "no_overlapping_tick_labels_by_fixed_layout_guard": true,
+    "no_table_source_row_dropped": true,
+    "pdf_svg_png_exist": true,
+    "pdf_vector_only": true,
+    "png_at_least_300_dpi": true,
+    "rounding_contract_exact": true,
+    "side_effect_remains_exploratory": true,
+    "table_preview_complete": true,
+    "table_values_trace_to_source": true
+  },
+  "report_path": "docs/stage_a3_1_final_figures_tables_report.md",
+  "scientific_operation_counters": {
+    "A1_metric_recomputations": 0,
+    "bootstrap_reruns": 0,
+    "eligibility_changes": 0,
+    "external_dataset_runs": 0,
+    "final_model_changes": 0,
+    "new_embedding_runs": 0,
+    "new_inference_runs": 0,
+    "new_model_fits": 0,
+    "new_significance_tests": 0,
+    "official_test_tuning": 0,
+    "threshold_changes": 0
+  },
+  "stage": "A3.1",
+  "stage_determination": "PASS_WITH_CONDITIONS",
+  "tables_generated": [
+    "Table1_Main_Heldout_Results",
+    "Table2_Efficiency_Complexity",
+    "Table3_Dev_Representation_Robustness",
+    "Table4_Benchmark_Heterogeneity",
+    "Table5_Interpretability_Failure_Summary"
+  ],
+  "visual_style": "a3_1_journal_neutral_v1",
+  "warnings": [
+    "Tier 4 literature verification is not part of A3.1.",
+    "Human review may select journal-specific resize/reflow.",
+    "The first formal render was invalidated for Fig4/FigS2 label overlap and fully regenerated after an independent fix commit."
+  ]
+}

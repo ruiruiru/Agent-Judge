@@ -1,0 +1,147 @@
+{
+  "stage": "A1.8",
+  "project": "D9-R1",
+  "mode": "evidence_audit_only",
+  "source_priority": [
+    "machine-readable artifact",
+    "formal stage report",
+    "human summary"
+  ],
+  "stop_on_core_numeric_conflict": true,
+  "targets": ["success", "side_effect", "looping"],
+  "status_taxonomy": [
+    "SUPPORTED",
+    "SUPPORTED_WITH_CONDITIONS",
+    "DESCRIPTIVE_ONLY",
+    "INSUFFICIENT_EVIDENCE",
+    "PROHIBITED"
+  ],
+  "claim_levels": ["core", "supporting", "auxiliary", "limitation"],
+  "support_roles": ["primary", "secondary", "exploratory", "diagnostic", "integrity_only"],
+  "claims": [
+    {"claim_id": "C1", "target": "success", "claim_short": "Success cross-Benchmark structural signal", "expected_status": "SUPPORTED"},
+    {"claim_id": "C2", "target": "success", "claim_short": "B2 stable over B3", "expected_status": "INSUFFICIENT_EVIDENCE"},
+    {"claim_id": "C3", "target": "success", "claim_short": "Success mainly depends on termination", "expected_status": "INSUFFICIENT_EVIDENCE"},
+    {"claim_id": "C4", "target": "success", "claim_short": "Three-feature Success representation competitive with full13", "expected_status": "SUPPORTED_WITH_CONDITIONS"},
+    {"claim_id": "C5", "target": "success", "claim_short": "Success dense semantic cross-Benchmark signal", "expected_status": "SUPPORTED"},
+    {"claim_id": "C6", "target": "success", "claim_short": "Dense semantics stable over B2 and B3", "expected_status": "INSUFFICIENT_EVIDENCE"},
+    {"claim_id": "C7", "target": "looping", "claim_short": "Looping cross-Benchmark structural signal", "expected_status": "SUPPORTED"},
+    {"claim_id": "C8", "target": "looping", "claim_short": "Repetition features have incremental value", "expected_status": "SUPPORTED"},
+    {"claim_id": "C9", "target": "looping", "claim_short": "Dense semantics are necessary for Looping", "expected_status": "INSUFFICIENT_EVIDENCE"},
+    {"claim_id": "C10", "target": "side_effect", "claim_short": "Side Effect structural robust signal", "expected_status": "PROHIBITED"},
+    {"claim_id": "C11", "target": "side_effect", "claim_short": "Side Effect semantic promise", "expected_status": "DESCRIPTIVE_ONLY"},
+    {"claim_id": "C12", "target": "cross_model", "claim_short": "Cross-model transfer with same-task counterparts", "expected_status": "SUPPORTED_WITH_CONDITIONS"},
+    {"claim_id": "C13", "target": "all", "claim_short": "More complex models are always better", "expected_status": "PROHIBITED"},
+    {"claim_id": "C14", "target": "all", "claim_short": "Dimensions show different empirical representation needs", "expected_status": "SUPPORTED_WITH_CONDITIONS"}
+  ],
+  "threats": [
+    {"threat_id": "T1", "description": "Small dev set: about 196 trajectories and 51 task groups."},
+    {"threat_id": "T2", "description": "Side Effect has only 12 positive dev trajectories."},
+    {"threat_id": "T3", "description": "Side Effect AssistantBench is a single-negative-class held-out domain."},
+    {"threat_id": "T4", "description": "A1.4 LOMO has 100 percent same-task counterparts and is not joint task-model OOD."},
+    {"threat_id": "T5", "description": "Primary LOBO has only four Benchmark groups."},
+    {"threat_id": "T6", "description": "Threshold transfer or calibration-like symptoms are not a calibration result."},
+    {"threat_id": "T7", "description": "Looping repetition features are conceptually close to the construct."},
+    {"threat_id": "T8", "description": "Dense chunk and weighted pooling is an engineering approximation."},
+    {"threat_id": "T9", "description": "A1.2-A1.7 are dev-driven method-selection stages."},
+    {"threat_id": "T10", "description": "Evidence comes from one dataset and annotation source."}
+  ],
+  "formal_method_proposal": {
+    "success": {"candidate_method": "B2 structural LR", "role": "primary candidate", "eligible_for_confirmatory_test": "true_after_human_freeze_approval"},
+    "looping": {"candidate_method": "B2 structural LR", "role": "primary candidate", "eligible_for_confirmatory_test": "true_after_human_freeze_approval"},
+    "side_effect": {"candidate_method": "B4 dense embedding LR", "role": "exploratory-only", "eligible_for_confirmatory_test": "false_or_exploratory_only"}
+  },
+  "remaining_evidence_decisions": [
+    "READY_FOR_FINAL_METHOD_FREEZE",
+    "ONE_BLOCKING_DEV_EXPERIMENT_REMAINS",
+    "NOT_READY_RESEARCH_DIRECTION_WEAK"
+  ],
+  "default_remaining_evidence_decision": "READY_FOR_FINAL_METHOD_FREEZE",
+  "boundaries": {
+    "estimator_fit_count": 0,
+    "model_forward_count": 0,
+    "new_prediction_count": 0,
+    "new_threshold_selection_count": 0,
+    "new_config_selection_count": 0,
+    "new_bootstrap_draw_count": 0,
+    "test_access_count": 0,
+    "prohibited_experiment_count": 0
+  },
+  "formal_sources": {
+    "A1.2": {
+      "summary": "artifacts/a1_2_run_summary.json",
+      "report": "docs/stage_a1_2_minimal_baseline_report.md",
+      "artifacts": ["artifacts/a1_2_pooled_metrics.csv", "artifacts/a1_2_oof_predictions.csv"],
+      "preregistration_commit": "b4fef6f63d55ccd4ed2cdf4feb2dcab1cd5b6d20",
+      "result_commit": "179ce02640a8e6e15411348b57fd8d7725047364"
+    },
+    "A1.3": {
+      "summary": "artifacts/a1_3_lobo_run_summary.json",
+      "report": "docs/stage_a1_3_primary_lobo_report.md",
+      "artifacts": ["artifacts/a1_3_lobo_domain_metrics.csv", "artifacts/a1_3_lobo_macro_metrics.csv", "artifacts/a1_3_lobo_pooled_metrics.csv", "artifacts/a1_3_lobo_predictions.csv"],
+      "preregistration_commit": "6b98e03537360d8e60e5ccf3ca4c5ea7b51a652d",
+      "execution_fix_commit": "6027d5e5af29a1b0143bb04024084a6c4209529e",
+      "result_commit": "346bb4b3d4a90fc51c1e099618c3b7592fa76b99"
+    },
+    "A1.4": {
+      "summary": "artifacts/a1_4_lomo_run_summary.json",
+      "report": "docs/stage_a1_4_leave_one_model_out_report.md",
+      "artifacts": ["artifacts/a1_4_lomo_model_metrics.csv", "artifacts/a1_4_lomo_macro_metrics.csv", "artifacts/a1_4_lomo_pooled_metrics.csv", "artifacts/a1_4_lomo_coverage_matrix.csv"],
+      "preregistration_commit": "84bf9da03c12c4bbe28f57e42b31de71e8cb1041",
+      "result_commit": "91e6b195dc63bae8c82728a126945abd0d5d2b68"
+    },
+    "A1.5": {
+      "summary": "artifacts/a1_5_run_summary.json",
+      "report": "docs/stage_a1_5_structural_mechanism_ablation_report.md",
+      "artifacts": ["artifacts/a1_5_domain_metrics.csv", "artifacts/a1_5_macro_metrics.csv", "artifacts/a1_5_pooled_metrics.csv", "artifacts/a1_5_structural_ablation_deltas.csv", "artifacts/a1_5_external_predictions.csv"],
+      "preregistration_commit": "fa9ef0771ea44a720ed8b900199a75ef3c863379",
+      "result_commit": "e4fd9aba83cc6ed3b01b1f624c666b6cc7fce3ca"
+    },
+    "A1.6": {
+      "summary": "artifacts/a1_6_run_summary.json",
+      "report": "docs/stage_a1_6_group_aware_bootstrap_report.md",
+      "artifacts": ["artifacts/a1_6_primary_paired_delta_summary.csv", "artifacts/a1_6_domain_bootstrap_summary.csv", "artifacts/a1_6_macro_bootstrap_summary.csv", "artifacts/a1_6_pooled_bootstrap_summary.csv"],
+      "preregistration_commit": "d7b851c48581a6c7c6220ab0dfc851b92a32162e",
+      "result_commit": "040d081d3359f75f1303f4c24d7f8be79b5da75d"
+    },
+    "A1.7": {
+      "summary": "artifacts/a1_7_run_summary.json",
+      "report": "docs/stage_a1_7_frozen_dense_semantic_baseline_report.md",
+      "artifacts": ["artifacts/a1_7_domain_metrics.csv", "artifacts/a1_7_macro_metrics.csv", "artifacts/a1_7_pooled_metrics.csv", "artifacts/a1_7_comparison_to_a1_3.csv", "artifacts/a1_7_bootstrap_primary_summary.csv"],
+      "preregistration_commit": "e776c16710fd18c1462808a044f911e40061c5c3",
+      "execution_fix_commit": "676ab5efe4f05a2cd5552421510058e5d7553859",
+      "result_commit": "e24066fa27c027c60e2ac35b8305ea3d4a585493",
+      "binary_fix_commit": "362a45917e403be7aacb54359aac2537473508fb"
+    }
+  },
+  "protocol_sources": [
+    "artifacts/lobo_primary_manifest.csv",
+    "artifacts/leave_one_model_out_manifest.csv",
+    "configs/evaluation_protocol.yaml",
+    "configs/baseline_registry.yaml",
+    "research/01_DECISION_LOG.md",
+    "research/02_EXPERIMENT_REGISTRY.csv"
+  ],
+  "preregistration_inputs": [
+    ".gitattributes",
+    "docs/tasks/STAGE_A1_8_EVIDENCE_AUDIT_AND_PAPER_CLAIM_MATRIX.md",
+    "configs/stage_a1_8_evidence_audit.yaml",
+    "scripts/run_stage_a1_8_evidence_audit.py",
+    "tests/test_stage_a1_8_evidence_audit.py"
+  ],
+  "outputs": {
+    "prerun_integrity": "artifacts/a1_8_prerun_integrity.json",
+    "evidence_registry": "artifacts/a1_8_evidence_registry.csv",
+    "claim_matrix": "artifacts/a1_8_claim_matrix.csv",
+    "threats": "artifacts/a1_8_threats_to_validity.csv",
+    "contributions": "artifacts/a1_8_paper_contribution_matrix.csv",
+    "method_proposal": "artifacts/a1_8_final_method_freeze_proposal.csv",
+    "table_figure_plan": "artifacts/a1_8_paper_table_figure_plan.csv",
+    "reviewer_attacks": "artifacts/a1_8_reviewer_attack_matrix.csv",
+    "remaining_decision": "artifacts/a1_8_remaining_evidence_decision.json",
+    "run_summary": "artifacts/a1_8_run_summary.json",
+    "formal_report": "docs/stage_a1_8_evidence_audit_report.md",
+    "allowed_forbidden": "docs/paper_claims_allowed_and_forbidden.md",
+    "evidence_snapshot": "docs/paper_evidence_snapshot_a1_8.md"
+  }
+}

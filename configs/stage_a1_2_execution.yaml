@@ -1,0 +1,197 @@
+stage: A1.2
+protocol_name: frozen_task_grouped_dev_five_fold_minimal_baselines
+random_state: 2026
+
+source:
+  github_commit: f838338886d723d40b586309465a38277803d9e6
+  huggingface_revision: b6d17e646009d6cb63d5dd7be78807b680693f61
+  data_version: dev_cleaned_v1
+  split_version: custom_deterministic_grouped_stratification_v1
+
+inputs:
+  cleaned:
+    path: data/processed/dev_cleaned_trajectories.jsonl
+    sha256: 157a2f665ec33aced4e549e349012f97387961afca2da4f8629cc3472a29342e
+  primary:
+    path: data/processed/dev_serialized_primary.jsonl
+    input_view: primary_with_natural_errors
+    sha256: ec2757489c04b4388711826d29a028b24585156c9dab0496d4afe394aa02398a
+  label_index:
+    path: artifacts/dev_analysis_index.csv
+    sha256: 2b29b46522b5cce32f084e6dc620ff3203f1fd474721fb001123348be0ab56d0
+  sealed_test_manifest:
+    path: artifacts/test_manifest.csv
+    sha256: a52cb55a9c7679b10a6f5ba5958dda2418759c5798adb5d959615f2f4ad3012a
+    identifier_only_overlap_check: true
+    trajectory_content_access_allowed: false
+    labels_access_allowed: false
+
+manifests:
+  success:
+    path: artifacts/evaluation_folds_success.csv
+    sha256: 820599f85fd901c1b73db61cbc77c54eb8223df3f3abc14062d5a9f20bb02e65
+  side_effect:
+    path: artifacts/evaluation_folds_side_effect.csv
+    sha256: 11be1d8b803d4afffe25716519d117ce1e1909231954bcfd587347317e9b089c
+  looping:
+    path: artifacts/evaluation_folds_looping.csv
+    sha256: b950bf23e465d2f108f28281395ac8816c9916b20eaebe2d529e9d5fde74c749
+
+targets:
+  success:
+    label_column: success_label
+    eligibility_column: success_eligible_main
+    expected_samples: 192
+    expected_positive: 58
+    expected_negative: 134
+  side_effect:
+    label_column: side_effect_label
+    eligibility_column: side_effect_eligible_main
+    expected_samples: 195
+    expected_positive: 12
+    expected_negative: 183
+    positive_semantics: side_effect_present
+  looping:
+    label_column: looping_label
+    eligibility_column: looping_eligible_main
+    expected_samples: 196
+    expected_positive: 92
+    expected_negative: 104
+
+baselines:
+  - id: B0
+    name: dummy_most_frequent
+    estimator: DummyClassifier
+    strategy: most_frequent
+  - id: B1
+    name: dummy_prior
+    estimator: DummyClassifier
+    strategy: prior
+  - id: B2
+    name: structural_lr
+    estimator: StandardScaler+LogisticRegression
+    input: cleaned
+    C: [0.1, 1.0, 10.0]
+    class_weight: [null, balanced]
+  - id: B3
+    name: tfidf_lr
+    estimator: TfidfVectorizer+LogisticRegression
+    input: primary
+    tfidf: [T1, T2]
+    C: [0.1, 1.0, 10.0]
+    class_weight: [null, balanced]
+
+logistic_regression:
+  penalty: l2
+  solver: liblinear
+  max_iter: 5000
+  fit_intercept: true
+  random_state: 2026
+
+structural_features:
+  - step_count
+  - nonempty_action_count
+  - nonempty_observation_count
+  - nonempty_focused_element_count
+  - natural_error_step_count
+  - natural_error_step_ratio
+  - has_explicit_termination_signal
+  - action_char_count_total
+  - observation_char_count_total
+  - action_char_count_mean_nonempty
+  - observation_char_count_mean_nonempty
+  - unique_action_ratio
+  - consecutive_duplicate_action_count
+
+tfidf:
+  T1:
+    ngram_range: [1, 1]
+  T2:
+    ngram_range: [1, 2]
+  common:
+    lowercase: true
+    strip_accents: unicode
+    min_df: 2
+    max_df: 1.0
+    max_features: 20000
+    sublinear_tf: true
+    norm: l2
+    use_idf: true
+    smooth_idf: true
+    token_pattern: '(?u)\b\w\w+\b'
+
+selection:
+  configuration_data: inner_validation_only
+  configuration_metric: average_precision_score
+  configuration_direction: maximize
+  B2_tie_break: [class_weight_none, smaller_C, config_id]
+  B3_tie_break: [T1, class_weight_none, smaller_C, config_id]
+  threshold_data: inner_validation_only
+  threshold_metric: positive_f1
+  thresholds: [0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80, 0.85, 0.90, 0.95]
+  threshold_tie_break: [higher_recall, closer_to_0.5, smaller_threshold]
+
+metrics:
+  pr_auc_implementation: sklearn.metrics.average_precision_score
+  primary: [pr_auc_average_precision, positive_f1]
+  secondary: [roc_auc, precision, recall, f2, balanced_accuracy, mcc]
+  positive_label: 1
+  zero_division: 0
+  fold_standard_deviation_ddof: 1
+
+execution:
+  allowed_scope: ordinary_task_grouped_dev_oof_only
+  required_preregistration_commit_subject: 'chore: preregister minimal grouped baselines'
+  git_worktree_must_be_clean: true
+  outer_validation_evaluations_per_target_baseline_fold: 1
+  test_access: false
+  input_view: primary_with_natural_errors
+  baselines_exactly: [B0, B1, B2, B3]
+  forbidden_experiments:
+    - test_evaluation
+    - lobo
+    - leave_one_model_out
+    - reasoning_sensitivity
+    - error_ablation
+    - benchmark_literal_redaction
+    - embedding
+    - mlp
+    - random_forest
+    - xgboost
+    - transformer
+    - lora
+    - llm_judge
+    - screenshot_or_multimodal
+    - char_ngram
+
+signal_grading:
+  clear_requires_same_learned_baseline: true
+  pooled_ap_above_prevalence: true
+  pooled_positive_f1_above_best_dummy: true
+  minimum_outer_folds_with_both_improvements: 2
+  no_integrity_or_implementation_anomaly: true
+  no_obvious_requires_no_learned_baseline_with_either_pooled_improvement: true
+
+stage_conditions:
+  convergence_warning: PASS_WITH_CONDITIONS
+  learned_baseline_zero_positive_outer_fold: PASS_WITH_CONDITIONS
+  target_positive_count_below: 20
+
+outputs:
+  structural_features: artifacts/dev_structural_features.csv
+  inner_config_selection: artifacts/a1_2_inner_config_selection.csv
+  threshold_selection: artifacts/a1_2_threshold_selection.csv
+  oof_predictions: artifacts/a1_2_oof_predictions.csv
+  fold_metrics: artifacts/a1_2_fold_metrics.csv
+  pooled_metrics: artifacts/a1_2_pooled_metrics.csv
+  config_frequency: artifacts/a1_2_config_frequency.csv
+  run_summary: artifacts/a1_2_run_summary.json
+  report: docs/stage_a1_2_minimal_baseline_report.md
+
+environment:
+  virtual_environment: .venv-baselines
+  lock_file: requirements/baseline-lock.txt
+  environment_artifact: artifacts/baseline_environment.json
+  prerun_integrity_artifact: artifacts/a1_2_prerun_integrity.json
+  gpu_allowed: false
+  formal_run_network_allowed: false

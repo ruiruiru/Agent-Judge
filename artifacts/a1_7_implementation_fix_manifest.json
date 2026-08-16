@@ -1,0 +1,20 @@
+{
+  "failure_run_id": "a1_7_dense_semantic_20260807T163747Z_e776c167",
+  "failure_phase": "post_fit_independent_bootstrap_verification",
+  "failure_error": "bootstrap valid draw count cannot be reproduced",
+  "root_cause": "Bootstrap verification grouped Q2 AP and F1 draw rows under the same key because metric and estimand were omitted.",
+  "scientific_disposition": "All B4 outputs from the failed invocation were invalidated and archived. No domain result was retained. The frozen 196x1024 embeddings remain valid because embedding inputs, tokenization, pooling, weights, and values were unaffected.",
+  "all_b4_outputs_invalidated": true,
+  "embedding_invalidated": false,
+  "fixed_file_sha256": {
+    ".gitattributes": "68ba5b2dfaabbf61069291085c3d49b568af20f9500b722efce40ffb94bf569c",
+    "scripts/run_stage_a1_7_dense_semantic.py": "3343483b9f7e3c96e2c5fbad16c304b52f5539e71e4507863644594da8ca95ba",
+    "tests/test_stage_a1_7_dense_semantic.py": "0093121b3176e64c2d86503320cfb4c0acaadd07fa3d39e1402627376320121d"
+  },
+  "recovery": "Independent verifier fix commit followed by a complete rerun of all 12 B4 cells and all bootstrap estimands. A post-result Git attribute fix stores NPY and Parquet as binary without changing their working-tree bytes or scientific values.",
+  "post_result_git_byte_policy_fix": {
+    "cause": "The broad A1.7 LF rule forced text normalization on NPY and Parquet during the experiment commit.",
+    "scope": "Git storage bytes only; formal embedding, predictions, metrics, and report values are unchanged.",
+    "required_blob_equality": "git hash-object --no-filters must equal the committed blob id for both binary artifacts"
+  }
+}

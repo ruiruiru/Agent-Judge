@@ -1,0 +1,13 @@
+target,error_type,case_role,trajectory_key,benchmark,model_name,true_label,predicted_label,probability,threshold,distance_from_threshold,selection_rank
+success,FP,borderline,visualwebarena::visualwebarena.331::GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct,visualwebarena,GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct,0,1,0.5528932999446989,0.55,0.0028932999446988905,1
+success,FP,median_error_confidence,webarena::webarena.60::GenericAgent-anthropic_claude-3.7-sonnet,webarena,GenericAgent-anthropic_claude-3.7-sonnet,0,1,0.7492495933978677,0.55,0.19924959339786763,68
+success,FP,high_confidence_error,workarena::workarena.servicenow.filter-random-expenses-and-select-investments-large-l2::GenericAgent-gpt-4o-2024-11-20,workarena,GenericAgent-gpt-4o-2024-11-20,0,1,0.9986416433862667,0.55,0.44864164338626666,136
+success,FN,borderline,visualwebarena::visualwebarena.120::GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct,visualwebarena,GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct,1,0,0.5479429899135827,0.55,0.0020570100864173435,1
+success,FN,median_error_confidence,webarena::webarena.268::GenericAgent-meta-llama_Llama-3.3-70B-Instruct,webarena,GenericAgent-meta-llama_Llama-3.3-70B-Instruct,1,0,0.26052827817701557,0.55,0.2894717218229845,35
+success,FN,high_confidence_error,webarena::webarena.263::GenericAgent-meta-llama_Llama-3.3-70B-Instruct,webarena,GenericAgent-meta-llama_Llama-3.3-70B-Instruct,1,0,0.05716298017340107,0.55,0.492837019826599,70
+looping,FP,borderline,workarena::workarena.servicenow.navigate-and-filter-hardware-list-l2::GenericAgent-gpt-4o-2024-11-20,workarena,GenericAgent-gpt-4o-2024-11-20,0,1,0.5642687354264178,0.55,0.014268735426417711,1
+looping,FP,median_error_confidence,assistantbench::assistantbench.validation.18::GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct,assistantbench,GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct,0,1,0.860450206305267,0.55,0.310450206305267,47
+looping,FP,high_confidence_error,visualwebarena::visualwebarena.172::GenericAgent-anthropic_claude-3.7-sonnet,visualwebarena,GenericAgent-anthropic_claude-3.7-sonnet,0,1,0.9850318677938957,0.55,0.4350318677938957,94
+looping,FN,borderline,visualwebarena::visualwebarena.876::GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct,visualwebarena,GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct,1,0,0.5400370948049827,0.55,0.009962905195017302,1
+looping,FN,median_error_confidence,visualwebarena::visualwebarena.614::GenericAgent-gpt-4o-2024-11-20,visualwebarena,GenericAgent-gpt-4o-2024-11-20,1,0,0.19378162523440454,0.55,0.3562183747655955,27
+looping,FN,high_confidence_error,workarena::workarena.servicenow.order-apple-mac-book-pro15::GenericAgent-meta-llama_Llama-3.3-70B-Instruct,workarena,GenericAgent-meta-llama_Llama-3.3-70B-Instruct,1,0,0.009259501969378189,0.55,0.5407404980306219,53

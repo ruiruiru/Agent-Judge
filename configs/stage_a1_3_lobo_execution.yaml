@@ -1,0 +1,243 @@
+stage: A1.3
+protocol_name: benchmark_group_primary_four_group_lobo_minimal_baselines
+random_state: 2026
+
+source:
+  github_commit: f838338886d723d40b586309465a38277803d9e6
+  huggingface_revision: b6d17e646009d6cb63d5dd7be78807b680693f61
+  data_version: dev_cleaned_v1
+  split_version: custom_deterministic_grouped_stratification_v1
+  a1_2_preregistration_commit: b4fef6f63d55ccd4ed2cdf4feb2dcab1cd5b6d20
+  a1_2_experiment_commit: 179ce02640a8e6e15411348b57fd8d7725047364
+
+inputs:
+  cleaned:
+    path: data/processed/dev_cleaned_trajectories.jsonl
+    sha256: 157a2f665ec33aced4e549e349012f97387961afca2da4f8629cc3472a29342e
+  primary:
+    path: data/processed/dev_serialized_primary.jsonl
+    input_view: primary_with_natural_errors
+    sha256: ec2757489c04b4388711826d29a028b24585156c9dab0496d4afe394aa02398a
+  structural_features:
+    path: artifacts/dev_structural_features.csv
+    sha256: 2dcd9f5a5a22c40d318f2a7fe1303cdcc0c27832d2ab443c0f3dbe2a1f631556
+  label_index:
+    path: artifacts/dev_analysis_index.csv
+    sha256: 2b29b46522b5cce32f084e6dc620ff3203f1fd474721fb001123348be0ab56d0
+  primary_lobo_manifest:
+    path: artifacts/lobo_primary_manifest.csv
+    sha256: 16735afc8defd5d91bf2d23ba7773a1f0515feafc238ad1cec2df0dc530b0191
+  sealed_test_manifest:
+    path: artifacts/test_manifest.csv
+    sha256: a52cb55a9c7679b10a6f5ba5958dda2418759c5798adb5d959615f2f4ad3012a
+    identifier_only_overlap_check: true
+    trajectory_content_access_allowed: false
+    labels_access_allowed: false
+
+locked_but_not_executed:
+  secondary_lobo_manifest:
+    path: artifacts/lobo_secondary_manifest.csv
+    sha256: 5872f114890e7a6c3096be0a7be6ba971528e72b1f2e6e67a3452c4575c9abfe
+
+a1_2_contract:
+  execution_config:
+    path: configs/stage_a1_2_execution.yaml
+    sha256: ab09e851b43c6a3f98cc18be571f0786dff7e21f5a74e3c5b37f41023af9ee28
+  implementation:
+    path: scripts/run_stage_a1_2_baselines.py
+    sha256: 524a3127961d628709b96230ed6430fc55e2223564d1790e7de4820026df5cca
+  pooled_metrics:
+    path: artifacts/a1_2_pooled_metrics.csv
+    sha256: 8ce01c2be0cf73e94c1a5fc085d28d92fd57bf40f450e4dfbd33f8912d5713bc
+  run_summary:
+    path: artifacts/a1_2_run_summary.json
+    sha256: 6e221c40c81f2c6edf9e8e58f819659018430802cdb7543e7ad38a44c4afc446
+  inner_config_selection:
+    path: artifacts/a1_2_inner_config_selection.csv
+    sha256: 8de21044a309440934053d81643134aa2fdf52e68baf3ddfcb01c809a87dc49e
+  threshold_selection:
+    path: artifacts/a1_2_threshold_selection.csv
+    sha256: 6d389b1f771912c4442ef0c7bde53190a2607b6afabcf071ac16c5106e57fb38
+  oof_predictions:
+    path: artifacts/a1_2_oof_predictions.csv
+    sha256: a57eb138fb7d89f6319f3540055fad9930fa700c1af551199b5d361d50c163c4
+  fold_metrics:
+    path: artifacts/a1_2_fold_metrics.csv
+    sha256: cb654ec99b7aa7bbf039b89444ae0c30d60baa56d9418d77e09cd4b7d24ac01e
+  config_frequency:
+    path: artifacts/a1_2_config_frequency.csv
+    sha256: d71f6acea47308c18627865c101f47cc80405e3e3bc255d3416baeed5f53cfe8
+  report:
+    path: docs/stage_a1_2_minimal_baseline_report.md
+    sha256: dc86540c97b5ee0e536e40eb0afa9be1727d226036709aa00ef6ffdc5b65e672
+
+held_out_groups: [assistantbench, visualwebarena, webarena, workarena]
+group_field: benchmark_group_primary
+group_key: benchmark_original::normalized_task_id
+
+targets:
+  success:
+    expected_samples: 192
+    expected_positive: 58
+    expected_negative: 134
+    held_out:
+      assistantbench: {samples: 24, task_groups: 6, positive: 2, negative: 22}
+      visualwebarena: {samples: 24, task_groups: 8, positive: 12, negative: 12}
+      webarena: {samples: 84, task_groups: 22, positive: 25, negative: 59}
+      workarena: {samples: 60, task_groups: 15, positive: 19, negative: 41}
+  side_effect:
+    expected_samples: 195
+    expected_positive: 12
+    expected_negative: 183
+    positive_semantics: side_effect_present
+    held_out:
+      assistantbench: {samples: 24, task_groups: 6, positive: 0, negative: 24}
+      visualwebarena: {samples: 24, task_groups: 8, positive: 2, negative: 22}
+      webarena: {samples: 87, task_groups: 22, positive: 8, negative: 79}
+      workarena: {samples: 60, task_groups: 15, positive: 2, negative: 58}
+  looping:
+    expected_samples: 196
+    expected_positive: 92
+    expected_negative: 104
+    held_out:
+      assistantbench: {samples: 24, task_groups: 6, positive: 11, negative: 13}
+      visualwebarena: {samples: 24, task_groups: 8, positive: 7, negative: 17}
+      webarena: {samples: 88, task_groups: 22, positive: 37, negative: 51}
+      workarena: {samples: 60, task_groups: 15, positive: 37, negative: 23}
+
+inner_folds:
+  path: artifacts/a1_3_lobo_inner_folds.csv
+  candidates: [5, 4, 3, 2]
+  seed: 2026
+  selection: maximum_feasible
+  algorithm: custom_deterministic_grouped_stratification_v1
+  namespace_template: 'a1_3|inner|{target}|heldout|{held_out_group}'
+  held_out_role_in_source_manifest: validation
+  held_out_role_in_frozen_artifact: held_out
+
+baselines:
+  - {id: B0, name: dummy_most_frequent, estimator: DummyClassifier, strategy: most_frequent}
+  - {id: B1, name: dummy_prior, estimator: DummyClassifier, strategy: prior}
+  - {id: B2, name: structural_lr, estimator: StandardScaler+LogisticRegression, input: frozen_structural_features}
+  - {id: B3, name: tfidf_lr, estimator: TfidfVectorizer+LogisticRegression, input: primary_with_natural_errors}
+
+logistic_regression:
+  penalty: l2
+  solver: liblinear
+  max_iter: 5000
+  fit_intercept: true
+  random_state: 2026
+
+structural_features:
+  - step_count
+  - nonempty_action_count
+  - nonempty_observation_count
+  - nonempty_focused_element_count
+  - natural_error_step_count
+  - natural_error_step_ratio
+  - has_explicit_termination_signal
+  - action_char_count_total
+  - observation_char_count_total
+  - action_char_count_mean_nonempty
+  - observation_char_count_mean_nonempty
+  - unique_action_ratio
+  - consecutive_duplicate_action_count
+
+tfidf:
+  T1: {ngram_range: [1, 1]}
+  T2: {ngram_range: [1, 2]}
+  common:
+    lowercase: true
+    strip_accents: unicode
+    min_df: 2
+    max_df: 1.0
+    max_features: 20000
+    sublinear_tf: true
+    norm: l2
+    use_idf: true
+    smooth_idf: true
+    token_pattern: '(?u)\b\w\w+\b'
+
+selection:
+  configuration_data: pooled_inner_oof_from_three_training_benchmarks_only
+  configuration_metric: average_precision_score
+  configuration_direction: maximize
+  B2_tie_break: [class_weight_none, smaller_C, config_id]
+  B3_tie_break: [T1, class_weight_none, smaller_C, config_id]
+  threshold_data: selected_configuration_pooled_inner_oof_only
+  threshold_metric: positive_f1
+  thresholds: [0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80, 0.85, 0.90, 0.95]
+  threshold_tie_break: [higher_recall, closer_to_0.5, smaller_threshold]
+
+metrics:
+  pr_auc_implementation: sklearn.metrics.average_precision_score
+  primary: [pr_auc_average_precision, positive_f1]
+  secondary: [roc_auc, precision, recall, f2, balanced_accuracy, mcc]
+  positive_label: 1
+  zero_division: 0
+  macro_standard_deviation_ddof: 1
+  single_class_metric_value: null
+  single_class_negative_status: single_class_negative
+
+execution:
+  allowed_scope: benchmark_group_primary_four_group_lobo_official_dev_only
+  required_preregistration_commit_subject: 'fix: normalize primary lobo preregistration bytes'
+  git_worktree_must_be_clean: true
+  external_evaluations_per_target_baseline_held_out_group: 1
+  test_access: false
+  input_view: primary_with_natural_errors
+  baselines_exactly: [B0, B1, B2, B3]
+  expected_config_selection_rows: 240
+  expected_threshold_selection_rows: 912
+  expected_external_prediction_rows: 2332
+  expected_domain_metric_rows: 48
+  forbidden_experiments:
+    - test_evaluation
+    - secondary_five_group_lobo
+    - leave_one_model_out
+    - reasoning_sensitivity
+    - error_ablation
+    - benchmark_literal_redaction
+    - embedding
+    - mlp
+    - random_forest
+    - xgboost
+    - transformer
+    - lora
+    - llm_judge
+    - screenshot_or_multimodal
+    - char_ngram
+    - B2_B3_fusion
+
+signal_grading:
+  robust_minimum_mixed_domain_fraction: 0.75
+  requires_same_learned_baseline: true
+  pooled_ap_above_prevalence: true
+  pooled_f1_above_both_dummies: true
+  domain_ap_above_prevalence: true
+  domain_f1_above_both_dummies: true
+  no_integrity_or_implementation_anomaly: true
+  not_assessable_below_mixed_domains: 2
+
+outputs:
+  inner_config_selection: artifacts/a1_3_lobo_inner_config_selection.csv
+  inner_selected_oof_predictions: artifacts/a1_3_lobo_inner_selected_oof_predictions.csv
+  threshold_selection: artifacts/a1_3_lobo_threshold_selection.csv
+  predictions: artifacts/a1_3_lobo_predictions.csv
+  domain_metrics: artifacts/a1_3_lobo_domain_metrics.csv
+  macro_metrics: artifacts/a1_3_lobo_macro_metrics.csv
+  pooled_metrics: artifacts/a1_3_lobo_pooled_metrics.csv
+  config_frequency: artifacts/a1_3_lobo_config_frequency.csv
+  comparison_to_a1_2: artifacts/a1_3_lobo_comparison_to_a1_2.csv
+  run_summary: artifacts/a1_3_lobo_run_summary.json
+  report: docs/stage_a1_3_primary_lobo_report.md
+
+environment:
+  virtual_environment: .venv-baselines
+  lock_file: requirements/baseline-lock.txt
+  lock_file_sha256: 6ad6b9933a8d435a95415903296d6c6d0aaf186a5f7f27812640c0e0b0f4e971
+  environment_artifact: artifacts/baseline_environment.json
+  environment_artifact_sha256: f6b830c652bd75149651cd8ab9390a9a318e2bf963f79dcbd8a5ba6c2c9b0a7b
+  prerun_integrity_artifact: artifacts/a1_3_lobo_prerun_integrity.json
+  gpu_allowed: false
+  formal_run_network_allowed: false

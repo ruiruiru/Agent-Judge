@@ -1,0 +1,57 @@
+{
+  "failures": [
+    {
+      "failure_id": "A1_11_IMPL_001",
+      "failure_type": "multi_artifact_source_path_parsing",
+      "observed_error": "FileNotFoundError while treating a semicolon-delimited pair of frozen source artifacts as one path",
+      "phase": "registry construction before any A1.11 output write",
+      "scientific_outputs_written": 0,
+      "test_label_rows_read": 0,
+      "test_prediction_rows_read": 0,
+      "new_experiments": 0,
+      "model_fits": 0,
+      "inference_runs": 0,
+      "embedding_runs": 0,
+      "test_metric_recomputations": 0,
+      "bootstrap_reruns": 0,
+      "resolution": "Hash each semicolon-delimited frozen artifact separately and retain an explicit path-to-hash contract.",
+      "rerun_policy": "Create an independent fix commit, then rerun the complete A1.11 audit from the beginning."
+    },
+    {
+      "failure_id": "A1_11_IMPL_002",
+      "failure_type": "incomplete_multi_artifact_source_path_fix",
+      "observed_error": "The first fix covered provenance rows but omitted the dev-evidence conversion branch, which raised the same FileNotFoundError.",
+      "phase": "registry construction before any A1.11 output write",
+      "scientific_outputs_written": 0,
+      "test_label_rows_read": 0,
+      "test_prediction_rows_read": 0,
+      "new_experiments": 0,
+      "model_fits": 0,
+      "inference_runs": 0,
+      "embedding_runs": 0,
+      "test_metric_recomputations": 0,
+      "bootstrap_reruns": 0,
+      "resolution": "Apply the multi-artifact hash helper in the dev-evidence conversion branch and enumerate all A1.11 fix commits in the final summary.",
+      "rerun_policy": "Create a second independent fix commit, then rerun the complete A1.11 audit from a clean worktree."
+    },
+    {
+      "failure_id": "A1_11_IMPL_003",
+      "failure_type": "post_generation_claim_reference_and_report_provenance_error",
+      "observed_error": "Pre-commit semantic review found claim IDs in supporting_evidence_ids for prohibited overclaims and an incorrect no-fix statement in the formal report.",
+      "phase": "post-generation verification before A1.11b result commit",
+      "scientific_outputs_written_then_invalidated": 13,
+      "test_label_rows_read": 0,
+      "test_prediction_rows_read": 0,
+      "new_experiments": 0,
+      "model_fits": 0,
+      "inference_runs": 0,
+      "embedding_runs": 0,
+      "test_metric_recomputations": 0,
+      "bootstrap_reruns": 0,
+      "resolution": "Bind every prohibited overclaim to actual evidence IDs and report all independent A1.11 fix commits.",
+      "rerun_policy": "Delete all invalid generated outputs, create a third independent fix commit, and rerun the complete A1.11 audit from a clean worktree."
+    }
+  ],
+  "stage": "A1.11",
+  "status": "PRESERVED_IMPLEMENTATION_FAILURE"
+}

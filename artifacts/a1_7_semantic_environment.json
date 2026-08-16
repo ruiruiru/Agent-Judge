@@ -1,0 +1,34 @@
+{
+  "baseline_environment_modified": false,
+  "dependencies": {
+    "huggingface_hub": "0.33.4",
+    "numpy": "2.3.1",
+    "safetensors": "0.5.3",
+    "tokenizers": "0.21.4",
+    "torch": "2.7.1+cu128",
+    "transformers": "4.53.3"
+  },
+  "fine_tune": false,
+  "formal_run_network_allowed": false,
+  "generated_at_utc": "2026-08-07T16:25:20+00:00",
+  "hardware": {
+    "cuda_available": true,
+    "cuda_runtime": "12.8",
+    "cudnn": 90701,
+    "gpu": "NVIDIA GeForce RTX 5070",
+    "gpu_capability": [
+      12,
+      0
+    ],
+    "logical_cpu_count": 16,
+    "machine": "AMD64"
+  },
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": {
+    "executable": "C:\\Users\\Admin\\Documents\\Agent-Judge\\.venv-semantic\\Scripts\\python.exe",
+    "implementation": "CPython",
+    "version": "3.12.13"
+  },
+  "quantization": false,
+  "semantic_environment_only": true
+}

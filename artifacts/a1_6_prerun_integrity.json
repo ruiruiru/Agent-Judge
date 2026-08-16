@@ -1,0 +1,302 @@
+{
+  "bootstrap": {
+    "bit_generator": "numpy.random.PCG64",
+    "confidence_level": 0.95,
+    "impute_invalid": false,
+    "interval_method": "percentile",
+    "macro_minimum_valid_mixed_domains": 2,
+    "n_bootstrap_draws": 10000,
+    "numpy_rng": "numpy.random.Generator",
+    "parallel_workers": 8,
+    "percentiles": [
+      2.5,
+      97.5
+    ],
+    "pooled_role": "secondary",
+    "prevalence_source": "bootstrap_draw",
+    "redraw_invalid": false,
+    "seed": 2026,
+    "strata": [
+      "target",
+      "held_out_group"
+    ],
+    "stratified": false,
+    "unit": "task_group_cluster"
+  },
+  "config_sha256": "0c9e133e9bbffaebde90c7cdfb1f4f0e1bfe46b7652c6cfc39eb84c38bf3f551",
+  "forbidden_experiments_executed": [],
+  "formal_bootstrap_metric_draw_count": 0,
+  "generated_at_utc": "2026-08-07T12:17:40+00:00",
+  "group_counts": {
+    "looping": {
+      "assistantbench": 6,
+      "visualwebarena": 8,
+      "webarena": 22,
+      "workarena": 15
+    },
+    "side_effect": {
+      "assistantbench": 6,
+      "visualwebarena": 8,
+      "webarena": 22,
+      "workarena": 15
+    },
+    "success": {
+      "assistantbench": 6,
+      "visualwebarena": 8,
+      "webarena": 22,
+      "workarena": 15
+    }
+  },
+  "point_estimate_regression": {
+    "a1_3": {
+      "checked_values": 204,
+      "max_absolute_error": 5.551115123125783e-17,
+      "status": "PASS",
+      "tolerance": 1e-12
+    },
+    "a1_5": {
+      "checked_values": 357,
+      "max_absolute_error": 1.1102230246251565e-16,
+      "status": "PASS",
+      "tolerance": 1e-12
+    }
+  },
+  "primary_comparisons": [
+    {
+      "id": "P1",
+      "kind": "positive_signal",
+      "method_a": "B2",
+      "metric": "ap_lift",
+      "role": "primary",
+      "scope": "macro",
+      "source": "a1_3",
+      "target": "success"
+    },
+    {
+      "id": "P2",
+      "kind": "paired_delta",
+      "method_a": "B2",
+      "method_b": "B3",
+      "metric": "ap",
+      "role": "primary",
+      "scope": "macro",
+      "source": "a1_3",
+      "target": "success"
+    },
+    {
+      "id": "P2",
+      "kind": "paired_delta",
+      "method_a": "B2",
+      "method_b": "B3",
+      "metric": "f1",
+      "role": "primary",
+      "scope": "macro",
+      "source": "a1_3",
+      "target": "success"
+    },
+    {
+      "id": "P3",
+      "kind": "paired_delta",
+      "method_a": "S1_no_termination",
+      "method_b": "S0_full13",
+      "metric": "ap",
+      "role": "primary",
+      "scope": "macro",
+      "source": "a1_5",
+      "target": "success"
+    },
+    {
+      "id": "P3",
+      "kind": "paired_delta",
+      "method_a": "S1_no_termination",
+      "method_b": "S0_full13",
+      "metric": "ap",
+      "role": "auxiliary",
+      "scope": "pooled",
+      "source": "a1_5",
+      "target": "success"
+    },
+    {
+      "id": "P3",
+      "kind": "paired_delta",
+      "method_a": "S1_no_termination",
+      "method_b": "S0_full13",
+      "metric": "f1",
+      "role": "auxiliary",
+      "scope": "macro",
+      "source": "a1_5",
+      "target": "success"
+    },
+    {
+      "id": "P4",
+      "kind": "paired_delta",
+      "method_a": "S6_termination_repetition_only",
+      "method_b": "S0_full13",
+      "metric": "ap",
+      "role": "primary",
+      "scope": "macro",
+      "source": "a1_5",
+      "target": "success"
+    },
+    {
+      "id": "P4",
+      "kind": "paired_delta",
+      "method_a": "S6_termination_repetition_only",
+      "method_b": "S0_full13",
+      "metric": "ap",
+      "role": "auxiliary",
+      "scope": "pooled",
+      "source": "a1_5",
+      "target": "success"
+    },
+    {
+      "id": "P4",
+      "kind": "paired_delta",
+      "method_a": "S6_termination_repetition_only",
+      "method_b": "S0_full13",
+      "metric": "f1",
+      "role": "auxiliary",
+      "scope": "macro",
+      "source": "a1_5",
+      "target": "success"
+    },
+    {
+      "id": "P5",
+      "kind": "positive_signal",
+      "method_a": "B2",
+      "metric": "ap_lift",
+      "role": "primary",
+      "scope": "macro",
+      "source": "a1_3",
+      "target": "looping"
+    },
+    {
+      "id": "P6",
+      "kind": "paired_delta",
+      "method_a": "S2_no_repetition",
+      "method_b": "S0_full13",
+      "metric": "ap",
+      "role": "primary",
+      "scope": "macro",
+      "source": "a1_5",
+      "target": "looping"
+    },
+    {
+      "id": "P6",
+      "kind": "paired_delta",
+      "method_a": "S2_no_repetition",
+      "method_b": "S0_full13",
+      "metric": "ap",
+      "role": "auxiliary",
+      "scope": "pooled",
+      "source": "a1_5",
+      "target": "looping"
+    },
+    {
+      "id": "P6",
+      "kind": "paired_delta",
+      "method_a": "S2_no_repetition",
+      "method_b": "S0_full13",
+      "metric": "f1",
+      "role": "auxiliary",
+      "scope": "macro",
+      "source": "a1_5",
+      "target": "looping"
+    },
+    {
+      "id": "P7",
+      "kind": "paired_delta",
+      "method_a": "S6_termination_repetition_only",
+      "method_b": "S0_full13",
+      "metric": "ap",
+      "role": "primary",
+      "scope": "macro",
+      "source": "a1_5",
+      "target": "looping"
+    },
+    {
+      "id": "P7",
+      "kind": "paired_delta",
+      "method_a": "S6_termination_repetition_only",
+      "method_b": "S0_full13",
+      "metric": "ap",
+      "role": "auxiliary",
+      "scope": "pooled",
+      "source": "a1_5",
+      "target": "looping"
+    },
+    {
+      "id": "P7",
+      "kind": "paired_delta",
+      "method_a": "S6_termination_repetition_only",
+      "method_b": "S0_full13",
+      "metric": "f1",
+      "role": "auxiliary",
+      "scope": "macro",
+      "source": "a1_5",
+      "target": "looping"
+    },
+    {
+      "id": "P8",
+      "kind": "support_diagnostic",
+      "method_a": "B3",
+      "metric": "ap",
+      "role": "primary",
+      "scope": "macro",
+      "source": "a1_3",
+      "target": "side_effect"
+    }
+  ],
+  "real_model_training_count": 0,
+  "registry_sha256": "3f875ca8a32fdb99c5754c69daac741b960ac84e742c1eabd4135bb246420a0f",
+  "registry_summary_sha256": "f2128647346fedfb6c477b5c2f1d80c2f345b4610f019af48507d4be66f02833",
+  "s0_equals_a1_3_b2": {
+    "configs_exact": true,
+    "keys_exact": true,
+    "labels_exact": true,
+    "max_probability_absolute_error": 0.0,
+    "predicted_labels_exact": true,
+    "row_count": 583,
+    "status": "PASS",
+    "thresholds_exact": true
+  },
+  "script_sha256": "7f54ab1610a3f7057893908d4d33f7a60447baddfb423c0ffdac9221c1e413fe",
+  "source_revisions": {
+    "github_commit": "f838338886d723d40b586309465a38277803d9e6",
+    "huggingface_revision": "b6d17e646009d6cb63d5dd7be78807b680693f61"
+  },
+  "stage": "A1.6a",
+  "status": "PASS",
+  "test_access": {
+    "content": 0,
+    "labels": 0,
+    "manifest": 0,
+    "metrics": 0,
+    "predictions": 0
+  },
+  "training_call_count": 0,
+  "verified_input_hashes": {
+    "artifacts/a1_3_lobo_domain_metrics.csv": "e648fa88feb18f8ff72a8e4ed65a1ca5315c173da17c368dbbc7366f75895222",
+    "artifacts/a1_3_lobo_macro_metrics.csv": "cee5105e4049a1f113995b225d366f938e56d787e274e96d0b0444bb6b472ec6",
+    "artifacts/a1_3_lobo_pooled_metrics.csv": "58319203d986a19ea2851a0eb4bb41bcae18e3cd5f9a017fdc32eb351a469bac",
+    "artifacts/a1_3_lobo_predictions.csv": "e761f5a0d4e72faa837496a29b91db358bc03645d8b7ea695c6322aa550bfe4d",
+    "artifacts/a1_3_lobo_run_summary.json": "ec4055a20fe7ab1d6df5d3e51b76962ef8ce642073ccc50563cad4c92bcc39e5",
+    "artifacts/a1_5_domain_metrics.csv": "8609d946fb032d497dd6ffd56020b184886516da9494be622020ef6cfc2c43a2",
+    "artifacts/a1_5_external_predictions.csv": "a55abec76db6d3afb03e1936a8ae230b9b2c142e805c9b805068911820b00143",
+    "artifacts/a1_5_macro_metrics.csv": "30de6ad6fef1ab5f748a131603d128bd1eb13a1059ac633767e0d7d795a930fe",
+    "artifacts/a1_5_pooled_metrics.csv": "a35fce3930a9ba47483dc8e1f7ec334321b529abb67ed8517bd7c2d9d44f835a",
+    "artifacts/a1_5_run_summary.json": "00e93994896b0a2f8ff82b418fb36a8fa3cc528a856ebc41c7ef872e487dfdd1",
+    "artifacts/a1_5_structural_ablation_deltas.csv": "4c5c6a6acd818800f5456c5a1cea816a72fa1938d86e641bb9a17d6c80317abf",
+    "artifacts/dev_analysis_index.csv": "2b29b46522b5cce32f084e6dc620ff3203f1fd474721fb001123348be0ab56d0",
+    "artifacts/lobo_primary_manifest.csv": "16735afc8defd5d91bf2d23ba7773a1f0515feafc238ad1cec2df0dc530b0191",
+    "artifacts/source_manifest.json": "e47c81f0b3e0cc6ee30718bc329ee92ee62ac8939e2a4bfaec7e6932ca95698d",
+    "configs/stage_a1_3_lobo_execution.yaml": "d681a09aa7106a9679a5640b751af1000080afddc198433d4f8891ec32541549",
+    "configs/stage_a1_5_structural_ablation.yaml": "e73f42d83ade649b1c658ea033cee22fb1a51f65770da97de081e449f29daa2c"
+  },
+  "verified_upstream_commits": {
+    "a1_3_experiment": "346bb4b3d4a90fc51c1e099618c3b7592fa76b99",
+    "a1_3_preregistration": "6027d5e5af29a1b0143bb04024084a6c4209529e",
+    "a1_5_experiment": "e4fd9aba83cc6ed3b01b1f624c666b6cc7fce3ca",
+    "a1_5_preregistration": "fa9ef0771ea44a720ed8b900199a75ef3c863379"
+  }
+}

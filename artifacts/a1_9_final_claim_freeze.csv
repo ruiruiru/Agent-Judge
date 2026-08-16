@@ -1,0 +1,9 @@
+claim_id,target,method_id,role,confirmatory_eligible,frozen_claim,interpretation_scope,automatic_upgrade_allowed
+FC1,success,FINAL_SUCCESS_B2,confirmatory_primary,true,Frozen B2 structural classifier retains predictive signal on the untouched official test split.,held-out official tasks and trajectories only,false
+FC2,looping,FINAL_LOOPING_B2,confirmatory_primary,true,Frozen B2 structural classifier retains predictive signal on the untouched official test split.,held-out official tasks and trajectories only,false
+FE1,side_effect,FINAL_SIDE_EFFECT_B4,exploratory_only,false,Frozen dense semantic baseline performance on official test is exploratory description only.,exploratory test description only,false
+FD1,success,DEV_ONLY,dev_only,false,B2 versus B3 relative superiority remains a dev-only claim.,not graded by final test,false
+FD2,success,DEV_ONLY,dev_only,false,B4 versus B2 or B3 relative superiority remains a dev-only claim.,not graded by final test,false
+FD3,all,DEV_ONLY,dev_only,false,Termination and repetition mechanism claims remain dev-only.,not graded by final test,false
+FD4,cross_model,DEV_ONLY,dev_only,false,A1.4 model-only transfer remains dev-only and is not joint task and model OOD.,not graded by final test,false
+FD5,all,DEV_ONLY,dev_only,false,Representation complexity hierarchy remains dev-only and cannot be upgraded by test scores.,not graded by final test,false

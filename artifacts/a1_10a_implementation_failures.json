@@ -1,0 +1,21 @@
+{
+  "failures": [
+    {
+      "affected_outputs_reused": false,
+      "eligibility_access": 0,
+      "error": "ModuleNotFoundError: No module named 'sklearn'",
+      "estimator_fits": 0,
+      "fix_commit": "100966969bf36c968051dea7fbbb675c1814b7cd",
+      "forward_passes_completed": 0,
+      "labels_access": 0,
+      "metrics_access": 0,
+      "model_loaded": false,
+      "phase": "embedding_startup",
+      "resolution": "defer the baseline-only structural-feature import until baseline phases",
+      "status": "RECOVERED_BY_INDEPENDENT_FIX_COMMIT"
+    }
+  ],
+  "failure_count": 1,
+  "stage": "A1.10a",
+  "test_label_guided_debugging": 0
+}

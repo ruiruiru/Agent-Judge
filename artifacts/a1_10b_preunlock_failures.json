@@ -1,0 +1,17 @@
+{
+  "failure_count": 1,
+  "failures": [
+    {
+      "affected_outputs_reused": false,
+      "eligibility_access": 0,
+      "error": "NameError: name 'false' is not defined",
+      "label_access": 0,
+      "label_source_opened": false,
+      "metrics_access": 0,
+      "phase": "preunlock_artifact_serialization",
+      "resolution": "replace the JSON-style name with the Python False literal and add an AST regression test",
+      "status": "RECOVERED_BEFORE_LABEL_UNLOCK"
+    }
+  ],
+  "stage": "A1.10b_preunlock"
+}

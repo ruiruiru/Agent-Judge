@@ -1,0 +1,14 @@
+\begin{table*}[t]
+\centering
+\scriptsize
+\caption{Associative/diagnostic coefficients are not causal effects. Metadata comparison is descriptive. Error cases are deterministic illustrations, not prevalence estimates.}
+\label{tab:interpretability-failure-summary}
+\begin{tabular}{lp{0.18\textwidth}rrrp{0.18\textwidth}p{0.23\textwidth}p{0.15\textwidth}}
+\hline
+Target & Top signed structural signals & Metadata AP & Metadata AP lift & Frozen B2 dev AP & Deterministic illustrative cases & Interpretation & Evidence status \\
+\hline
+Success & observation\_char\_count\_total: -2.204 \newline observation\_char\_count\_mean\_nonempty: 1.879 \newline action\_char\_count\_total: 0.732 \newline has\_explicit\_termination\_signal: -0.610 \newline unique\_action\_ratio: 0.520 & 0.371 & 0.069 & 0.547 & LONG\_BUT\_UNSUCCESSFUL:2; REPETITIVE\_BUT\_PROGRESSING:1; SHORT\_BUT\_SUCCESSFUL:1; TERMINATION\_MISMATCH:2 & Associations and deterministic cases delimit where task-agnostic structure tracks execution morphology but misses semantic completion; coefficients are not causal importance. & DEV\_ONLY;POST\_FREEZE\_DIAGNOSTIC;POST\_FREEZE\_DESCRIPTIVE \\
+Looping & observation\_char\_count\_mean\_nonempty: -0.830 \newline nonempty\_action\_count: 0.695 \newline nonempty\_observation\_count: 0.695 \newline step\_count: 0.695 \newline nonempty\_focused\_element\_count: 0.670 & 0.569 & 0.099 & 0.914 & EXPLICIT\_ERROR\_RECOVERY:1; NON\_REPETITIVE\_FAILURE:2; OTHER:1; REPETITIVE\_BUT\_PROGRESSING:1; UNCLEAR:1 & Associations and deterministic cases distinguish literal action repetition from progress and semantic cycling; coefficients are not causal importance. & DEV\_ONLY;POST\_FREEZE\_DIAGNOSTIC;POST\_FREEZE\_DESCRIPTIVE \\
+\hline
+\end{tabular}
+\end{table*}

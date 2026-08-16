@@ -1,0 +1,162 @@
+stage: A1.10a
+protocol_name: blind_first_official_test_inference
+random_state: 2026
+
+authorization: AUTHORIZE A1.10a BLIND TEST INFERENCE
+taskbook:
+  path: docs/tasks/STAGE_A1_10_BLIND_FIRST_OFFICIAL_TEST_EVALUATION.md
+  sha256: fdf83ec4ded9fb9e91a6b62ba92916154b75b19f088dbf0d8cd93dbd130c0913
+  docs_commit: ce31d8767de3fa45d436191ab8faf6aff126eb0d
+
+source:
+  github_commit: f838338886d723d40b586309465a38277803d9e6
+  huggingface_revision: b6d17e646009d6cb63d5dd7be78807b680693f61
+  repository: McGill-NLP/agent-reward-bench
+  identifier_manifest: artifacts/test_manifest.csv
+  prior_trajectory_count: 1106
+
+provenance:
+  a1_8_claim_matrix:
+    path: artifacts/a1_8_claim_matrix.csv
+    sha256: 264678a325f1680c8cfdad3631e6f5209a29a91e6ab8dd5b9683adb857810590
+  a1_9a_commit: 4944df46be45d8ad52d57a051e04b59c4a1a82ee
+  a1_9b_commit: 8f96a6f032ee9b4dd0272164d60230303612043b
+  a1_9_prerun_integrity:
+    path: artifacts/a1_9_prerun_integrity.json
+    sha256: ac47b479be4dbdd93fe04da063c6db0c5454d8ee5c3f8df7997e7c0999707a4b
+  a1_9_model_manifest:
+    path: artifacts/a1_9_final_model_manifest.json
+    sha256: 44d7fce8e2b3cef51fd8c1d2e46bae7838dcd92e8c664a31c48962ff2070881f
+  a1_9_claim_freeze:
+    path: artifacts/a1_9_final_claim_freeze.csv
+    sha256: e9fa0da68351cfc5e773984e6fd72e2290a426f4cbe9b4eedba496203be9bbec
+  a1_9_test_preregistration:
+    path: artifacts/a1_9_test_preregistration.json
+    sha256: d9a98936f0469f75f6d186c2505481939900bdd895355c0f471b48a73eb86bbc
+
+models:
+  success:
+    target: success
+    method_id: FINAL_SUCCESS_B2
+    role: confirmatory_primary
+    path: artifacts/final_models/final_success_b2.joblib
+    sha256: afbdb0a60205d7c6bd40232a8c8a1b1ad3b0910d6b65fecf894cca1a040123c1
+    input: structural_features
+    input_dimension: 13
+    standard_scaler: true
+    threshold: 0.55
+  looping:
+    target: looping
+    method_id: FINAL_LOOPING_B2
+    role: confirmatory_primary
+    path: artifacts/final_models/final_looping_b2.joblib
+    sha256: 862b7ff2b0cbcb5faf88908f5fe5824c7f4e52c2c21521e41bb5fb71b011660c
+    input: structural_features
+    input_dimension: 13
+    standard_scaler: true
+    threshold: 0.55
+  side_effect:
+    target: side_effect
+    method_id: FINAL_SIDE_EFFECT_B4
+    role: exploratory_only
+    confirmatory_eligible: false
+    path: artifacts/final_models/final_side_effect_b4.joblib
+    sha256: 5eb29646c10a8193b8492ffe26a41a63414dc9da884890813273c43d17a7de59
+    input: qwen3_embedding
+    input_dimension: 1024
+    standard_scaler: false
+    threshold: 0.40
+
+structural_features:
+  - step_count
+  - nonempty_action_count
+  - nonempty_observation_count
+  - nonempty_focused_element_count
+  - natural_error_step_count
+  - natural_error_step_ratio
+  - has_explicit_termination_signal
+  - action_char_count_total
+  - observation_char_count_total
+  - action_char_count_mean_nonempty
+  - observation_char_count_mean_nonempty
+  - unique_action_ratio
+  - consecutive_duplicate_action_count
+
+qwen:
+  repo_id: Qwen/Qwen3-Embedding-0.6B
+  local_snapshot: .semantic-cache/models/Qwen3-Embedding-0.6B-97b0c614
+  immutable_revision: 97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3
+  weight_sha256: 0437e45c94563b09e13cb7a64478fc406947a93cb34a7e05870fc8dcd48e23fd
+  frozen_a1_7_config: configs/stage_a1_7_dense_semantic.yaml
+  frozen_model_manifest: artifacts/a1_7_embedding_model_manifest.json
+  payload_tokens_per_chunk: 8191
+  overlap: 0
+  append_eos_count: 1
+  pooling: last_eos_hidden_state
+  chunk_normalization: l2
+  trajectory_aggregation: payload_token_count_weighted_mean
+  trajectory_normalization: l2
+  output_dimension: 1024
+  output_dtype: float32
+  inference_weight_dtype: bfloat16
+  cublas_workspace_config: ':4096:8'
+
+outputs:
+  prerun_integrity: artifacts/a1_10a_prerun_integrity.json
+  identifier_manifest: artifacts/a1_10a_test_identifier_manifest.csv
+  structural_features: artifacts/a1_10a_test_structural_features.csv
+  embedding: artifacts/a1_10a_test_qwen3_embedding_0p6b.npy
+  embedding_index: artifacts/a1_10a_test_embedding_index.csv
+  tokenization_audit: artifacts/a1_10a_test_tokenization_audit.csv
+  blind_predictions: artifacts/a1_10a_blind_predictions.csv
+  blind_prediction_manifest: artifacts/a1_10a_blind_prediction_manifest.json
+  run_summary: artifacts/a1_10a_run_summary.json
+  report: docs/stage_a1_10a_blind_test_inference_report.md
+  cleaned_jsonl: data/processed/a1_10a_test_cleaned_trajectories.jsonl
+  primary_jsonl: data/processed/a1_10a_test_serialized_primary.jsonl
+  local_state: data/test_build_temp/a1_10a_state.csv
+  local_records: data/test_build_temp/records
+  local_embeddings: data/test_build_temp/embeddings
+  raw_cache: data/test_download_cache
+
+expected:
+  trajectories: 1106
+  targets: 3
+  prediction_rows: 3318
+  embedding_dimension: 1024
+  structural_feature_count: 13
+
+test_access_final:
+  manifest: 1106
+  content: 1106
+  labels: 0
+  eligibility: 0
+  features: 1106
+  embeddings: 1106
+  predictions: 3318
+  metrics: 0
+
+prohibited_experiments:
+  estimator_refit: 0
+  threshold_tuning: 0
+  config_selection: 0
+  feature_change: 0
+  b3_final_method: 0
+  s6_final_method: 0
+  fusion: 0
+  calibration: 0
+  second_embedding_model: 0
+  llm_judge: 0
+  new_model_family: 0
+  dev_embedding_regeneration: 0
+  label_guided_debugging: 0
+
+execution:
+  formal_network_scope: fixed_revision_test_raw_json_only
+  label_source_configured: false
+  eligibility_source_configured: false
+  metric_computation_configured: false
+  estimator_fit_allowed: false
+  delete_downloaded_raw_after_compact_record: true
+  required_result_commit_subject: "experiment: freeze blind official test predictions"
+  stop_after_a1_10a: true

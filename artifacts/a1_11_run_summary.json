@@ -1,0 +1,269 @@
+{
+  "a1_11_fix_commits": [
+    "11e86d5a2eb7006cf3faaef30ba0e495a86b5638",
+    "4534678a3eba2716d4b93f6f406c9e3af1dad7ff",
+    "4729517292f83dd310c760daf182d27a0ef8a8ea"
+  ],
+  "a2_gap_recommendation": "Start manuscript writing now; prioritize independent external validation, then lightweight mechanism validation; do not prioritize additional model complexity.",
+  "bootstrap_reruns": 0,
+  "claim_count_by_status": {
+    "CONFIRMATORY_SUPPORTED": 2,
+    "DESCRIPTIVE_ONLY": 3,
+    "DEV_ONLY": 9,
+    "EXPLORATORY_SUPPORTED": 1,
+    "NOT_SUPPORTED": 2,
+    "PROHIBITED_OVERCLAIM": 8
+  },
+  "core_confirmatory_claims": [
+    "FC1",
+    "FC2"
+  ],
+  "determination": "PASS",
+  "dev_only_claims": [
+    "FD1",
+    "FD2",
+    "FD3",
+    "FD4",
+    "FD5",
+    "FD6",
+    "FD7",
+    "FD8",
+    "FD9"
+  ],
+  "eligibility_changes": 0,
+  "embedding_runs": 0,
+  "evidence_registry_rows": 90,
+  "exploratory_claims": [
+    "FE1"
+  ],
+  "final_claim_matrix_hash": "2fc929e242e614244940d6d96d8ff1e3935e059925cff0b36b009a86b04f3175",
+  "git_clean": true,
+  "git_start_clean": true,
+  "head_before": "c0d82fb1b89eddc8a8f0765183e51808b9268616",
+  "implementation_failures": {
+    "count": 3,
+    "path": "artifacts/a1_11_implementation_failures.json",
+    "sha256": "7863b196c6446cb49d44df3f000c0607db32e14a38925194a9cd3caa1c81b1b1"
+  },
+  "inconsistencies": [],
+  "inference_runs": 0,
+  "input_machine_artifacts": [
+    "artifacts/a1_10_run_summary.json",
+    "artifacts/a1_10a_run_summary.json",
+    "artifacts/a1_2_run_summary.json",
+    "artifacts/a1_3_lobo_run_summary.json",
+    "artifacts/a1_4_lomo_run_summary.json",
+    "artifacts/a1_5_run_summary.json",
+    "artifacts/a1_6_run_summary.json",
+    "artifacts/a1_7_run_summary.json",
+    "artifacts/a1_8_run_summary.json",
+    "artifacts/a1_9_run_summary.json",
+    "artifacts/analysis_index_summary.json",
+    "artifacts/dev_corpus_summary.json",
+    "artifacts/input_contract_summary.json",
+    "artifacts/metadata_audit.json",
+    "artifacts/pre_baseline_summary.json",
+    "artifacts/trajectory_probe_summary.json"
+  ],
+  "input_reports": [
+    "docs/data_contract.md",
+    "docs/analysis_unit_policy.md",
+    "docs/analysis_unit_policy.md",
+    "docs/trajectory_schema_probe.md",
+    "docs/input_contract.md",
+    "docs/dev_corpus_build_report.md",
+    "docs/pre_baseline_audit_report.md",
+    "docs/stage_a1_2_minimal_baseline_report.md",
+    "docs/stage_a1_3_primary_lobo_report.md",
+    "docs/stage_a1_4_leave_one_model_out_report.md",
+    "docs/stage_a1_5_structural_mechanism_ablation_report.md",
+    "docs/stage_a1_6_group_aware_bootstrap_report.md",
+    "docs/stage_a1_7_frozen_dense_semantic_baseline_report.md",
+    "docs/stage_a1_8_evidence_audit_report.md",
+    "docs/stage_a1_9_final_method_freeze_report.md",
+    "docs/stage_a1_10a_blind_test_inference_report.md",
+    "docs/stage_a1_10_official_test_evaluation_report.md"
+  ],
+  "limitations_count": 8,
+  "main_table_hash": "c60ff992487e7a05d70c39de7db9364c31529a6b4334739e59045783ec3e9947",
+  "model_changes": 0,
+  "model_fits": 0,
+  "new_experiments_executed": 0,
+  "next_stage_recommendation": "READY_FOR_A2_DESIGN_REVIEW",
+  "output_hashes": {
+    "artifacts/a1_11_dev_evidence_summary.csv": "0b6860d68c51cf343044739743c5d92f5f28d34c2213ed9635e2acf2fe184d0e",
+    "artifacts/a1_11_evidence_registry.csv": "98c8f66e7d53bdecaef201c362565279a2a81630f73a3c5970c725433c0cd0a8",
+    "artifacts/a1_11_evidence_registry.json": "c03c9e3393341315606936cc5f56bd560b69e73447cce40fd133c12a2786a086",
+    "artifacts/a1_11_final_claim_matrix.csv": "2fc929e242e614244940d6d96d8ff1e3935e059925cff0b36b009a86b04f3175",
+    "artifacts/a1_11_table_benchmark_results.csv": "3df5b511d0cf29472ccfba5c63ea28caf4b58407285109231f176871668d77a2",
+    "artifacts/a1_11_table_main_test_results.csv": "c60ff992487e7a05d70c39de7db9364c31529a6b4334739e59045783ec3e9947",
+    "docs/a1_11_a2_gap_analysis.md": "d94ce0b96230ac3d36c39accd8480a2b1527d015c8d94983401f942786e563e7",
+    "docs/a1_11_final_claim_ledger.md": "18471e5e776f47dbb0b52634dd306e19855853c2309211e19455a0275f75b4aa",
+    "docs/a1_11_limitations_ledger.md": "d16384d16a0f25456524efaa4e1624f7338dc472d235ff2e0d083ac8e0e58057",
+    "docs/a1_11_paper_figure_spec.md": "1788b6cc089d1f1ee0389d9f2a3e56b0cd6a7be20f666c5e11d4cad275988fc8",
+    "docs/a1_11_paper_results_outline.md": "9b2823c47cd9ec901dd7ecad9055152996b145594d26ea732464e2708de8a686"
+  },
+  "prohibited_overclaims": [
+    "PO1",
+    "PO2",
+    "PO3",
+    "PO4",
+    "PO5",
+    "PO6",
+    "PO7",
+    "PO8"
+  ],
+  "provenance_audit": {
+    "a1_10_report_value_checks": 21,
+    "a1_2_to_a1_7_report_artifact_values_previously_verified": 277,
+    "coverage_count": 17,
+    "coverage_expected": 17,
+    "stage_units": [
+      "A0.1",
+      "A0.2",
+      "A0.2-Fix",
+      "A0.3",
+      "A0.4",
+      "A1.0",
+      "A1.1",
+      "A1.2",
+      "A1.3",
+      "A1.4",
+      "A1.5",
+      "A1.6",
+      "A1.7",
+      "A1.8",
+      "A1.9",
+      "A1.10a",
+      "A1.10b"
+    ],
+    "status": "PASS",
+    "verified_a1_2_to_a1_7_source_hashes": 38,
+    "verified_commit_count": 37
+  },
+  "result_commit": "recorded_by_enclosing_result_commit",
+  "stage": "A1.11",
+  "test_metric_recomputations": 0,
+  "threshold_changes": 0,
+  "verified_commits": {
+    "A0.1": {
+      "fixes": [],
+      "preregistration": "49f7d7c7d6c83f23ff8d6a5a68c671a0d3687177",
+      "result": "49f7d7c7d6c83f23ff8d6a5a68c671a0d3687177"
+    },
+    "A0.2": {
+      "fixes": [
+        "60296babe21a7c91c5ca52a3da2780f3ee859b9f"
+      ],
+      "preregistration": "70f11b75a3ec21efd40df632c39e96af80f5f724",
+      "result": "70f11b75a3ec21efd40df632c39e96af80f5f724"
+    },
+    "A0.2-Fix": {
+      "fixes": [],
+      "preregistration": "60296babe21a7c91c5ca52a3da2780f3ee859b9f",
+      "result": "60296babe21a7c91c5ca52a3da2780f3ee859b9f"
+    },
+    "A0.3": {
+      "fixes": [],
+      "preregistration": "c8fa3cde43e92de8069ab8dd6a6f41f975297651",
+      "result": "c8fa3cde43e92de8069ab8dd6a6f41f975297651"
+    },
+    "A0.4": {
+      "fixes": [],
+      "preregistration": "e302dfc2b159f295e6e3a17243fbb6c490bd5d15",
+      "result": "e302dfc2b159f295e6e3a17243fbb6c490bd5d15"
+    },
+    "A1.0": {
+      "fixes": [],
+      "preregistration": "695750f6011e307324a4b483117bcd5010653260",
+      "result": "695750f6011e307324a4b483117bcd5010653260"
+    },
+    "A1.1": {
+      "fixes": [
+        "49bba3279f356c779a0bfe93e8d31c5319009102"
+      ],
+      "preregistration": "1044cb783dc0d7883b9065393b3e7147dafad34b",
+      "result": "1044cb783dc0d7883b9065393b3e7147dafad34b"
+    },
+    "A1.10a": {
+      "fixes": [
+        "100966969bf36c968051dea7fbbb675c1814b7cd"
+      ],
+      "preregistration": "d32f9e215f27425ce907493344e4c65c835e91f6",
+      "result": "cead3cbaa362da4a9918dab32e41b58fffb987d9"
+    },
+    "A1.10b": {
+      "fixes": [
+        "3f0bc4da460652a74ae4767ff6d482fd4116ec9f",
+        "85cb71a49c9c25c9284562afad751f975d787608"
+      ],
+      "preregistration": "042866147e7b4a0c930eeb120d6e642cb34773a7",
+      "result": "53d81eb17e1be52e55489f5fbdf1f72018c5a349"
+    },
+    "A1.2": {
+      "fixes": [],
+      "preregistration": "b4fef6f63d55ccd4ed2cdf4feb2dcab1cd5b6d20",
+      "result": "179ce02640a8e6e15411348b57fd8d7725047364"
+    },
+    "A1.3": {
+      "fixes": [
+        "6027d5e5af29a1b0143bb04024084a6c4209529e"
+      ],
+      "preregistration": "6b98e03537360d8e60e5ccf3ca4c5ea7b51a652d",
+      "result": "346bb4b3d4a90fc51c1e099618c3b7592fa76b99"
+    },
+    "A1.4": {
+      "fixes": [
+        "21012dd38d86b631408bd64a65af3dde8cb9b86c"
+      ],
+      "preregistration": "84bf9da03c12c4bbe28f57e42b31de71e8cb1041",
+      "result": "91e6b195dc63bae8c82728a126945abd0d5d2b68"
+    },
+    "A1.5": {
+      "fixes": [],
+      "preregistration": "fa9ef0771ea44a720ed8b900199a75ef3c863379",
+      "result": "e4fd9aba83cc6ed3b01b1f624c666b6cc7fce3ca"
+    },
+    "A1.6": {
+      "fixes": [],
+      "preregistration": "d7b851c48581a6c7c6220ab0dfc851b92a32162e",
+      "result": "040d081d3359f75f1303f4c24d7f8be79b5da75d"
+    },
+    "A1.7": {
+      "fixes": [
+        "676ab5efe4f05a2cd5552421510058e5d7553859",
+        "362a45917e403be7aacb54359aac2537473508fb"
+      ],
+      "preregistration": "e776c16710fd18c1462808a044f911e40061c5c3",
+      "result": "e24066fa27c027c60e2ac35b8305ea3d4a585493"
+    },
+    "A1.8": {
+      "fixes": [
+        "a7406bcc2e4fe885c02a0024243abfa6fee8fb61"
+      ],
+      "preregistration": "d2f0b84c6247c95cc599b28784c5a2db10ad947f",
+      "result": "ddc3f9b6ef89ada12b7393fc31c5b57dbb7118f0"
+    },
+    "A1.9": {
+      "fixes": [],
+      "preregistration": "4944df46be45d8ad52d57a051e04b59c4a1a82ee",
+      "result": "8f96a6f032ee9b4dd0272164d60230303612043b"
+    }
+  },
+  "verified_hashes": {
+    "a1_10_blind_predictions": "a3a232484716ee455a604f03ffd40e6f734a1925ffdfb93e4a3d04118de27c3d",
+    "a1_10_scored_predictions": "22883f32ad22ecd2de6e7a3056a0f165d7aa4c03ab4ec847a535dbff7defb704",
+    "a1_8_claim_matrix": "264678a325f1680c8cfdad3631e6f5209a29a91e6ab8dd5b9683adb857810590",
+    "github_revision": "f838338886d723d40b586309465a38277803d9e6",
+    "huggingface_revision": "b6d17e646009d6cb63d5dd7be78807b680693f61"
+  },
+  "warnings": [
+    "The first A1.11 implementation invocation stopped before output generation because a multi-artifact evidence source was parsed as one path; the failure is preserved and corrected in an independent fix commit.",
+    "Side Effect remains exploratory-only and low-support despite positive held-out AP lift.",
+    "Per-benchmark results are descriptive only; no pairwise significance comparison exists.",
+    "A1.4 is model-only same-task transfer, not joint task/model OOD.",
+    "Structural ablations are predictive, not causal.",
+    "The dataset declares custom Terms of Use but no standard license identifier.",
+    "Calibration, deployment utility, and online behavior were not evaluated."
+  ]
+}

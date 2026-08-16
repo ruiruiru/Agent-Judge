@@ -1,0 +1,41 @@
+{
+  "annotations_file": "data/raw/agent_reward_bench/a0_1/annotations.csv",
+  "command": "python scripts/audit_agent_reward_bench_metadata.py",
+  "file_sha256": {
+    "README.md": "e16adf817e3950441d70c7bb1bb3f44bd8dc65344938247f23fea4aaff9f654e",
+    "annotations.csv": "155be0e6530d190c14a056f0195aaafa081c2a45a36e8f72b922c9fdc6838367",
+    "splits.csv": "42bfeef886c1d7b216d31a6c8e9f7af58a6c4bd4d236df9f230e24c558c2499d"
+  },
+  "files": {
+    "README.md": {
+      "local_path": "data/raw/agent_reward_bench/a0_1/README.md",
+      "sha256": "e16adf817e3950441d70c7bb1bb3f44bd8dc65344938247f23fea4aaff9f654e",
+      "size_bytes": 3819,
+      "source_url": "https://huggingface.co/datasets/McGill-NLP/agent-reward-bench/resolve/b6d17e646009d6cb63d5dd7be78807b680693f61/README.md"
+    },
+    "annotations.csv": {
+      "local_path": "data/raw/agent_reward_bench/a0_1/annotations.csv",
+      "sha256": "155be0e6530d190c14a056f0195aaafa081c2a45a36e8f72b922c9fdc6838367",
+      "size_bytes": 265137,
+      "source_url": "https://raw.githubusercontent.com/McGill-NLP/agent-reward-bench/f838338886d723d40b586309465a38277803d9e6/agent_reward_bench/data/annotations.csv"
+    },
+    "splits.csv": {
+      "local_path": "data/raw/agent_reward_bench/a0_1/splits.csv",
+      "sha256": "42bfeef886c1d7b216d31a6c8e9f7af58a6c4bd4d236df9f230e24c558c2499d",
+      "size_bytes": 19149,
+      "source_url": "https://raw.githubusercontent.com/McGill-NLP/agent-reward-bench/f838338886d723d40b586309465a38277803d9e6/agent_reward_bench/data/splits.csv"
+    }
+  },
+  "github_commit": "f838338886d723d40b586309465a38277803d9e6",
+  "github_repository": "https://github.com/McGill-NLP/agent-reward-bench",
+  "huggingface_repository": "McGill-NLP/agent-reward-bench",
+  "huggingface_revision": "b6d17e646009d6cb63d5dd7be78807b680693f61",
+  "huggingface_revision_lock": "main resolved once on 2026-08-02, then pinned for all subsequent runs",
+  "license_status": "No standard license identifier declared; custom Terms of Use apply",
+  "readme_file": "data/raw/agent_reward_bench/a0_1/README.md",
+  "retrieved_at_utc": "2026-08-02T08:16:12.784189+00:00",
+  "schema_version": "1.0",
+  "splits_file": "data/raw/agent_reward_bench/a0_1/splits.csv",
+  "stage": "A0.1",
+  "terms_of_use_url": "https://huggingface.co/datasets/McGill-NLP/agent-reward-bench/blob/b6d17e646009d6cb63d5dd7be78807b680693f61/README.md#terms-of-use"
+}

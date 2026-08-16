@@ -1,0 +1,36 @@
+{
+  "allowed_operations": [
+    "formatting",
+    "rounding for display",
+    "unit conversion",
+    "sorting for presentation",
+    "plot coordinate placement",
+    "rendering",
+    "hashing",
+    "source verification"
+  ],
+  "coefficients": "3 decimal places",
+  "counts": "integer",
+  "efficiency": {
+    "dimension": "integer",
+    "latency_at_least_1_ms": "3 significant digits",
+    "latency_below_1_ms": "4 significant digits",
+    "memory_and_storage": "3 significant digits with documented binary-unit conversion",
+    "ratios": "3 significant digits"
+  },
+  "machine_source_policy": "Exact frozen source strings remain unchanged; display formatting is recorded separately.",
+  "missing": "NA",
+  "predictive_metrics": {
+    "display": "3 decimal places",
+    "fields": [
+      "AP",
+      "F1",
+      "prevalence",
+      "AP_lift",
+      "CI endpoints"
+    ]
+  },
+  "rounding_mode": "Decimal ROUND_HALF_UP",
+  "source_writeback": false,
+  "version": "a3_1_display_contract_v1"
+}

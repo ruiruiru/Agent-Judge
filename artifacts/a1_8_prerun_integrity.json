@@ -1,0 +1,239 @@
+{
+  "claim_expected_status": {
+    "C1": "SUPPORTED",
+    "C10": "PROHIBITED",
+    "C11": "DESCRIPTIVE_ONLY",
+    "C12": "SUPPORTED_WITH_CONDITIONS",
+    "C13": "PROHIBITED",
+    "C14": "SUPPORTED_WITH_CONDITIONS",
+    "C2": "INSUFFICIENT_EVIDENCE",
+    "C3": "INSUFFICIENT_EVIDENCE",
+    "C4": "SUPPORTED_WITH_CONDITIONS",
+    "C5": "SUPPORTED",
+    "C6": "INSUFFICIENT_EVIDENCE",
+    "C7": "SUPPORTED",
+    "C8": "SUPPORTED",
+    "C9": "INSUFFICIENT_EVIDENCE"
+  },
+  "claim_ids": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6",
+    "C7",
+    "C8",
+    "C9",
+    "C10",
+    "C11",
+    "C12",
+    "C13",
+    "C14"
+  ],
+  "consistency_guards": {
+    "a1_3_b2_equals_a1_5_s0": {
+      "fields_exact": [
+        "true_label",
+        "predicted_probability",
+        "selected_threshold",
+        "predicted_label",
+        "selected_config_id",
+        "inner_n_splits"
+      ],
+      "row_count": 583,
+      "status": "PASS"
+    },
+    "a1_6_regression_guards": {
+      "point_estimate_regression": {
+        "a1_3": {
+          "checked_values": 204,
+          "max_absolute_error": 5.551115123125783e-17,
+          "status": "PASS",
+          "tolerance": 1e-12
+        },
+        "a1_5": {
+          "checked_values": 357,
+          "max_absolute_error": 1.1102230246251565e-16,
+          "status": "PASS",
+          "tolerance": 1e-12
+        }
+      },
+      "s0_equals_b2": {
+        "configs_exact": true,
+        "keys_exact": true,
+        "labels_exact": true,
+        "max_probability_absolute_error": 0.0,
+        "predicted_labels_exact": true,
+        "row_count": 583,
+        "status": "PASS",
+        "thresholds_exact": true
+      },
+      "status": "PASS"
+    },
+    "a1_7_frozen_source_guards": {
+      "checked_values": 24,
+      "status": "PASS",
+      "tolerance": 1e-12
+    },
+    "report_numeric_consistency": {
+      "checked_core_values": {
+        "A1.2": 18,
+        "A1.3": 24,
+        "A1.4": 25,
+        "A1.5": 84,
+        "A1.6": 68,
+        "A1.7": 58
+      },
+      "status": "PASS",
+      "total": 277
+    }
+  },
+  "execution_boundaries": {
+    "estimator_fit_count": 0,
+    "model_forward_count": 0,
+    "new_bootstrap_draw_count": 0,
+    "new_config_selection_count": 0,
+    "new_prediction_count": 0,
+    "new_threshold_selection_count": 0,
+    "prohibited_experiment_count": 0,
+    "test_access_count": 0
+  },
+  "formal_commits": {
+    "A1.2": {
+      "preregistration_commit": "b4fef6f63d55ccd4ed2cdf4feb2dcab1cd5b6d20",
+      "result_commit": "179ce02640a8e6e15411348b57fd8d7725047364"
+    },
+    "A1.3": {
+      "execution_fix_commit": "6027d5e5af29a1b0143bb04024084a6c4209529e",
+      "preregistration_commit": "6b98e03537360d8e60e5ccf3ca4c5ea7b51a652d",
+      "result_commit": "346bb4b3d4a90fc51c1e099618c3b7592fa76b99"
+    },
+    "A1.4": {
+      "preregistration_commit": "84bf9da03c12c4bbe28f57e42b31de71e8cb1041",
+      "result_commit": "91e6b195dc63bae8c82728a126945abd0d5d2b68"
+    },
+    "A1.5": {
+      "preregistration_commit": "fa9ef0771ea44a720ed8b900199a75ef3c863379",
+      "result_commit": "e4fd9aba83cc6ed3b01b1f624c666b6cc7fce3ca"
+    },
+    "A1.6": {
+      "preregistration_commit": "d7b851c48581a6c7c6220ab0dfc851b92a32162e",
+      "result_commit": "040d081d3359f75f1303f4c24d7f8be79b5da75d"
+    },
+    "A1.7": {
+      "binary_fix_commit": "362a45917e403be7aacb54359aac2537473508fb",
+      "execution_fix_commit": "676ab5efe4f05a2cd5552421510058e5d7553859",
+      "preregistration_commit": "e776c16710fd18c1462808a044f911e40061c5c3",
+      "result_commit": "e24066fa27c027c60e2ac35b8305ea3d4a585493"
+    }
+  },
+  "generated_at_utc": "2026-08-08T04:22:06+00:00",
+  "method_proposal": {
+    "looping": {
+      "candidate_method": "B2 structural LR",
+      "eligible_for_confirmatory_test": "true_after_human_freeze_approval",
+      "role": "primary candidate"
+    },
+    "side_effect": {
+      "candidate_method": "B4 dense embedding LR",
+      "eligible_for_confirmatory_test": "false_or_exploratory_only",
+      "role": "exploratory-only"
+    },
+    "success": {
+      "candidate_method": "B2 structural LR",
+      "eligible_for_confirmatory_test": "true_after_human_freeze_approval",
+      "role": "primary candidate"
+    }
+  },
+  "prohibited_experiment_count": 0,
+  "remaining_evidence_decisions": [
+    "READY_FOR_FINAL_METHOD_FREEZE",
+    "ONE_BLOCKING_DEV_EXPERIMENT_REMAINS",
+    "NOT_READY_RESEARCH_DIRECTION_WEAK"
+  ],
+  "source_hashes": {
+    ".gitattributes": "168c4441b61528103b3f107681b7f1851f228332e0ad0e10d8bb7ca87c7709e7",
+    "artifacts/a1_2_oof_predictions.csv": "a57eb138fb7d89f6319f3540055fad9930fa700c1af551199b5d361d50c163c4",
+    "artifacts/a1_2_pooled_metrics.csv": "8ce01c2be0cf73e94c1a5fc085d28d92fd57bf40f450e4dfbd33f8912d5713bc",
+    "artifacts/a1_2_run_summary.json": "6e221c40c81f2c6edf9e8e58f819659018430802cdb7543e7ad38a44c4afc446",
+    "artifacts/a1_3_lobo_domain_metrics.csv": "e648fa88feb18f8ff72a8e4ed65a1ca5315c173da17c368dbbc7366f75895222",
+    "artifacts/a1_3_lobo_macro_metrics.csv": "cee5105e4049a1f113995b225d366f938e56d787e274e96d0b0444bb6b472ec6",
+    "artifacts/a1_3_lobo_pooled_metrics.csv": "58319203d986a19ea2851a0eb4bb41bcae18e3cd5f9a017fdc32eb351a469bac",
+    "artifacts/a1_3_lobo_predictions.csv": "e761f5a0d4e72faa837496a29b91db358bc03645d8b7ea695c6322aa550bfe4d",
+    "artifacts/a1_3_lobo_run_summary.json": "ec4055a20fe7ab1d6df5d3e51b76962ef8ce642073ccc50563cad4c92bcc39e5",
+    "artifacts/a1_4_lomo_coverage_matrix.csv": "b691a92c0dee30151eaa0a6494aedc75aed5e5a5dec9e1792e66b833ee9b3d96",
+    "artifacts/a1_4_lomo_macro_metrics.csv": "4b9bbefa14ace53daa954a25a7efcaa92e85ef26b7c0dafd3d0d5c2b7c9a617d",
+    "artifacts/a1_4_lomo_model_metrics.csv": "1fe0de56e08e82ff6d99aed8bb0123f2b8ccc57be6c66a223102479b91eb74cc",
+    "artifacts/a1_4_lomo_pooled_metrics.csv": "f27468608c8ec26d8888ef5da39729eac09e96689617eb8a052866a60a3a0eb2",
+    "artifacts/a1_4_lomo_run_summary.json": "4f553be59ad4b3719e194ac84043286ec99e14ef0d4c5ceff3fdb98d676f1523",
+    "artifacts/a1_5_domain_metrics.csv": "8609d946fb032d497dd6ffd56020b184886516da9494be622020ef6cfc2c43a2",
+    "artifacts/a1_5_external_predictions.csv": "a55abec76db6d3afb03e1936a8ae230b9b2c142e805c9b805068911820b00143",
+    "artifacts/a1_5_macro_metrics.csv": "30de6ad6fef1ab5f748a131603d128bd1eb13a1059ac633767e0d7d795a930fe",
+    "artifacts/a1_5_pooled_metrics.csv": "a35fce3930a9ba47483dc8e1f7ec334321b529abb67ed8517bd7c2d9d44f835a",
+    "artifacts/a1_5_run_summary.json": "00e93994896b0a2f8ff82b418fb36a8fa3cc528a856ebc41c7ef872e487dfdd1",
+    "artifacts/a1_5_structural_ablation_deltas.csv": "4c5c6a6acd818800f5456c5a1cea816a72fa1938d86e641bb9a17d6c80317abf",
+    "artifacts/a1_6_domain_bootstrap_summary.csv": "259fa936cd42ca1d8a06d96fb0c31d2c0be450e8c538fea15e1e9842751594d3",
+    "artifacts/a1_6_macro_bootstrap_summary.csv": "ad7453413e031bd6183c233d8229a9e746e1d56c04d855f2995b445e3bf97a76",
+    "artifacts/a1_6_pooled_bootstrap_summary.csv": "480a12bfb09561e7aa7379dbbe80083e9bbceb7291dd51e80b2a973015f4d5b7",
+    "artifacts/a1_6_primary_paired_delta_summary.csv": "f240fa5d52f546add06e4bc360aac3820c38fa60ba2ef5e11d009ff0cea80e91",
+    "artifacts/a1_6_run_summary.json": "b562c9f6535fe840c5c526463681d355c2f72041ebaee6099e5096047ea10ed9",
+    "artifacts/a1_7_bootstrap_primary_summary.csv": "a203d63b0701e204e98076241cf6dab470b728b111186185f19ee3fa1999824b",
+    "artifacts/a1_7_comparison_to_a1_3.csv": "a332ee7387ec2a7b3bdb9b5b7cea986a895c7bc70159a62d929ee6d93b821417",
+    "artifacts/a1_7_domain_metrics.csv": "7dca59f82fe6712d13fced4f8e5db6bb6323828ec39544311eb2f3972998346f",
+    "artifacts/a1_7_macro_metrics.csv": "fb8e38b6a2f49c4f9777fc46307675ab20c3a31e9329701ab47b4218e731c04a",
+    "artifacts/a1_7_pooled_metrics.csv": "381296ee98aa13bd1068854d1948a821aeba08a257b6c2397cc611916904eb1f",
+    "artifacts/a1_7_run_summary.json": "48566eac5f40ff956bb7b5ccdc33ecf167a3279fe3c17cf3e39d299189eaff0e",
+    "artifacts/leave_one_model_out_manifest.csv": "5f1f64803014b6891089c18a67b41778ab0ced4f4110bcca014008675b07ac7d",
+    "artifacts/lobo_primary_manifest.csv": "16735afc8defd5d91bf2d23ba7773a1f0515feafc238ad1cec2df0dc530b0191",
+    "configs/baseline_registry.yaml": "956ba0395f8ade9fc91ee4d10e0590d82eca0a889db97950f0faa00ec38dab17",
+    "configs/evaluation_protocol.yaml": "ec535722c78194a8c652a4bd25f1fd7cc18f0135452d6d1a1a2b433b096cb2cf",
+    "configs/stage_a1_8_evidence_audit.yaml": "a34256840bb7993fae17e4317c3397b5356c363c9ec310b38cee95003a0a01db",
+    "docs/stage_a1_2_minimal_baseline_report.md": "dc86540c97b5ee0e536e40eb0afa9be1727d226036709aa00ef6ffdc5b65e672",
+    "docs/stage_a1_3_primary_lobo_report.md": "b6914d76cca3283906266fea37320ae1022103ab9b4b6809ef19fd1291457d78",
+    "docs/stage_a1_4_leave_one_model_out_report.md": "58acaedc95fc77dec24f79321e05e72f94b810deb8c2183046b24b3df3900f13",
+    "docs/stage_a1_5_structural_mechanism_ablation_report.md": "c42dc5ae2fc3f9672b1d37cc8754f8748007202b32811b518e7acdcf0654e1e8",
+    "docs/stage_a1_6_group_aware_bootstrap_report.md": "36c466c43c5e7e350ab12fea64b9e4fd46021a2084aeeddde1a99bf01105d550",
+    "docs/stage_a1_7_frozen_dense_semantic_baseline_report.md": "8380c035339b87bde1a6e9f7aafeef47b3f2612d6712f335a670aea52c4f7676",
+    "docs/tasks/STAGE_A1_8_EVIDENCE_AUDIT_AND_PAPER_CLAIM_MATRIX.md": "cf7508ccf8605477cf464debecb0e38a076d7b1cfa0c0b35d0aea3c97962b6c0",
+    "research/01_DECISION_LOG.md": "147c6cef4b3b59d8da07ccb81900e0a8b906656bbd87f5a00769584a9ea0b4b7",
+    "research/02_EXPERIMENT_REGISTRY.csv": "39e3f3648ed6b51a7704093322449a53f4b8cfa90bf38d30d5f1f935b2c38345",
+    "scripts/run_stage_a1_8_evidence_audit.py": "0e0c1c03c305fbc97086bf669fe7758c0863db1a990902bc72ee7b8e8eed84a7",
+    "tests/test_stage_a1_8_evidence_audit.py": "f6b98eb8250e693b3f848f7905cfdda90d265bda66b492d82b76485404ade20f"
+  },
+  "source_priority": [
+    "machine-readable artifact",
+    "formal stage report",
+    "human summary"
+  ],
+  "stage": "A1.8a",
+  "stage_decisions": {
+    "A1.2": "PASS_WITH_CONDITIONS",
+    "A1.3": "PASS_WITH_CONDITIONS",
+    "A1.4": "PASS_WITH_CONDITIONS",
+    "A1.5": "PASS_WITH_CONDITIONS",
+    "A1.6": "PASS_WITH_CONDITIONS",
+    "A1.7": "PASS_WITH_CONDITIONS"
+  },
+  "status": "PASS",
+  "status_taxonomy": [
+    "SUPPORTED",
+    "SUPPORTED_WITH_CONDITIONS",
+    "DESCRIPTIVE_ONLY",
+    "INSUFFICIENT_EVIDENCE",
+    "PROHIBITED"
+  ],
+  "test_access_count": 0,
+  "threat_ids": [
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5",
+    "T6",
+    "T7",
+    "T8",
+    "T9",
+    "T10"
+  ]
+}

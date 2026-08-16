@@ -1,0 +1,538 @@
+{
+  "conditions": [
+    "Shared fields have benchmark-dependent null/type profiles and require guarded normalization.",
+    "No explicit final_response field was observed; any final message mapping needs manual semantic confirmation."
+  ],
+  "leakage": {
+    "direct_leakage_rate": 1.0,
+    "direct_leakage_trajectory_count": 16,
+    "registered_field_count": 9,
+    "strong_proxy_rate": 0.0,
+    "strong_proxy_trajectory_count": 0
+  },
+  "mapping": {
+    "dev_index_count": 196,
+    "resolution_rate": 1.0,
+    "resolved_count": 196,
+    "unresolved": []
+  },
+  "parsing": {
+    "by_benchmark": {
+      "assistantbench": {
+        "parse_success_rate": 1.0,
+        "parseable_count": 4,
+        "probe_count": 4
+      },
+      "visualwebarena": {
+        "parse_success_rate": 1.0,
+        "parseable_count": 3,
+        "probe_count": 3
+      },
+      "webarena": {
+        "parse_success_rate": 1.0,
+        "parseable_count": 5,
+        "probe_count": 5
+      },
+      "workarena": {
+        "parse_success_rate": 1.0,
+        "parseable_count": 4,
+        "probe_count": 4
+      }
+    },
+    "by_model": {
+      "GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct": {
+        "parse_success_rate": 1.0,
+        "parseable_count": 5,
+        "probe_count": 5
+      },
+      "GenericAgent-anthropic_claude-3.7-sonnet": {
+        "parse_success_rate": 1.0,
+        "parseable_count": 4,
+        "probe_count": 4
+      },
+      "GenericAgent-gpt-4o-2024-11-20": {
+        "parse_success_rate": 1.0,
+        "parseable_count": 4,
+        "probe_count": 4
+      },
+      "GenericAgent-meta-llama_Llama-3.3-70B-Instruct": {
+        "parse_success_rate": 1.0,
+        "parseable_count": 3,
+        "probe_count": 3
+      }
+    },
+    "completeness": [
+      {
+        "action_found": true,
+        "benchmark": "assistantbench",
+        "direct_leakage_found": true,
+        "downloaded": true,
+        "final_response_found": false,
+        "json_parseable": true,
+        "model_name": "GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct",
+        "observation_found": true,
+        "parse_error": "",
+        "path_resolved": true,
+        "screenshot_reference_found": true,
+        "steps_found": true,
+        "strong_proxy_found": false,
+        "task_instruction_found": true,
+        "trajectory_key": "assistantbench::assistantbench.validation.11::GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct",
+        "trajectory_nonempty": true
+      },
+      {
+        "action_found": true,
+        "benchmark": "assistantbench",
+        "direct_leakage_found": true,
+        "downloaded": true,
+        "final_response_found": false,
+        "json_parseable": true,
+        "model_name": "GenericAgent-meta-llama_Llama-3.3-70B-Instruct",
+        "observation_found": true,
+        "parse_error": "",
+        "path_resolved": true,
+        "screenshot_reference_found": true,
+        "steps_found": true,
+        "strong_proxy_found": false,
+        "task_instruction_found": true,
+        "trajectory_key": "assistantbench::assistantbench.validation.25::GenericAgent-meta-llama_Llama-3.3-70B-Instruct",
+        "trajectory_nonempty": true
+      },
+      {
+        "action_found": true,
+        "benchmark": "assistantbench",
+        "direct_leakage_found": true,
+        "downloaded": true,
+        "final_response_found": false,
+        "json_parseable": true,
+        "model_name": "GenericAgent-anthropic_claude-3.7-sonnet",
+        "observation_found": true,
+        "parse_error": "",
+        "path_resolved": true,
+        "screenshot_reference_found": true,
+        "steps_found": true,
+        "strong_proxy_found": false,
+        "task_instruction_found": true,
+        "trajectory_key": "assistantbench::assistantbench.validation.3::GenericAgent-anthropic_claude-3.7-sonnet",
+        "trajectory_nonempty": true
+      },
+      {
+        "action_found": true,
+        "benchmark": "assistantbench",
+        "direct_leakage_found": true,
+        "downloaded": true,
+        "final_response_found": false,
+        "json_parseable": true,
+        "model_name": "GenericAgent-gpt-4o-2024-11-20",
+        "observation_found": true,
+        "parse_error": "",
+        "path_resolved": true,
+        "screenshot_reference_found": true,
+        "steps_found": true,
+        "strong_proxy_found": false,
+        "task_instruction_found": true,
+        "trajectory_key": "assistantbench::assistantbench.validation.5::GenericAgent-gpt-4o-2024-11-20",
+        "trajectory_nonempty": true
+      },
+      {
+        "action_found": true,
+        "benchmark": "visualwebarena",
+        "direct_leakage_found": true,
+        "downloaded": true,
+        "final_response_found": false,
+        "json_parseable": true,
+        "model_name": "GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct",
+        "observation_found": true,
+        "parse_error": "",
+        "path_resolved": true,
+        "screenshot_reference_found": true,
+        "steps_found": true,
+        "strong_proxy_found": false,
+        "task_instruction_found": true,
+        "trajectory_key": "visualwebarena::visualwebarena.118::GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct",
+        "trajectory_nonempty": true
+      },
+      {
+        "action_found": true,
+        "benchmark": "visualwebarena",
+        "direct_leakage_found": true,
+        "downloaded": true,
+        "final_response_found": false,
+        "json_parseable": true,
+        "model_name": "GenericAgent-anthropic_claude-3.7-sonnet",
+        "observation_found": true,
+        "parse_error": "",
+        "path_resolved": true,
+        "screenshot_reference_found": true,
+        "steps_found": true,
+        "strong_proxy_found": false,
+        "task_instruction_found": true,
+        "trajectory_key": "visualwebarena::visualwebarena.118::GenericAgent-anthropic_claude-3.7-sonnet",
+        "trajectory_nonempty": true
+      },
+      {
+        "action_found": true,
+        "benchmark": "visualwebarena",
+        "direct_leakage_found": true,
+        "downloaded": true,
+        "final_response_found": false,
+        "json_parseable": true,
+        "model_name": "GenericAgent-gpt-4o-2024-11-20",
+        "observation_found": true,
+        "parse_error": "",
+        "path_resolved": true,
+        "screenshot_reference_found": true,
+        "steps_found": true,
+        "strong_proxy_found": false,
+        "task_instruction_found": true,
+        "trajectory_key": "visualwebarena::visualwebarena.118::GenericAgent-gpt-4o-2024-11-20",
+        "trajectory_nonempty": true
+      },
+      {
+        "action_found": true,
+        "benchmark": "webarena",
+        "direct_leakage_found": true,
+        "downloaded": true,
+        "final_response_found": false,
+        "json_parseable": true,
+        "model_name": "GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct",
+        "observation_found": true,
+        "parse_error": "",
+        "path_resolved": true,
+        "screenshot_reference_found": true,
+        "steps_found": true,
+        "strong_proxy_found": false,
+        "task_instruction_found": true,
+        "trajectory_key": "webarena::webarena.370::GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct",
+        "trajectory_nonempty": true
+      },
+      {
+        "action_found": true,
+        "benchmark": "webarena",
+        "direct_leakage_found": true,
+        "downloaded": true,
+        "final_response_found": false,
+        "json_parseable": true,
+        "model_name": "GenericAgent-gpt-4o-2024-11-20",
+        "observation_found": true,
+        "parse_error": "",
+        "path_resolved": true,
+        "screenshot_reference_found": true,
+        "steps_found": true,
+        "strong_proxy_found": false,
+        "task_instruction_found": true,
+        "trajectory_key": "webarena::webarena.370::GenericAgent-gpt-4o-2024-11-20",
+        "trajectory_nonempty": true
+      },
+      {
+        "action_found": true,
+        "benchmark": "webarena",
+        "direct_leakage_found": true,
+        "downloaded": true,
+        "final_response_found": false,
+        "json_parseable": true,
+        "model_name": "GenericAgent-meta-llama_Llama-3.3-70B-Instruct",
+        "observation_found": true,
+        "parse_error": "",
+        "path_resolved": true,
+        "screenshot_reference_found": true,
+        "steps_found": true,
+        "strong_proxy_found": false,
+        "task_instruction_found": true,
+        "trajectory_key": "webarena::webarena.370::GenericAgent-meta-llama_Llama-3.3-70B-Instruct",
+        "trajectory_nonempty": true
+      },
+      {
+        "action_found": true,
+        "benchmark": "webarena",
+        "direct_leakage_found": true,
+        "downloaded": true,
+        "final_response_found": false,
+        "json_parseable": true,
+        "model_name": "GenericAgent-anthropic_claude-3.7-sonnet",
+        "observation_found": true,
+        "parse_error": "",
+        "path_resolved": true,
+        "screenshot_reference_found": true,
+        "steps_found": true,
+        "strong_proxy_found": false,
+        "task_instruction_found": true,
+        "trajectory_key": "webarena::webarena.427::GenericAgent-anthropic_claude-3.7-sonnet",
+        "trajectory_nonempty": true
+      },
+      {
+        "action_found": true,
+        "benchmark": "webarena",
+        "direct_leakage_found": true,
+        "downloaded": true,
+        "final_response_found": false,
+        "json_parseable": true,
+        "model_name": "GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct",
+        "observation_found": true,
+        "parse_error": "",
+        "path_resolved": true,
+        "screenshot_reference_found": true,
+        "steps_found": true,
+        "strong_proxy_found": false,
+        "task_instruction_found": true,
+        "trajectory_key": "webarena::webarena.583::GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct",
+        "trajectory_nonempty": true
+      },
+      {
+        "action_found": true,
+        "benchmark": "workarena",
+        "direct_leakage_found": true,
+        "downloaded": true,
+        "final_response_found": false,
+        "json_parseable": true,
+        "model_name": "GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct",
+        "observation_found": true,
+        "parse_error": "",
+        "path_resolved": true,
+        "screenshot_reference_found": true,
+        "steps_found": true,
+        "strong_proxy_found": false,
+        "task_instruction_found": true,
+        "trajectory_key": "workarena::workarena.servicenow.navigate-and-order-apple-mac-book-pro15-l2::GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct",
+        "trajectory_nonempty": true
+      },
+      {
+        "action_found": true,
+        "benchmark": "workarena",
+        "direct_leakage_found": true,
+        "downloaded": true,
+        "final_response_found": false,
+        "json_parseable": true,
+        "model_name": "GenericAgent-anthropic_claude-3.7-sonnet",
+        "observation_found": true,
+        "parse_error": "",
+        "path_resolved": true,
+        "screenshot_reference_found": true,
+        "steps_found": true,
+        "strong_proxy_found": false,
+        "task_instruction_found": true,
+        "trajectory_key": "workarena::workarena.servicenow.navigate-and-order-apple-mac-book-pro15-l2::GenericAgent-anthropic_claude-3.7-sonnet",
+        "trajectory_nonempty": true
+      },
+      {
+        "action_found": true,
+        "benchmark": "workarena",
+        "direct_leakage_found": true,
+        "downloaded": true,
+        "final_response_found": false,
+        "json_parseable": true,
+        "model_name": "GenericAgent-meta-llama_Llama-3.3-70B-Instruct",
+        "observation_found": true,
+        "parse_error": "",
+        "path_resolved": true,
+        "screenshot_reference_found": true,
+        "steps_found": true,
+        "strong_proxy_found": false,
+        "task_instruction_found": true,
+        "trajectory_key": "workarena::workarena.servicenow.navigate-and-order-apple-mac-book-pro15-l2::GenericAgent-meta-llama_Llama-3.3-70B-Instruct",
+        "trajectory_nonempty": true
+      },
+      {
+        "action_found": true,
+        "benchmark": "workarena",
+        "direct_leakage_found": true,
+        "downloaded": true,
+        "final_response_found": false,
+        "json_parseable": true,
+        "model_name": "GenericAgent-gpt-4o-2024-11-20",
+        "observation_found": true,
+        "parse_error": "",
+        "path_resolved": true,
+        "screenshot_reference_found": true,
+        "steps_found": true,
+        "strong_proxy_found": false,
+        "task_instruction_found": true,
+        "trajectory_key": "workarena::workarena.servicenow.navigate-and-order-loaner-laptop-l2::GenericAgent-gpt-4o-2024-11-20",
+        "trajectory_nonempty": true
+      }
+    ],
+    "downloaded_count": 16,
+    "parse_success_rate": 1.0,
+    "parseable_count": 16,
+    "screenshot_reference_count": 16,
+    "screenshot_reference_rate": 1.0,
+    "text_structured_parseable_count": 16,
+    "text_structured_parseable_rate": 1.0
+  },
+  "projected_full_dev_text_scope": {
+    "declared_bytes": 3647118724,
+    "estimate_basis": "exact fixed-revision file metadata for uniquely mapped dev trajectories; no full files downloaded",
+    "file_count": 196
+  },
+  "schema": {
+    "adapter_recommendation": "one shared cleaned-schema adapter with benchmark/model-aware nullable and semantic hooks",
+    "direct_field_type_differences": {
+      "$.steps[].focused_element": {
+        "assistantbench": [
+          "str"
+        ],
+        "visualwebarena": [
+          "str"
+        ],
+        "webarena": [
+          "str"
+        ],
+        "workarena": [
+          "null",
+          "str"
+        ]
+      }
+    },
+    "independent_benchmark_adapters_required": false,
+    "root_fields_by_benchmark": {
+      "assistantbench": [
+        "$.agent",
+        "$.benchmark",
+        "$.experiment",
+        "$.flags",
+        "$.goal",
+        "$.model",
+        "$.model_args",
+        "$.package_version",
+        "$.seed",
+        "$.steps",
+        "$.summary_info",
+        "$.valid"
+      ],
+      "visualwebarena": [
+        "$.agent",
+        "$.benchmark",
+        "$.experiment",
+        "$.flags",
+        "$.goal",
+        "$.model",
+        "$.model_args",
+        "$.package_version",
+        "$.seed",
+        "$.steps",
+        "$.summary_info",
+        "$.valid"
+      ],
+      "webarena": [
+        "$.agent",
+        "$.benchmark",
+        "$.experiment",
+        "$.flags",
+        "$.goal",
+        "$.model",
+        "$.model_args",
+        "$.package_version",
+        "$.seed",
+        "$.steps",
+        "$.summary_info",
+        "$.valid"
+      ],
+      "workarena": [
+        "$.agent",
+        "$.benchmark",
+        "$.experiment",
+        "$.flags",
+        "$.goal",
+        "$.model",
+        "$.model_args",
+        "$.package_version",
+        "$.seed",
+        "$.steps",
+        "$.summary_info",
+        "$.valid"
+      ]
+    },
+    "screenshots_required_for_minimal_text_probe": false,
+    "shared_root_field_set": true,
+    "shared_step_field_set": true,
+    "step_fields_by_benchmark": {
+      "assistantbench": [
+        "$.steps[].action",
+        "$.steps[].axtree",
+        "$.steps[].axtree_obj",
+        "$.steps[].axtree_pruned",
+        "$.steps[].bounding_boxes",
+        "$.steps[].chat_messages",
+        "$.steps[].extra_element_properties",
+        "$.steps[].focused_element",
+        "$.steps[].last_action_error",
+        "$.steps[].num",
+        "$.steps[].open_pages_urls",
+        "$.steps[].reasoning",
+        "$.steps[].screenshot_path",
+        "$.steps[].stats",
+        "$.steps[].url"
+      ],
+      "visualwebarena": [
+        "$.steps[].action",
+        "$.steps[].axtree",
+        "$.steps[].axtree_obj",
+        "$.steps[].axtree_pruned",
+        "$.steps[].bounding_boxes",
+        "$.steps[].chat_messages",
+        "$.steps[].extra_element_properties",
+        "$.steps[].focused_element",
+        "$.steps[].last_action_error",
+        "$.steps[].num",
+        "$.steps[].open_pages_urls",
+        "$.steps[].reasoning",
+        "$.steps[].screenshot_path",
+        "$.steps[].stats",
+        "$.steps[].url"
+      ],
+      "webarena": [
+        "$.steps[].action",
+        "$.steps[].axtree",
+        "$.steps[].axtree_obj",
+        "$.steps[].axtree_pruned",
+        "$.steps[].bounding_boxes",
+        "$.steps[].chat_messages",
+        "$.steps[].extra_element_properties",
+        "$.steps[].focused_element",
+        "$.steps[].last_action_error",
+        "$.steps[].num",
+        "$.steps[].open_pages_urls",
+        "$.steps[].reasoning",
+        "$.steps[].screenshot_path",
+        "$.steps[].stats",
+        "$.steps[].url"
+      ],
+      "workarena": [
+        "$.steps[].action",
+        "$.steps[].axtree",
+        "$.steps[].axtree_obj",
+        "$.steps[].axtree_pruned",
+        "$.steps[].bounding_boxes",
+        "$.steps[].chat_messages",
+        "$.steps[].extra_element_properties",
+        "$.steps[].focused_element",
+        "$.steps[].last_action_error",
+        "$.steps[].num",
+        "$.steps[].open_pages_urls",
+        "$.steps[].reasoning",
+        "$.steps[].screenshot_path",
+        "$.steps[].stats",
+        "$.steps[].url"
+      ]
+    }
+  },
+  "scope": {
+    "dev_only": true,
+    "models_or_baselines_run": 0,
+    "screenshots_downloaded": 0,
+    "test_trajectory_downloads": 0
+  },
+  "selection": {
+    "download_bytes": 42816517,
+    "download_limit_bytes": 209715200,
+    "max_probe_count": 24,
+    "probe_count": 16,
+    "rule": "smallest exact-mapped file per benchmark_group_primary x model_name, then smallest missing eligible target polarities; deterministic lexical tie-break"
+  },
+  "source": {
+    "huggingface_repository": "McGill-NLP/agent-reward-bench",
+    "revision": "b6d17e646009d6cb63d5dd7be78807b680693f61"
+  },
+  "stage": "A0.3",
+  "stage_decision": "PASS_WITH_CONDITIONS"
+}

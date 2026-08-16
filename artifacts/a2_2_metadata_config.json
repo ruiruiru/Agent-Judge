@@ -1,0 +1,44 @@
+{
+  "classifier": {
+    "C": 1.0,
+    "class_weight": "balanced",
+    "fit_intercept": true,
+    "max_iter": 5000,
+    "name": "LogisticRegression",
+    "penalty": "l2",
+    "random_state": 2026,
+    "solver": "liblinear"
+  },
+  "configuration_search": 0,
+  "encoder": {
+    "handle_unknown": "ignore",
+    "name": "OneHotEncoder"
+  },
+  "features": [
+    "benchmark_group_primary",
+    "model_name"
+  ],
+  "identity": "POST_FREEZE_DIAGNOSTIC",
+  "metadata_diagnostic_fits": 10,
+  "official_test_use": 0,
+  "split_source": "A1.1 frozen grouped folds",
+  "stage": "A2.2",
+  "targets": [
+    "success",
+    "looping"
+  ],
+  "threshold": 0.5,
+  "threshold_tuning": 0,
+  "verified_inputs": {
+    "artifacts/a1_9_final_model_manifest.json": "44d7fce8e2b3cef51fd8c1d2e46bae7838dcd92e8c664a31c48962ff2070881f",
+    "artifacts/dev_analysis_index.csv": "2b29b46522b5cce32f084e6dc620ff3203f1fd474721fb001123348be0ab56d0",
+    "artifacts/evaluation_folds_looping.csv": "b950bf23e465d2f108f28281395ac8816c9916b20eaebe2d529e9d5fde74c749",
+    "artifacts/evaluation_folds_success.csv": "820599f85fd901c1b73db61cbc77c54eb8223df3f3abc14062d5a9f20bb02e65",
+    "docs/tasks/STAGE_A2_2_INTERPRETABILITY_CONFOUNDER_ERROR_ANALYSIS.md": "5019985dd1ec7cd4ca1a5feffb20ef5c7309c9298f9fc6f19cf966d6b34a7cac",
+    "formal_git_commit": "ce2a40d0263e522d1a0f4e1482a8694a75aba1e2"
+  },
+  "warning_count": 10,
+  "warnings": [
+    "'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None."
+  ]
+}

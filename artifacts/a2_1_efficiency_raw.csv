@@ -1,0 +1,26 @@
+method,phase,run_type,run_index,trajectory_count,dimension,device,total_seconds,ms_per_trajectory,peak_cpu_rss_mb,peak_gpu_allocated_mb,peak_gpu_reserved_mb,status,notes
+B2,cold_start,measured,1,1,13,cpu,0.9577901,957.7900999999999,154.8984375,NA,NA,OK,fresh process + frozen extractor import + cleaned-input load + first usable 13-d output
+B2,warm_extraction,warmup,0,196,13,cpu,0.0033952999801840633,0.01732295908257175,155.015625,NA,NA,OK,excluded from summary median
+B2,warm_extraction,measured,1,196,13,cpu,0.002807100012432784,0.014321938838942774,155.03515625,NA,NA,OK,full frozen dev extraction
+B2,warm_extraction,measured,2,196,13,cpu,0.0027267999830655754,0.013912244811559058,155.07421875,NA,NA,OK,full frozen dev extraction
+B2,warm_extraction,measured,3,196,13,cpu,0.0026326000224798918,0.01343163276775455,155.08984375,NA,NA,OK,full frozen dev extraction
+B2,warm_extraction,measured,4,196,13,cpu,0.002575200021965429,0.013138775622272598,155.09375,NA,NA,OK,full frozen dev extraction
+B2,warm_extraction,measured,5,196,13,cpu,0.0025425000058021396,0.012971938805112958,155.09765625,NA,NA,OK,full frozen dev extraction
+B2,classifier_load,measured,1,0,13,cpu,0.6008723999839276,NA,120.0,NA,NA,OK,FINAL_SUCCESS_B2; StandardScaler + frozen LogisticRegression
+B2,classifier_inference,warmup,0,196,13,cpu,0.005878700001630932,0.029993367355259856,120.05078125,NA,NA,OK,excluded from summary median
+B2,classifier_inference,measured,1,196,13,cpu,0.00022610000451095402,0.0011535714515865001,120.0546875,NA,NA,OK,FINAL_SUCCESS_B2; StandardScaler + frozen LogisticRegression
+B2,classifier_inference,measured,2,196,13,cpu,0.0001579000090714544,0.0008056122911808899,120.0703125,NA,NA,OK,FINAL_SUCCESS_B2; StandardScaler + frozen LogisticRegression
+B2,classifier_inference,measured,3,196,13,cpu,0.00013770000077784061,0.0007025510243767379,120.078125,NA,NA,OK,FINAL_SUCCESS_B2; StandardScaler + frozen LogisticRegression
+B2,classifier_inference,measured,4,196,13,cpu,0.00013290002243593335,0.0006780613389588436,120.08203125,NA,NA,OK,FINAL_SUCCESS_B2; StandardScaler + frozen LogisticRegression
+B2,classifier_inference,measured,5,196,13,cpu,0.00012730000889860094,0.0006494898413193926,120.08203125,NA,NA,OK,FINAL_SUCCESS_B2; StandardScaler + frozen LogisticRegression
+B4,model_load,measured,1,0,1024,cuda:0,1.9703310999902897,NA,2163.0234375,1136.36767578125,1160.0,OK,pinned local Qwen load only; tokenizer load excluded
+B4,cold_start,measured,1,1,1024,cuda:0,7.8807164,7880.7164,2163.0234375,1412.55517578125,1480.0,OK,fresh process + tokenizer/model initialization + first usable 1024-d CUDA output
+B4,warm_extraction,warmup,0,196,1024,cuda:0,463.6789085000055,2365.7087168367625,2163.0234375,1428.6298828125,1536.0,OK,tokenization + full frozen encoder extraction; excluded from summary median
+B4,warm_extraction,measured,1,196,1024,cuda:0,464.5726490000088,2370.268617346984,2163.0234375,1428.6298828125,1536.0,OK,tokenization + full frozen encoder extraction
+B4,warm_extraction,measured,2,196,1024,cuda:0,468.27460600002087,2389.1561530613308,2163.0234375,1428.6298828125,1536.0,OK,tokenization + full frozen encoder extraction
+B4,warm_extraction,measured,3,196,1024,cuda:0,464.1688556000008,2368.2084469387796,2163.0234375,1428.6298828125,1536.0,OK,tokenization + full frozen encoder extraction
+B4,classifier_load,measured,1,0,1024,cpu,0.5827292999892961,NA,120.43359375,NA,NA,OK,FINAL_SIDE_EFFECT_B4; frozen LogisticRegression; no scaler
+B4,classifier_inference,warmup,0,196,1024,cpu,0.0019079999765381217,0.00973469375784756,122.0234375,NA,NA,OK,excluded from summary median
+B4,classifier_inference,measured,1,196,1024,cpu,0.00042779999785125256,0.0021826530502614926,122.03125,NA,NA,OK,FINAL_SIDE_EFFECT_B4; frozen LogisticRegression; no scaler
+B4,classifier_inference,measured,2,196,1024,cpu,0.00035340001340955496,0.0018030612929058926,122.03515625,NA,NA,OK,FINAL_SIDE_EFFECT_B4; frozen LogisticRegression; no scaler
+B4,classifier_inference,measured,3,196,1024,cpu,0.0003428999916650355,0.0017494897533930382,122.04296875,NA,NA,OK,FINAL_SIDE_EFFECT_B4; frozen LogisticRegression; no scaler

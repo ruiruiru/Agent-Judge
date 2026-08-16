@@ -1,0 +1,13 @@
+{
+  "cleaned_rows": 1106,
+  "cleaned_sha256": "4b9fdbaa18eb5c041bc68737a6b9ea2db202f6dbe17bb56cf339b43b4b2eb004",
+  "feature_count": 13,
+  "feature_rows": 1106,
+  "network_download_bytes": 26748480163,
+  "primary_rows": 1106,
+  "primary_sha256": "dc65dcec24cc7c7075b327ed45dd76fc2a67227a0711c589d0241179b0f8f03b",
+  "raw_retained_count": 0,
+  "schema_drift_groups": 8,
+  "schema_drift_sha256": "772e8895e8ff499feb71be5175789ce5c965f5e4e6a4304c7aa6bd3024e7c699",
+  "structural_feature_sha256": "e39994f35815b2b5131e0b1bf1e5e81c86e430a1f6bdfe1fc9448a5b847faa6d"
+}

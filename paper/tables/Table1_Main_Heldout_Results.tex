@@ -1,0 +1,15 @@
+\begin{table*}[t]
+\centering
+\scriptsize
+\caption{Official held-out tasks/trajectories within evaluated benchmark families using frozen thresholds. Success and Looping are confirmatory; Side Effect is exploratory.}
+\label{tab:main-heldout-results}
+\begin{tabular}{lp{0.17\textwidth}rrrrrrrp{0.13\textwidth}p{0.17\textwidth}}
+\hline
+Target & Frozen method & N & Positive & Negative & Prevalence & AP & AP lift & F1 & AP-lift 95\% CI & Evidence status \\
+\hline
+Success & FINAL\_SUCCESS\_B2 & 1097 & 291 & 806 & 0.265 & 0.655 & 0.390 & 0.682 & [0.327, 0.455] & CONFIRMATORY\_SUPPORTED \\
+Looping & FINAL\_LOOPING\_B2 & 1095 & 577 & 518 & 0.527 & 0.922 & 0.395 & 0.877 & [0.361, 0.429] & CONFIRMATORY\_SUPPORTED \\
+Side Effect & FINAL\_SIDE\_EFFECT\_B4 & 1102 & 71 & 1031 & 0.064 & 0.107 & 0.043 & 0.169 & [0.021, 0.079] & EXPLORATORY\_SUPPORTED \\
+\hline
+\end{tabular}
+\end{table*}

@@ -1,0 +1,131 @@
+{
+  "baselines": [
+    {
+      "estimator": "DummyClassifier",
+      "id": "B0",
+      "name": "majority",
+      "parameters": {
+        "strategy": [
+          "most_frequent"
+        ]
+      }
+    },
+    {
+      "estimator": "DummyClassifier",
+      "id": "B1",
+      "name": "training_prior",
+      "parameters": {
+        "strategy": [
+          "prior"
+        ]
+      }
+    },
+    {
+      "candidate_features": [
+        "step_count",
+        "nonempty_action_count",
+        "nonempty_observation_count",
+        "nonempty_focused_element_count",
+        "natural_error_step_count",
+        "explicit_termination_signal_present",
+        "action_text_total_length",
+        "observation_text_total_length",
+        "mean_action_length",
+        "mean_observation_length",
+        "repeated_action_ratio"
+      ],
+      "estimator": "LogisticRegression",
+      "id": "B2",
+      "input": "dev_cleaned_trajectories",
+      "name": "leak_safe_structural_logistic_regression",
+      "parameters": {
+        "C": [
+          0.1,
+          1.0,
+          10.0
+        ],
+        "class_weight": [
+          null,
+          "balanced"
+        ],
+        "max_iter": [
+          1000
+        ],
+        "solver": [
+          "liblinear"
+        ]
+      }
+    },
+    {
+      "estimator": "TfidfVectorizer+LogisticRegression",
+      "id": "B3",
+      "input": "primary_with_natural_errors",
+      "name": "tfidf_logistic_regression",
+      "parameters": {
+        "C": [
+          0.1,
+          1.0,
+          10.0
+        ],
+        "class_weight": [
+          null,
+          "balanced"
+        ],
+        "max_iter": [
+          1000
+        ],
+        "solver": [
+          "liblinear"
+        ]
+      },
+      "tfidf_variants": [
+        {
+          "id": "word_unigram",
+          "max_features": 20000,
+          "min_df": 2,
+          "ngram_range": [
+            1,
+            1
+          ]
+        },
+        {
+          "id": "word_unigram_bigram",
+          "max_features": 20000,
+          "min_df": 2,
+          "ngram_range": [
+            1,
+            2
+          ]
+        }
+      ]
+    }
+  ],
+  "execution_allowed_in_this_stage": false,
+  "execution_protocol": {
+    "configuration_selection_data": "inner_validation_only",
+    "configuration_selection_metric": "pr_auc",
+    "configuration_tie_break": "predeclared_registry_order",
+    "outer_validation_use": "single_evaluation_after_complete_outer_train_refit",
+    "threshold_selection_data": "inner_validation_only",
+    "threshold_selection_metric": "positive_f1"
+  },
+  "feature_and_hyperparameter_selection_data": "inner_validation_only",
+  "forbidden": [
+    "llm_judge",
+    "embedding_mlp",
+    "transformer_finetuning",
+    "lora",
+    "xgboost_large_search",
+    "graph_neural_network",
+    "multimodal_screenshot_model",
+    "per_sample_manual_judgment",
+    "test_evaluation",
+    "smote",
+    "oversampling",
+    "undersampling"
+  ],
+  "outer_validation_selection_allowed": false,
+  "primary_input_view": "primary_with_natural_errors",
+  "schema_version": "1.0",
+  "stage": "A1.1"
+}

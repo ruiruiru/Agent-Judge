@@ -1,0 +1,262 @@
+{
+  "a1_8a_preregistration_commit": "d2f0b84c6247c95cc599b28784c5a2db10ad947f",
+  "a1_8b_result_commit": "recorded_by_enclosing_result_commit",
+  "claim_status": {
+    "C1": "SUPPORTED",
+    "C10": "PROHIBITED",
+    "C11": "DESCRIPTIVE_ONLY",
+    "C12": "SUPPORTED_WITH_CONDITIONS",
+    "C13": "PROHIBITED",
+    "C14": "SUPPORTED_WITH_CONDITIONS",
+    "C2": "INSUFFICIENT_EVIDENCE",
+    "C3": "INSUFFICIENT_EVIDENCE",
+    "C4": "SUPPORTED_WITH_CONDITIONS",
+    "C5": "SUPPORTED",
+    "C6": "INSUFFICIENT_EVIDENCE",
+    "C7": "SUPPORTED",
+    "C8": "SUPPORTED",
+    "C9": "INSUFFICIENT_EVIDENCE"
+  },
+  "contribution_status": {
+    "K1": "KEEP_WITH_CONDITIONS",
+    "K2": "KEEP_WITH_CONDITIONS",
+    "K3": "KEEP_WITH_CONDITIONS",
+    "K4": "KEEP"
+  },
+  "execution_boundaries": {
+    "estimator_fit_count": 0,
+    "model_forward_count": 0,
+    "new_bootstrap_draw_count": 0,
+    "new_config_selection_count": 0,
+    "new_prediction_count": 0,
+    "new_threshold_selection_count": 0,
+    "prohibited_experiment_count": 0,
+    "test_access_count": 0
+  },
+  "final_method_freeze_proposal": [
+    {
+      "candidate_method": "B2 structural LR",
+      "eligible_for_confirmatory_test": "true_after_human_freeze_approval",
+      "known_limitation": "B2 is not stably better than B3; termination mechanism is uncertain; four-domain dev evidence only.",
+      "role": "primary candidate",
+      "selection_rationale": "A1.6 P1 stable positive cross-Benchmark signal; A1.7 B4 has no stable AP gain over B2 and has a stable macro-F1 drop; B2 is simpler, cheaper, and interpretable.",
+      "target": "success"
+    },
+    {
+      "candidate_method": "B4 dense embedding LR",
+      "eligible_for_confirmatory_test": "false_or_exploratory_only",
+      "known_limitation": "Only 12 positives; AssistantBench is all-negative; B4-B3 difference is uncertain; no robust claim.",
+      "role": "exploratory-only",
+      "selection_rationale": "A1.7 B4 shows promising semantic point estimates, while B2 structural evidence is weak; candidate role is deliberately reduced.",
+      "target": "side_effect"
+    },
+    {
+      "candidate_method": "B2 structural LR",
+      "eligible_for_confirmatory_test": "true_after_human_freeze_approval",
+      "known_limitation": "Repetition features are construct-adjacent and do not fully explain performance; four-domain dev evidence only.",
+      "role": "primary candidate",
+      "selection_rationale": "A1.6 P5 is a strong stable cross-Benchmark signal; P6 shows repetition increment; A1.7 B4 has no clear gain. S6 remains compact auxiliary only.",
+      "target": "looping"
+    }
+  ],
+  "generated_at_utc": "2026-08-08T04:23:12+00:00",
+  "output_hashes": {
+    "artifacts/a1_8_claim_matrix.csv": "264678a325f1680c8cfdad3631e6f5209a29a91e6ab8dd5b9683adb857810590",
+    "artifacts/a1_8_evidence_registry.csv": "c03295f9c4019a2bdefd05c9d7da1f4b5705bf68f0a8d229adcf17836e80212e",
+    "artifacts/a1_8_final_method_freeze_proposal.csv": "d05660748347ef4bca689189ff67d5b5f5f013e434176287c03c457672e304b1",
+    "artifacts/a1_8_paper_contribution_matrix.csv": "b2a0c90cdb4fb52c8935107a2656606562ba5aa4d5ff1aa23aee6054fa2c88a6",
+    "artifacts/a1_8_paper_table_figure_plan.csv": "329bd8b84c903a72c3814fb6c4c31fe28d6330fa101523ebb831ff9956cf7700",
+    "artifacts/a1_8_remaining_evidence_decision.json": "39ad8f4fba9807a29a176ddf56818dcb767c8e49a1e95a174e49dddb1912c948",
+    "artifacts/a1_8_reviewer_attack_matrix.csv": "9161d1c079c266c8e7d4a02e058bf7597bf000aa4cbacf14d2c8544f3d3fb0ae",
+    "artifacts/a1_8_threats_to_validity.csv": "9d6fcfa800e74d8e6d2088b23a9925f8625b549fc66ea6a1acf9174cce214ec3",
+    "docs/paper_claims_allowed_and_forbidden.md": "5b63732127982db7e424897282ede0563a67c25d928548244f75f4e612c04e39",
+    "docs/paper_evidence_snapshot_a1_8.md": "ccf90763e267da25167757146daf36ff4669b449609faf662a6d1172501df9de",
+    "docs/stage_a1_8_evidence_audit_report.md": "744621c5973fd27e47c5f62b57f63c5d4747c22c01bda219f4e69014f194672c"
+  },
+  "prohibited_experiment_count": 0,
+  "provenance_audit": {
+    "a1_3_b2_equals_a1_5_s0": {
+      "fields_exact": [
+        "true_label",
+        "predicted_probability",
+        "selected_threshold",
+        "predicted_label",
+        "selected_config_id",
+        "inner_n_splits"
+      ],
+      "row_count": 583,
+      "status": "PASS"
+    },
+    "a1_6_regression_guards": {
+      "point_estimate_regression": {
+        "a1_3": {
+          "checked_values": 204,
+          "max_absolute_error": 5.551115123125783e-17,
+          "status": "PASS",
+          "tolerance": 1e-12
+        },
+        "a1_5": {
+          "checked_values": 357,
+          "max_absolute_error": 1.1102230246251565e-16,
+          "status": "PASS",
+          "tolerance": 1e-12
+        }
+      },
+      "s0_equals_b2": {
+        "configs_exact": true,
+        "keys_exact": true,
+        "labels_exact": true,
+        "max_probability_absolute_error": 0.0,
+        "predicted_labels_exact": true,
+        "row_count": 583,
+        "status": "PASS",
+        "thresholds_exact": true
+      },
+      "status": "PASS"
+    },
+    "a1_7_frozen_source_guards": {
+      "checked_values": 24,
+      "status": "PASS",
+      "tolerance": 1e-12
+    },
+    "boundary_audit": {
+      "A1.2": {
+        "prohibited_experiments": 0,
+        "test_access_non_identifier": 0
+      },
+      "A1.3": {
+        "prohibited_experiments": 0,
+        "test_access_non_identifier": 0
+      },
+      "A1.4": {
+        "prohibited_experiments": 0,
+        "test_access_non_identifier": 0
+      },
+      "A1.5": {
+        "prohibited_experiments": 0,
+        "test_access_non_identifier": 0
+      },
+      "A1.6": {
+        "prohibited_experiments": 0,
+        "test_access_non_identifier": 0
+      },
+      "A1.7": {
+        "prohibited_experiments": 0,
+        "test_access_non_identifier": 0
+      }
+    },
+    "formal_commits": {
+      "A1.2": {
+        "preregistration_commit": "b4fef6f63d55ccd4ed2cdf4feb2dcab1cd5b6d20",
+        "result_commit": "179ce02640a8e6e15411348b57fd8d7725047364"
+      },
+      "A1.3": {
+        "execution_fix_commit": "6027d5e5af29a1b0143bb04024084a6c4209529e",
+        "preregistration_commit": "6b98e03537360d8e60e5ccf3ca4c5ea7b51a652d",
+        "result_commit": "346bb4b3d4a90fc51c1e099618c3b7592fa76b99"
+      },
+      "A1.4": {
+        "preregistration_commit": "84bf9da03c12c4bbe28f57e42b31de71e8cb1041",
+        "result_commit": "91e6b195dc63bae8c82728a126945abd0d5d2b68"
+      },
+      "A1.5": {
+        "preregistration_commit": "fa9ef0771ea44a720ed8b900199a75ef3c863379",
+        "result_commit": "e4fd9aba83cc6ed3b01b1f624c666b6cc7fce3ca"
+      },
+      "A1.6": {
+        "preregistration_commit": "d7b851c48581a6c7c6220ab0dfc851b92a32162e",
+        "result_commit": "040d081d3359f75f1303f4c24d7f8be79b5da75d"
+      },
+      "A1.7": {
+        "binary_fix_commit": "362a45917e403be7aacb54359aac2537473508fb",
+        "execution_fix_commit": "676ab5efe4f05a2cd5552421510058e5d7553859",
+        "preregistration_commit": "e776c16710fd18c1462808a044f911e40061c5c3",
+        "result_commit": "e24066fa27c027c60e2ac35b8305ea3d4a585493"
+      }
+    },
+    "report_numeric_consistency": {
+      "checked_core_values": {
+        "A1.2": 18,
+        "A1.3": 24,
+        "A1.4": 25,
+        "A1.5": 84,
+        "A1.6": 68,
+        "A1.7": 58
+      },
+      "status": "PASS",
+      "total": 277
+    },
+    "source_paths": [
+      "artifacts/a1_2_oof_predictions.csv",
+      "artifacts/a1_2_pooled_metrics.csv",
+      "artifacts/a1_2_run_summary.json",
+      "artifacts/a1_3_lobo_domain_metrics.csv",
+      "artifacts/a1_3_lobo_macro_metrics.csv",
+      "artifacts/a1_3_lobo_pooled_metrics.csv",
+      "artifacts/a1_3_lobo_predictions.csv",
+      "artifacts/a1_3_lobo_run_summary.json",
+      "artifacts/a1_4_lomo_coverage_matrix.csv",
+      "artifacts/a1_4_lomo_macro_metrics.csv",
+      "artifacts/a1_4_lomo_model_metrics.csv",
+      "artifacts/a1_4_lomo_pooled_metrics.csv",
+      "artifacts/a1_4_lomo_run_summary.json",
+      "artifacts/a1_5_domain_metrics.csv",
+      "artifacts/a1_5_external_predictions.csv",
+      "artifacts/a1_5_macro_metrics.csv",
+      "artifacts/a1_5_pooled_metrics.csv",
+      "artifacts/a1_5_run_summary.json",
+      "artifacts/a1_5_structural_ablation_deltas.csv",
+      "artifacts/a1_6_domain_bootstrap_summary.csv",
+      "artifacts/a1_6_macro_bootstrap_summary.csv",
+      "artifacts/a1_6_pooled_bootstrap_summary.csv",
+      "artifacts/a1_6_primary_paired_delta_summary.csv",
+      "artifacts/a1_6_run_summary.json",
+      "artifacts/a1_7_bootstrap_primary_summary.csv",
+      "artifacts/a1_7_comparison_to_a1_3.csv",
+      "artifacts/a1_7_domain_metrics.csv",
+      "artifacts/a1_7_macro_metrics.csv",
+      "artifacts/a1_7_pooled_metrics.csv",
+      "artifacts/a1_7_run_summary.json",
+      "artifacts/leave_one_model_out_manifest.csv",
+      "artifacts/lobo_primary_manifest.csv",
+      "configs/baseline_registry.yaml",
+      "configs/evaluation_protocol.yaml",
+      "docs/stage_a1_2_minimal_baseline_report.md",
+      "docs/stage_a1_3_primary_lobo_report.md",
+      "docs/stage_a1_4_leave_one_model_out_report.md",
+      "docs/stage_a1_5_structural_mechanism_ablation_report.md",
+      "docs/stage_a1_6_group_aware_bootstrap_report.md",
+      "docs/stage_a1_7_frozen_dense_semantic_baseline_report.md",
+      "research/01_DECISION_LOG.md",
+      "research/02_EXPERIMENT_REGISTRY.csv"
+    ],
+    "stage_decisions": {
+      "A1.2": "PASS_WITH_CONDITIONS",
+      "A1.3": "PASS_WITH_CONDITIONS",
+      "A1.4": "PASS_WITH_CONDITIONS",
+      "A1.5": "PASS_WITH_CONDITIONS",
+      "A1.6": "PASS_WITH_CONDITIONS",
+      "A1.7": "PASS_WITH_CONDITIONS"
+    },
+    "status": "PASS"
+  },
+  "recommend_enter_final_method_freeze": true,
+  "remaining_evidence_decision": "READY_FOR_FINAL_METHOD_FREEZE",
+  "source_priority": [
+    "machine-readable artifact",
+    "formal stage report",
+    "human summary"
+  ],
+  "stage": "A1.8",
+  "stage_determination": "PASS_WITH_CONDITIONS",
+  "stop_condition": "await_human_stage_gate_no_test_or_new_experiment",
+  "test_access_count": 0,
+  "validation": {
+    "claim_rows": 14,
+    "contribution_rows": 4,
+    "evidence_rows": 55,
+    "proposal_rows": 3,
+    "status": "PASS",
+    "threat_rows": 10
+  }
+}

@@ -1,0 +1,1706 @@
+{
+  "baseline_registry": {
+    "baselines": [
+      {
+        "estimator": "DummyClassifier",
+        "id": "B0",
+        "name": "majority",
+        "parameters": {
+          "strategy": [
+            "most_frequent"
+          ]
+        }
+      },
+      {
+        "estimator": "DummyClassifier",
+        "id": "B1",
+        "name": "training_prior",
+        "parameters": {
+          "strategy": [
+            "prior"
+          ]
+        }
+      },
+      {
+        "candidate_features": [
+          "step_count",
+          "nonempty_action_count",
+          "nonempty_observation_count",
+          "nonempty_focused_element_count",
+          "natural_error_step_count",
+          "explicit_termination_signal_present",
+          "action_text_total_length",
+          "observation_text_total_length",
+          "mean_action_length",
+          "mean_observation_length",
+          "repeated_action_ratio"
+        ],
+        "estimator": "LogisticRegression",
+        "id": "B2",
+        "input": "dev_cleaned_trajectories",
+        "name": "leak_safe_structural_logistic_regression",
+        "parameters": {
+          "C": [
+            0.1,
+            1.0,
+            10.0
+          ],
+          "class_weight": [
+            null,
+            "balanced"
+          ],
+          "max_iter": [
+            1000
+          ],
+          "solver": [
+            "liblinear"
+          ]
+        }
+      },
+      {
+        "estimator": "TfidfVectorizer+LogisticRegression",
+        "id": "B3",
+        "input": "primary_with_natural_errors",
+        "name": "tfidf_logistic_regression",
+        "parameters": {
+          "C": [
+            0.1,
+            1.0,
+            10.0
+          ],
+          "class_weight": [
+            null,
+            "balanced"
+          ],
+          "max_iter": [
+            1000
+          ],
+          "solver": [
+            "liblinear"
+          ]
+        },
+        "tfidf_variants": [
+          {
+            "id": "word_unigram",
+            "max_features": 20000,
+            "min_df": 2,
+            "ngram_range": [
+              1,
+              1
+            ]
+          },
+          {
+            "id": "word_unigram_bigram",
+            "max_features": 20000,
+            "min_df": 2,
+            "ngram_range": [
+              1,
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "execution_allowed_in_this_stage": false,
+    "execution_protocol": {
+      "configuration_selection_data": "inner_validation_only",
+      "configuration_selection_metric": "pr_auc",
+      "configuration_tie_break": "predeclared_registry_order",
+      "outer_validation_use": "single_evaluation_after_complete_outer_train_refit",
+      "threshold_selection_data": "inner_validation_only",
+      "threshold_selection_metric": "positive_f1"
+    },
+    "feature_and_hyperparameter_selection_data": "inner_validation_only",
+    "forbidden": [
+      "llm_judge",
+      "embedding_mlp",
+      "transformer_finetuning",
+      "lora",
+      "xgboost_large_search",
+      "graph_neural_network",
+      "multimodal_screenshot_model",
+      "per_sample_manual_judgment",
+      "test_evaluation",
+      "smote",
+      "oversampling",
+      "undersampling"
+    ],
+    "outer_validation_selection_allowed": false,
+    "primary_input_view": "primary_with_natural_errors",
+    "schema_version": "1.0",
+    "stage": "A1.1"
+  },
+  "benchmark_literal_audit": {
+    "affected_trajectories": 8,
+    "all_sources_are_allowlisted_natural_text": true,
+    "audit_rows": 139,
+    "decision": "retain_natural_text",
+    "field_occurrences": {
+      "$.goal": 4,
+      "$.steps[].action": 4,
+      "$.steps[].axtree_pruned": 450
+    },
+    "future_sensitivity_candidate": "benchmark_literal_redacted (not generated in A1.1)",
+    "literal_occurrences": 458,
+    "serializer_or_metadata_injection_detected": false,
+    "trajectory_keys": [
+      "workarena::workarena.servicenow.create-user::GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct",
+      "workarena::workarena.servicenow.create-user::GenericAgent-anthropic_claude-3.7-sonnet",
+      "workarena::workarena.servicenow.create-user::GenericAgent-gpt-4o-2024-11-20",
+      "workarena::workarena.servicenow.create-user::GenericAgent-meta-llama_Llama-3.3-70B-Instruct",
+      "workarena::workarena.servicenow.sort-user-list::GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct",
+      "workarena::workarena.servicenow.sort-user-list::GenericAgent-anthropic_claude-3.7-sonnet",
+      "workarena::workarena.servicenow.sort-user-list::GenericAgent-gpt-4o-2024-11-20",
+      "workarena::workarena.servicenow.sort-user-list::GenericAgent-meta-llama_Llama-3.3-70B-Instruct"
+    ]
+  },
+  "conditions": [
+    "Primary LOBO held-out domains without both classes: side_effect:assistantbench.",
+    "Sensitivity LOBO held-out domains without both classes: side_effect:assistantbench, side_effect:workarena_l1.",
+    "Leave-One-Model-Out is exploratory because model coverage is incomplete across primary Benchmarks.",
+    "Four schema-drift groups remain excluded pending research-lead approval; no whitelist expansion occurred.",
+    "Eight trajectories retain natural `workarena` literals; a uniform redaction sensitivity remains optional and ungenerated."
+  ],
+  "cv": {
+    "looping": {
+      "eligible_trajectories": 196,
+      "folds": [
+        {
+          "inner_n_splits": 5,
+          "inner_seed": 2327,
+          "inner_train": {
+            "negative": 65,
+            "positive": 61,
+            "task_groups": 33,
+            "trajectories": 126
+          },
+          "inner_validation": {
+            "negative": 17,
+            "positive": 14,
+            "task_groups": 8,
+            "trajectories": 31
+          },
+          "outer_fold": 1,
+          "outer_train": {
+            "negative": 82,
+            "positive": 75,
+            "task_groups": 41,
+            "trajectories": 157
+          },
+          "outer_validation": {
+            "negative": 22,
+            "positive": 17,
+            "task_groups": 10,
+            "trajectories": 39
+          }
+        },
+        {
+          "inner_n_splits": 5,
+          "inner_seed": 2328,
+          "inner_train": {
+            "negative": 67,
+            "positive": 59,
+            "task_groups": 33,
+            "trajectories": 126
+          },
+          "inner_validation": {
+            "negative": 17,
+            "positive": 14,
+            "task_groups": 8,
+            "trajectories": 31
+          },
+          "outer_fold": 2,
+          "outer_train": {
+            "negative": 84,
+            "positive": 73,
+            "task_groups": 41,
+            "trajectories": 157
+          },
+          "outer_validation": {
+            "negative": 20,
+            "positive": 19,
+            "task_groups": 10,
+            "trajectories": 39
+          }
+        },
+        {
+          "inner_n_splits": 5,
+          "inner_seed": 2329,
+          "inner_train": {
+            "negative": 67,
+            "positive": 60,
+            "task_groups": 33,
+            "trajectories": 127
+          },
+          "inner_validation": {
+            "negative": 17,
+            "positive": 14,
+            "task_groups": 8,
+            "trajectories": 31
+          },
+          "outer_fold": 3,
+          "outer_train": {
+            "negative": 84,
+            "positive": 74,
+            "task_groups": 41,
+            "trajectories": 158
+          },
+          "outer_validation": {
+            "negative": 20,
+            "positive": 18,
+            "task_groups": 10,
+            "trajectories": 38
+          }
+        },
+        {
+          "inner_n_splits": 5,
+          "inner_seed": 2330,
+          "inner_train": {
+            "negative": 66,
+            "positive": 60,
+            "task_groups": 33,
+            "trajectories": 126
+          },
+          "inner_validation": {
+            "negative": 17,
+            "positive": 14,
+            "task_groups": 8,
+            "trajectories": 31
+          },
+          "outer_fold": 4,
+          "outer_train": {
+            "negative": 83,
+            "positive": 74,
+            "task_groups": 41,
+            "trajectories": 157
+          },
+          "outer_validation": {
+            "negative": 21,
+            "positive": 18,
+            "task_groups": 10,
+            "trajectories": 39
+          }
+        },
+        {
+          "inner_n_splits": 5,
+          "inner_seed": 2331,
+          "inner_train": {
+            "negative": 66,
+            "positive": 58,
+            "task_groups": 32,
+            "trajectories": 124
+          },
+          "inner_validation": {
+            "negative": 17,
+            "positive": 14,
+            "task_groups": 8,
+            "trajectories": 31
+          },
+          "outer_fold": 5,
+          "outer_train": {
+            "negative": 83,
+            "positive": 72,
+            "task_groups": 40,
+            "trajectories": 155
+          },
+          "outer_validation": {
+            "negative": 21,
+            "positive": 20,
+            "task_groups": 11,
+            "trajectories": 41
+          }
+        }
+      ],
+      "negative": 104,
+      "outer_folds": 5,
+      "positive": 92,
+      "positive_task_groups": 39,
+      "task_groups": 51
+    },
+    "side_effect": {
+      "eligible_trajectories": 195,
+      "folds": [
+        {
+          "inner_n_splits": 5,
+          "inner_seed": 2227,
+          "inner_train": {
+            "negative": 119,
+            "positive": 7,
+            "task_groups": 33,
+            "trajectories": 126
+          },
+          "inner_validation": {
+            "negative": 28,
+            "positive": 2,
+            "task_groups": 8,
+            "trajectories": 30
+          },
+          "outer_fold": 1,
+          "outer_train": {
+            "negative": 147,
+            "positive": 9,
+            "task_groups": 41,
+            "trajectories": 156
+          },
+          "outer_validation": {
+            "negative": 36,
+            "positive": 3,
+            "task_groups": 10,
+            "trajectories": 39
+          }
+        },
+        {
+          "inner_n_splits": 5,
+          "inner_seed": 2228,
+          "inner_train": {
+            "negative": 117,
+            "positive": 9,
+            "task_groups": 33,
+            "trajectories": 126
+          },
+          "inner_validation": {
+            "negative": 30,
+            "positive": 1,
+            "task_groups": 8,
+            "trajectories": 31
+          },
+          "outer_fold": 2,
+          "outer_train": {
+            "negative": 147,
+            "positive": 10,
+            "task_groups": 41,
+            "trajectories": 157
+          },
+          "outer_validation": {
+            "negative": 36,
+            "positive": 2,
+            "task_groups": 10,
+            "trajectories": 38
+          }
+        },
+        {
+          "inner_n_splits": 5,
+          "inner_seed": 2229,
+          "inner_train": {
+            "negative": 118,
+            "positive": 8,
+            "task_groups": 33,
+            "trajectories": 126
+          },
+          "inner_validation": {
+            "negative": 28,
+            "positive": 2,
+            "task_groups": 8,
+            "trajectories": 30
+          },
+          "outer_fold": 3,
+          "outer_train": {
+            "negative": 146,
+            "positive": 10,
+            "task_groups": 41,
+            "trajectories": 156
+          },
+          "outer_validation": {
+            "negative": 37,
+            "positive": 2,
+            "task_groups": 10,
+            "trajectories": 39
+          }
+        },
+        {
+          "inner_n_splits": 5,
+          "inner_seed": 2230,
+          "inner_train": {
+            "negative": 119,
+            "positive": 7,
+            "task_groups": 33,
+            "trajectories": 126
+          },
+          "inner_validation": {
+            "negative": 28,
+            "positive": 3,
+            "task_groups": 8,
+            "trajectories": 31
+          },
+          "outer_fold": 4,
+          "outer_train": {
+            "negative": 147,
+            "positive": 10,
+            "task_groups": 41,
+            "trajectories": 157
+          },
+          "outer_validation": {
+            "negative": 36,
+            "positive": 2,
+            "task_groups": 10,
+            "trajectories": 38
+          }
+        },
+        {
+          "inner_n_splits": 5,
+          "inner_seed": 2231,
+          "inner_train": {
+            "negative": 115,
+            "positive": 8,
+            "task_groups": 32,
+            "trajectories": 123
+          },
+          "inner_validation": {
+            "negative": 30,
+            "positive": 1,
+            "task_groups": 8,
+            "trajectories": 31
+          },
+          "outer_fold": 5,
+          "outer_train": {
+            "negative": 145,
+            "positive": 9,
+            "task_groups": 40,
+            "trajectories": 154
+          },
+          "outer_validation": {
+            "negative": 38,
+            "positive": 3,
+            "task_groups": 11,
+            "trajectories": 41
+          }
+        }
+      ],
+      "negative": 183,
+      "outer_folds": 5,
+      "positive": 12,
+      "positive_task_groups": 8,
+      "task_groups": 51
+    },
+    "success": {
+      "eligible_trajectories": 192,
+      "folds": [
+        {
+          "inner_n_splits": 5,
+          "inner_seed": 2127,
+          "inner_train": {
+            "negative": 86,
+            "positive": 37,
+            "task_groups": 33,
+            "trajectories": 123
+          },
+          "inner_validation": {
+            "negative": 20,
+            "positive": 10,
+            "task_groups": 8,
+            "trajectories": 30
+          },
+          "outer_fold": 1,
+          "outer_train": {
+            "negative": 106,
+            "positive": 47,
+            "task_groups": 41,
+            "trajectories": 153
+          },
+          "outer_validation": {
+            "negative": 28,
+            "positive": 11,
+            "task_groups": 10,
+            "trajectories": 39
+          }
+        },
+        {
+          "inner_n_splits": 5,
+          "inner_seed": 2128,
+          "inner_train": {
+            "negative": 84,
+            "positive": 37,
+            "task_groups": 32,
+            "trajectories": 121
+          },
+          "inner_validation": {
+            "negative": 22,
+            "positive": 9,
+            "task_groups": 8,
+            "trajectories": 31
+          },
+          "outer_fold": 2,
+          "outer_train": {
+            "negative": 106,
+            "positive": 46,
+            "task_groups": 40,
+            "trajectories": 152
+          },
+          "outer_validation": {
+            "negative": 28,
+            "positive": 12,
+            "task_groups": 11,
+            "trajectories": 40
+          }
+        },
+        {
+          "inner_n_splits": 5,
+          "inner_seed": 2129,
+          "inner_train": {
+            "negative": 88,
+            "positive": 36,
+            "task_groups": 33,
+            "trajectories": 124
+          },
+          "inner_validation": {
+            "negative": 20,
+            "positive": 10,
+            "task_groups": 8,
+            "trajectories": 30
+          },
+          "outer_fold": 3,
+          "outer_train": {
+            "negative": 108,
+            "positive": 46,
+            "task_groups": 41,
+            "trajectories": 154
+          },
+          "outer_validation": {
+            "negative": 26,
+            "positive": 12,
+            "task_groups": 10,
+            "trajectories": 38
+          }
+        },
+        {
+          "inner_n_splits": 5,
+          "inner_seed": 2130,
+          "inner_train": {
+            "negative": 87,
+            "positive": 37,
+            "task_groups": 33,
+            "trajectories": 124
+          },
+          "inner_validation": {
+            "negative": 21,
+            "positive": 9,
+            "task_groups": 8,
+            "trajectories": 30
+          },
+          "outer_fold": 4,
+          "outer_train": {
+            "negative": 108,
+            "positive": 46,
+            "task_groups": 41,
+            "trajectories": 154
+          },
+          "outer_validation": {
+            "negative": 26,
+            "positive": 12,
+            "task_groups": 10,
+            "trajectories": 38
+          }
+        },
+        {
+          "inner_n_splits": 5,
+          "inner_seed": 2131,
+          "inner_train": {
+            "negative": 88,
+            "positive": 37,
+            "task_groups": 33,
+            "trajectories": 125
+          },
+          "inner_validation": {
+            "negative": 20,
+            "positive": 10,
+            "task_groups": 8,
+            "trajectories": 30
+          },
+          "outer_fold": 5,
+          "outer_train": {
+            "negative": 108,
+            "positive": 47,
+            "task_groups": 41,
+            "trajectories": 155
+          },
+          "outer_validation": {
+            "negative": 26,
+            "positive": 11,
+            "task_groups": 10,
+            "trajectories": 37
+          }
+        }
+      ],
+      "negative": 134,
+      "outer_folds": 5,
+      "positive": 58,
+      "positive_task_groups": 24,
+      "task_groups": 51
+    }
+  },
+  "formal_input_sha256_after": {
+    "data/processed/dev_cleaned_trajectories.jsonl": "157a2f665ec33aced4e549e349012f97387961afca2da4f8629cc3472a29342e",
+    "data/processed/dev_serialized_error_ablation.jsonl": "416ca5e1fd20939d146000b5e931be193c68c172c494279fda15e09ad9ece686",
+    "data/processed/dev_serialized_primary.jsonl": "ec2757489c04b4388711826d29a028b24585156c9dab0496d4afe394aa02398a",
+    "data/processed/dev_serialized_reasoning_sensitivity.jsonl": "e8e98436fb804eb6dcf59d7f96f0b92cb0a5903cd3dae52bb0ea1f939f6642cb"
+  },
+  "formal_input_sha256_before": {
+    "data/processed/dev_cleaned_trajectories.jsonl": "157a2f665ec33aced4e549e349012f97387961afca2da4f8629cc3472a29342e",
+    "data/processed/dev_serialized_error_ablation.jsonl": "416ca5e1fd20939d146000b5e931be193c68c172c494279fda15e09ad9ece686",
+    "data/processed/dev_serialized_primary.jsonl": "ec2757489c04b4388711826d29a028b24585156c9dab0496d4afe394aa02398a",
+    "data/processed/dev_serialized_reasoning_sensitivity.jsonl": "e8e98436fb804eb6dcf59d7f96f0b92cb0a5903cd3dae52bb0ea1f939f6642cb"
+  },
+  "formal_inputs_unchanged": true,
+  "group_key_audit": {
+    "benchmark_component_prevents_namespace_collision": true,
+    "cross_benchmark_normalized_task_id_collisions": {},
+    "group_key_components": [
+      "benchmark_original",
+      "normalized_task_id"
+    ],
+    "group_size_distribution": {
+      "3": 8,
+      "4": 43
+    },
+    "groups_with_four_models": 43,
+    "groups_with_partial_model_coverage": 8,
+    "max_group_size": 4,
+    "median_group_size": 4,
+    "min_group_size": 3,
+    "task_groups": 51
+  },
+  "leave_one_model_out": {
+    "all_models_cover_all_primary_benchmarks": false,
+    "models": [
+      "GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct",
+      "GenericAgent-anthropic_claude-3.7-sonnet",
+      "GenericAgent-gpt-4o-2024-11-20",
+      "GenericAgent-meta-llama_Llama-3.3-70B-Instruct"
+    ],
+    "recommended_status": "exploratory_only",
+    "targets": {
+      "looping": {
+        "GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct": {
+          "train_benchmark_groups": [
+            "assistantbench",
+            "visualwebarena",
+            "webarena",
+            "workarena"
+          ],
+          "train_covers_all_primary_benchmarks": true,
+          "validation": {
+            "benchmark_groups": [
+              "assistantbench",
+              "visualwebarena",
+              "webarena",
+              "workarena"
+            ],
+            "negative": 21,
+            "positive": 30,
+            "task_groups": 51,
+            "trajectories": 51
+          },
+          "validation_covers_all_primary_benchmarks": true,
+          "validation_has_both_classes": true
+        },
+        "GenericAgent-anthropic_claude-3.7-sonnet": {
+          "train_benchmark_groups": [
+            "assistantbench",
+            "visualwebarena",
+            "webarena",
+            "workarena"
+          ],
+          "train_covers_all_primary_benchmarks": true,
+          "validation": {
+            "benchmark_groups": [
+              "assistantbench",
+              "visualwebarena",
+              "webarena",
+              "workarena"
+            ],
+            "negative": 37,
+            "positive": 14,
+            "task_groups": 51,
+            "trajectories": 51
+          },
+          "validation_covers_all_primary_benchmarks": true,
+          "validation_has_both_classes": true
+        },
+        "GenericAgent-gpt-4o-2024-11-20": {
+          "train_benchmark_groups": [
+            "assistantbench",
+            "visualwebarena",
+            "webarena",
+            "workarena"
+          ],
+          "train_covers_all_primary_benchmarks": true,
+          "validation": {
+            "benchmark_groups": [
+              "assistantbench",
+              "visualwebarena",
+              "webarena",
+              "workarena"
+            ],
+            "negative": 30,
+            "positive": 21,
+            "task_groups": 51,
+            "trajectories": 51
+          },
+          "validation_covers_all_primary_benchmarks": true,
+          "validation_has_both_classes": true
+        },
+        "GenericAgent-meta-llama_Llama-3.3-70B-Instruct": {
+          "train_benchmark_groups": [
+            "assistantbench",
+            "visualwebarena",
+            "webarena",
+            "workarena"
+          ],
+          "train_covers_all_primary_benchmarks": true,
+          "validation": {
+            "benchmark_groups": [
+              "assistantbench",
+              "webarena",
+              "workarena"
+            ],
+            "negative": 16,
+            "positive": 27,
+            "task_groups": 43,
+            "trajectories": 43
+          },
+          "validation_covers_all_primary_benchmarks": false,
+          "validation_has_both_classes": true
+        }
+      },
+      "side_effect": {
+        "GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct": {
+          "train_benchmark_groups": [
+            "assistantbench",
+            "visualwebarena",
+            "webarena",
+            "workarena"
+          ],
+          "train_covers_all_primary_benchmarks": true,
+          "validation": {
+            "benchmark_groups": [
+              "assistantbench",
+              "visualwebarena",
+              "webarena",
+              "workarena"
+            ],
+            "negative": 46,
+            "positive": 5,
+            "task_groups": 51,
+            "trajectories": 51
+          },
+          "validation_covers_all_primary_benchmarks": true,
+          "validation_has_both_classes": true
+        },
+        "GenericAgent-anthropic_claude-3.7-sonnet": {
+          "train_benchmark_groups": [
+            "assistantbench",
+            "visualwebarena",
+            "webarena",
+            "workarena"
+          ],
+          "train_covers_all_primary_benchmarks": true,
+          "validation": {
+            "benchmark_groups": [
+              "assistantbench",
+              "visualwebarena",
+              "webarena",
+              "workarena"
+            ],
+            "negative": 49,
+            "positive": 2,
+            "task_groups": 51,
+            "trajectories": 51
+          },
+          "validation_covers_all_primary_benchmarks": true,
+          "validation_has_both_classes": true
+        },
+        "GenericAgent-gpt-4o-2024-11-20": {
+          "train_benchmark_groups": [
+            "assistantbench",
+            "visualwebarena",
+            "webarena",
+            "workarena"
+          ],
+          "train_covers_all_primary_benchmarks": true,
+          "validation": {
+            "benchmark_groups": [
+              "assistantbench",
+              "visualwebarena",
+              "webarena",
+              "workarena"
+            ],
+            "negative": 48,
+            "positive": 2,
+            "task_groups": 50,
+            "trajectories": 50
+          },
+          "validation_covers_all_primary_benchmarks": true,
+          "validation_has_both_classes": true
+        },
+        "GenericAgent-meta-llama_Llama-3.3-70B-Instruct": {
+          "train_benchmark_groups": [
+            "assistantbench",
+            "visualwebarena",
+            "webarena",
+            "workarena"
+          ],
+          "train_covers_all_primary_benchmarks": true,
+          "validation": {
+            "benchmark_groups": [
+              "assistantbench",
+              "webarena",
+              "workarena"
+            ],
+            "negative": 40,
+            "positive": 3,
+            "task_groups": 43,
+            "trajectories": 43
+          },
+          "validation_covers_all_primary_benchmarks": false,
+          "validation_has_both_classes": true
+        }
+      },
+      "success": {
+        "GenericAgent-Qwen_Qwen2.5-VL-72B-Instruct": {
+          "train_benchmark_groups": [
+            "assistantbench",
+            "visualwebarena",
+            "webarena",
+            "workarena"
+          ],
+          "train_covers_all_primary_benchmarks": true,
+          "validation": {
+            "benchmark_groups": [
+              "assistantbench",
+              "visualwebarena",
+              "webarena",
+              "workarena"
+            ],
+            "negative": 37,
+            "positive": 14,
+            "task_groups": 51,
+            "trajectories": 51
+          },
+          "validation_covers_all_primary_benchmarks": true,
+          "validation_has_both_classes": true
+        },
+        "GenericAgent-anthropic_claude-3.7-sonnet": {
+          "train_benchmark_groups": [
+            "assistantbench",
+            "visualwebarena",
+            "webarena",
+            "workarena"
+          ],
+          "train_covers_all_primary_benchmarks": true,
+          "validation": {
+            "benchmark_groups": [
+              "assistantbench",
+              "visualwebarena",
+              "webarena",
+              "workarena"
+            ],
+            "negative": 31,
+            "positive": 20,
+            "task_groups": 51,
+            "trajectories": 51
+          },
+          "validation_covers_all_primary_benchmarks": true,
+          "validation_has_both_classes": true
+        },
+        "GenericAgent-gpt-4o-2024-11-20": {
+          "train_benchmark_groups": [
+            "assistantbench",
+            "visualwebarena",
+            "webarena",
+            "workarena"
+          ],
+          "train_covers_all_primary_benchmarks": true,
+          "validation": {
+            "benchmark_groups": [
+              "assistantbench",
+              "visualwebarena",
+              "webarena",
+              "workarena"
+            ],
+            "negative": 33,
+            "positive": 14,
+            "task_groups": 47,
+            "trajectories": 47
+          },
+          "validation_covers_all_primary_benchmarks": true,
+          "validation_has_both_classes": true
+        },
+        "GenericAgent-meta-llama_Llama-3.3-70B-Instruct": {
+          "train_benchmark_groups": [
+            "assistantbench",
+            "visualwebarena",
+            "webarena",
+            "workarena"
+          ],
+          "train_covers_all_primary_benchmarks": true,
+          "validation": {
+            "benchmark_groups": [
+              "assistantbench",
+              "webarena",
+              "workarena"
+            ],
+            "negative": 33,
+            "positive": 10,
+            "task_groups": 43,
+            "trajectories": 43
+          },
+          "validation_covers_all_primary_benchmarks": false,
+          "validation_has_both_classes": true
+        }
+      }
+    }
+  },
+  "lobo_primary": {
+    "looping": {
+      "assistantbench": {
+        "inner_n_splits": 5,
+        "inner_split_feasible": true,
+        "train": {
+          "negative": 91,
+          "positive": 81,
+          "task_groups": 45,
+          "trajectories": 172
+        },
+        "validation": {
+          "negative": 13,
+          "positive": 11,
+          "task_groups": 6,
+          "trajectories": 24
+        },
+        "validation_has_both_classes": true
+      },
+      "visualwebarena": {
+        "inner_n_splits": 5,
+        "inner_split_feasible": true,
+        "train": {
+          "negative": 87,
+          "positive": 85,
+          "task_groups": 43,
+          "trajectories": 172
+        },
+        "validation": {
+          "negative": 17,
+          "positive": 7,
+          "task_groups": 8,
+          "trajectories": 24
+        },
+        "validation_has_both_classes": true
+      },
+      "webarena": {
+        "inner_n_splits": 5,
+        "inner_split_feasible": true,
+        "train": {
+          "negative": 53,
+          "positive": 55,
+          "task_groups": 29,
+          "trajectories": 108
+        },
+        "validation": {
+          "negative": 51,
+          "positive": 37,
+          "task_groups": 22,
+          "trajectories": 88
+        },
+        "validation_has_both_classes": true
+      },
+      "workarena": {
+        "inner_n_splits": 5,
+        "inner_split_feasible": true,
+        "train": {
+          "negative": 81,
+          "positive": 55,
+          "task_groups": 36,
+          "trajectories": 136
+        },
+        "validation": {
+          "negative": 23,
+          "positive": 37,
+          "task_groups": 15,
+          "trajectories": 60
+        },
+        "validation_has_both_classes": true
+      }
+    },
+    "side_effect": {
+      "assistantbench": {
+        "inner_n_splits": 5,
+        "inner_split_feasible": true,
+        "train": {
+          "negative": 159,
+          "positive": 12,
+          "task_groups": 45,
+          "trajectories": 171
+        },
+        "validation": {
+          "negative": 24,
+          "positive": 0,
+          "task_groups": 6,
+          "trajectories": 24
+        },
+        "validation_has_both_classes": false
+      },
+      "visualwebarena": {
+        "inner_n_splits": 5,
+        "inner_split_feasible": true,
+        "train": {
+          "negative": 161,
+          "positive": 10,
+          "task_groups": 43,
+          "trajectories": 171
+        },
+        "validation": {
+          "negative": 22,
+          "positive": 2,
+          "task_groups": 8,
+          "trajectories": 24
+        },
+        "validation_has_both_classes": true
+      },
+      "webarena": {
+        "inner_n_splits": 4,
+        "inner_split_feasible": true,
+        "train": {
+          "negative": 104,
+          "positive": 4,
+          "task_groups": 29,
+          "trajectories": 108
+        },
+        "validation": {
+          "negative": 79,
+          "positive": 8,
+          "task_groups": 22,
+          "trajectories": 87
+        },
+        "validation_has_both_classes": true
+      },
+      "workarena": {
+        "inner_n_splits": 5,
+        "inner_split_feasible": true,
+        "train": {
+          "negative": 125,
+          "positive": 10,
+          "task_groups": 36,
+          "trajectories": 135
+        },
+        "validation": {
+          "negative": 58,
+          "positive": 2,
+          "task_groups": 15,
+          "trajectories": 60
+        },
+        "validation_has_both_classes": true
+      }
+    },
+    "success": {
+      "assistantbench": {
+        "inner_n_splits": 5,
+        "inner_split_feasible": true,
+        "train": {
+          "negative": 112,
+          "positive": 56,
+          "task_groups": 45,
+          "trajectories": 168
+        },
+        "validation": {
+          "negative": 22,
+          "positive": 2,
+          "task_groups": 6,
+          "trajectories": 24
+        },
+        "validation_has_both_classes": true
+      },
+      "visualwebarena": {
+        "inner_n_splits": 5,
+        "inner_split_feasible": true,
+        "train": {
+          "negative": 122,
+          "positive": 46,
+          "task_groups": 43,
+          "trajectories": 168
+        },
+        "validation": {
+          "negative": 12,
+          "positive": 12,
+          "task_groups": 8,
+          "trajectories": 24
+        },
+        "validation_has_both_classes": true
+      },
+      "webarena": {
+        "inner_n_splits": 5,
+        "inner_split_feasible": true,
+        "train": {
+          "negative": 75,
+          "positive": 33,
+          "task_groups": 29,
+          "trajectories": 108
+        },
+        "validation": {
+          "negative": 59,
+          "positive": 25,
+          "task_groups": 22,
+          "trajectories": 84
+        },
+        "validation_has_both_classes": true
+      },
+      "workarena": {
+        "inner_n_splits": 5,
+        "inner_split_feasible": true,
+        "train": {
+          "negative": 93,
+          "positive": 39,
+          "task_groups": 36,
+          "trajectories": 132
+        },
+        "validation": {
+          "negative": 41,
+          "positive": 19,
+          "task_groups": 15,
+          "trajectories": 60
+        },
+        "validation_has_both_classes": true
+      }
+    }
+  },
+  "lobo_secondary": {
+    "looping": {
+      "assistantbench": {
+        "inner_n_splits": 5,
+        "inner_split_feasible": true,
+        "train": {
+          "negative": 91,
+          "positive": 81,
+          "task_groups": 45,
+          "trajectories": 172
+        },
+        "validation": {
+          "negative": 13,
+          "positive": 11,
+          "task_groups": 6,
+          "trajectories": 24
+        },
+        "validation_has_both_classes": true
+      },
+      "visualwebarena": {
+        "inner_n_splits": 5,
+        "inner_split_feasible": true,
+        "train": {
+          "negative": 87,
+          "positive": 85,
+          "task_groups": 43,
+          "trajectories": 172
+        },
+        "validation": {
+          "negative": 17,
+          "positive": 7,
+          "task_groups": 8,
+          "trajectories": 24
+        },
+        "validation_has_both_classes": true
+      },
+      "webarena": {
+        "inner_n_splits": 5,
+        "inner_split_feasible": true,
+        "train": {
+          "negative": 53,
+          "positive": 55,
+          "task_groups": 29,
+          "trajectories": 108
+        },
+        "validation": {
+          "negative": 51,
+          "positive": 37,
+          "task_groups": 22,
+          "trajectories": 88
+        },
+        "validation_has_both_classes": true
+      },
+      "workarena_l1": {
+        "inner_n_splits": 5,
+        "inner_split_feasible": true,
+        "train": {
+          "negative": 100,
+          "positive": 88,
+          "task_groups": 49,
+          "trajectories": 188
+        },
+        "validation": {
+          "negative": 4,
+          "positive": 4,
+          "task_groups": 2,
+          "trajectories": 8
+        },
+        "validation_has_both_classes": true
+      },
+      "workarena_l2": {
+        "inner_n_splits": 5,
+        "inner_split_feasible": true,
+        "train": {
+          "negative": 85,
+          "positive": 59,
+          "task_groups": 38,
+          "trajectories": 144
+        },
+        "validation": {
+          "negative": 19,
+          "positive": 33,
+          "task_groups": 13,
+          "trajectories": 52
+        },
+        "validation_has_both_classes": true
+      }
+    },
+    "side_effect": {
+      "assistantbench": {
+        "inner_n_splits": 5,
+        "inner_split_feasible": true,
+        "train": {
+          "negative": 159,
+          "positive": 12,
+          "task_groups": 45,
+          "trajectories": 171
+        },
+        "validation": {
+          "negative": 24,
+          "positive": 0,
+          "task_groups": 6,
+          "trajectories": 24
+        },
+        "validation_has_both_classes": false
+      },
+      "visualwebarena": {
+        "inner_n_splits": 5,
+        "inner_split_feasible": true,
+        "train": {
+          "negative": 161,
+          "positive": 10,
+          "task_groups": 43,
+          "trajectories": 171
+        },
+        "validation": {
+          "negative": 22,
+          "positive": 2,
+          "task_groups": 8,
+          "trajectories": 24
+        },
+        "validation_has_both_classes": true
+      },
+      "webarena": {
+        "inner_n_splits": 4,
+        "inner_split_feasible": true,
+        "train": {
+          "negative": 104,
+          "positive": 4,
+          "task_groups": 29,
+          "trajectories": 108
+        },
+        "validation": {
+          "negative": 79,
+          "positive": 8,
+          "task_groups": 22,
+          "trajectories": 87
+        },
+        "validation_has_both_classes": true
+      },
+      "workarena_l1": {
+        "inner_n_splits": 5,
+        "inner_split_feasible": true,
+        "train": {
+          "negative": 175,
+          "positive": 12,
+          "task_groups": 49,
+          "trajectories": 187
+        },
+        "validation": {
+          "negative": 8,
+          "positive": 0,
+          "task_groups": 2,
+          "trajectories": 8
+        },
+        "validation_has_both_classes": false
+      },
+      "workarena_l2": {
+        "inner_n_splits": 5,
+        "inner_split_feasible": true,
+        "train": {
+          "negative": 133,
+          "positive": 10,
+          "task_groups": 38,
+          "trajectories": 143
+        },
+        "validation": {
+          "negative": 50,
+          "positive": 2,
+          "task_groups": 13,
+          "trajectories": 52
+        },
+        "validation_has_both_classes": true
+      }
+    },
+    "success": {
+      "assistantbench": {
+        "inner_n_splits": 5,
+        "inner_split_feasible": true,
+        "train": {
+          "negative": 112,
+          "positive": 56,
+          "task_groups": 45,
+          "trajectories": 168
+        },
+        "validation": {
+          "negative": 22,
+          "positive": 2,
+          "task_groups": 6,
+          "trajectories": 24
+        },
+        "validation_has_both_classes": true
+      },
+      "visualwebarena": {
+        "inner_n_splits": 5,
+        "inner_split_feasible": true,
+        "train": {
+          "negative": 122,
+          "positive": 46,
+          "task_groups": 43,
+          "trajectories": 168
+        },
+        "validation": {
+          "negative": 12,
+          "positive": 12,
+          "task_groups": 8,
+          "trajectories": 24
+        },
+        "validation_has_both_classes": true
+      },
+      "webarena": {
+        "inner_n_splits": 5,
+        "inner_split_feasible": true,
+        "train": {
+          "negative": 75,
+          "positive": 33,
+          "task_groups": 29,
+          "trajectories": 108
+        },
+        "validation": {
+          "negative": 59,
+          "positive": 25,
+          "task_groups": 22,
+          "trajectories": 84
+        },
+        "validation_has_both_classes": true
+      },
+      "workarena_l1": {
+        "inner_n_splits": 5,
+        "inner_split_feasible": true,
+        "train": {
+          "negative": 130,
+          "positive": 54,
+          "task_groups": 49,
+          "trajectories": 184
+        },
+        "validation": {
+          "negative": 4,
+          "positive": 4,
+          "task_groups": 2,
+          "trajectories": 8
+        },
+        "validation_has_both_classes": true
+      },
+      "workarena_l2": {
+        "inner_n_splits": 5,
+        "inner_split_feasible": true,
+        "train": {
+          "negative": 97,
+          "positive": 43,
+          "task_groups": 38,
+          "trajectories": 140
+        },
+        "validation": {
+          "negative": 37,
+          "positive": 15,
+          "task_groups": 13,
+          "trajectories": 52
+        },
+        "validation_has_both_classes": true
+      }
+    }
+  },
+  "protocol": {
+    "eligibility": {
+      "join_key": "trajectory_key",
+      "required": [
+        "<target>_eligible_main == true",
+        "<target>_label in {0, 1}"
+      ]
+    },
+    "first_round_disallowed_views": [
+      "ablation_without_error_fields",
+      "sensitivity_with_reasoning"
+    ],
+    "group_key": [
+      "benchmark_original",
+      "normalized_task_id"
+    ],
+    "inner_split": {
+      "applies_identically_to_all_registered_models": true,
+      "candidate_folds_descending": [
+        5,
+        4,
+        3,
+        2
+      ],
+      "group_aware": true,
+      "outer_validation_access_allowed": false,
+      "selected_validation_fold": 1,
+      "type": "fixed_once_group_aware_split_within_each_outer_train"
+    },
+    "execution_sequence": [
+      "fit_each_registered_candidate_on_inner_train",
+      "score_each_candidate_on_inner_validation_and_select_by_pr_auc",
+      "select_positive_f1_threshold_for_selected_candidate_on_inner_validation",
+      "refit_selected_candidate_on_complete_outer_train",
+      "evaluate_complete_outer_validation_once_with_frozen_threshold"
+    ],
+    "leave_one_model_out": {
+      "authoritative_manifests": {
+        "artifacts/leave_one_model_out_manifest.csv": "5f1f64803014b6891089c18a67b41778ab0ced4f4110bcca014008675b07ac7d"
+      }
+    },
+    "lobo": {
+      "authoritative_manifests": {
+        "artifacts/lobo_primary_manifest.csv": "16735afc8defd5d91bf2d23ba7773a1f0515feafc238ad1cec2df0dc530b0191",
+        "artifacts/lobo_secondary_manifest.csv": "5872f114890e7a6c3096be0a7be6ba971528e72b1f2e6e67a3452c4575c9abfe"
+      },
+      "primary_group_field": "benchmark_group_primary",
+      "primary_groups": [
+        "assistantbench",
+        "visualwebarena",
+        "webarena",
+        "workarena"
+      ],
+      "sensitivity_group_field": "benchmark_group_secondary",
+      "sensitivity_groups": [
+        "assistantbench",
+        "visualwebarena",
+        "webarena",
+        "workarena_l1",
+        "workarena_l2"
+      ]
+    },
+    "metrics": {
+      "accuracy_is_primary": false,
+      "fold_aggregation": [
+        "raw_fold_values",
+        "mean",
+        "standard_deviation",
+        "pooled_out_of_fold"
+      ],
+      "pooled_out_of_fold": {
+        "definition": "concatenate_exactly_one_outer_validation_prediction_per_eligible_trajectory",
+        "predicted_label_uses_fold_specific_frozen_threshold": true,
+        "report_separately_from_fold_mean_and_standard_deviation": true
+      },
+      "primary": [
+        "pr_auc",
+        "positive_f1"
+      ],
+      "secondary": [
+        "roc_auc",
+        "precision",
+        "recall",
+        "f2",
+        "balanced_accuracy",
+        "mcc"
+      ],
+      "single_class_lobo_holdout": {
+        "allowed_reports": [
+          "predicted_positive_rate",
+          "false_positive_rate_if_negatives_exist",
+          "specificity_if_negatives_exist",
+          "mean_predicted_probability"
+        ],
+        "all_other_predictive_metrics": "NA",
+        "known_affected_holdouts": [
+          "primary:side_effect:assistantbench",
+          "sensitivity:side_effect:assistantbench",
+          "sensitivity:side_effect:workarena_l1"
+        ],
+        "na_fill_value_prohibited": true
+      },
+      "uncomputable_metric_policy": "record_not_computable_never_impute"
+    },
+    "model_configuration_selection": {
+      "direction": "maximize",
+      "primary_objective": "pr_auc",
+      "selection_data": "inner_validation_only",
+      "tie_break": "predeclared_registry_order"
+    },
+    "outer_cv": {
+      "algorithm": "custom_deterministic_grouped_stratification_v1",
+      "authoritative_manifests": {
+        "artifacts/evaluation_folds_looping.csv": "b950bf23e465d2f108f28281395ac8816c9916b20eaebe2d529e9d5fde74c749",
+        "artifacts/evaluation_folds_side_effect.csv": "11be1d8b803d4afffe25716519d117ce1e1909231954bcfd587347317e9b089c",
+        "artifacts/evaluation_folds_success.csv": "820599f85fd901c1b73db61cbc77c54eb8223df3f3abc14062d5a9f20bb02e65"
+      },
+      "authoritative_outputs": [
+        "artifacts/evaluation_folds_success.csv",
+        "artifacts/evaluation_folds_side_effect.csv",
+        "artifacts/evaluation_folds_looping.csv"
+      ],
+      "candidate_folds_descending": [
+        5,
+        4,
+        3
+      ],
+      "folds_by_target": {
+        "looping": 5,
+        "side_effect": 5,
+        "success": 5
+      },
+      "random_state": 2026,
+      "regeneration_allowed": false,
+      "scikit_learn_class_called": false,
+      "scikit_learn_equivalence_claimed": false,
+      "sole_authority": "recorded_manifest_bytes_and_sha256"
+    },
+    "primary_input_view": "primary_with_natural_errors",
+    "probability_calibration": "not_registered_first_round",
+    "resampling": "prohibited",
+    "schema_version": "1.0",
+    "split_seed": 2026,
+    "stage": "A1.1",
+    "targets": [
+      "success",
+      "side_effect",
+      "looping"
+    ],
+    "test_access": {
+      "allowed": false,
+      "labels": false,
+      "metrics": false,
+      "trajectory_content": false
+    },
+    "threshold": {
+      "candidates": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.4,
+        0.45,
+        0.5,
+        0.55,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.8,
+        0.85,
+        0.9,
+        0.95
+      ],
+      "outer_validation_access_allowed": false,
+      "primary_objective": "positive_f1",
+      "selection_data": "inner_validation_only",
+      "side_effect_f2_is_reporting_only": true,
+      "tie_break": [
+        "higher_recall",
+        "closer_to_0.5",
+        "smaller_threshold"
+      ]
+    }
+  },
+  "schema_drift_review": {
+    "decisions": {
+      "keep_excluded": 4
+    },
+    "groups": 4,
+    "occurrences": 12477,
+    "whitelist_expanded": false
+  },
+  "scope": {
+    "corpus_key_count": 196,
+    "excluded": {
+      "looping": [],
+      "side_effect": [
+        {
+          "eligible_main": "false",
+          "label": "",
+          "status": "duplicate_disagreement",
+          "trajectory_key": "webarena::webarena.586::GenericAgent-gpt-4o-2024-11-20"
+        }
+      ],
+      "success": [
+        {
+          "eligible_main": "false",
+          "label": "",
+          "status": "duplicate_disagreement",
+          "trajectory_key": "webarena::webarena.171::GenericAgent-gpt-4o-2024-11-20"
+        },
+        {
+          "eligible_main": "false",
+          "label": "",
+          "status": "contains_unsure",
+          "trajectory_key": "webarena::webarena.344::GenericAgent-gpt-4o-2024-11-20"
+        },
+        {
+          "eligible_main": "false",
+          "label": "",
+          "status": "duplicate_disagreement",
+          "trajectory_key": "webarena::webarena.370::GenericAgent-gpt-4o-2024-11-20"
+        },
+        {
+          "eligible_main": "false",
+          "label": "",
+          "status": "duplicate_disagreement",
+          "trajectory_key": "webarena::webarena.629::GenericAgent-gpt-4o-2024-11-20"
+        }
+      ]
+    },
+    "models_or_baselines_run": 0,
+    "predictions_generated": 0,
+    "predictive_metrics_computed": 0,
+    "test_identifier_count_read_for_sealing_only": 1106,
+    "test_target_columns_read": 0,
+    "test_trajectory_content_accessed": 0
+  },
+  "source_revisions": {
+    "github_commit": "f838338886d723d40b586309465a38277803d9e6",
+    "huggingface_revision": "b6d17e646009d6cb63d5dd7be78807b680693f61"
+  },
+  "stage": "A1.1",
+  "stage_decision": "PASS_WITH_CONDITIONS",
+  "stop_reasons": [],
+  "terminal_audit": {
+    "explicit_termination_signal_count": 71,
+    "explicit_termination_signal_rate": 0.3622448979591837,
+    "explicit_termination_signal_values": {
+      "null": 125,
+      "report_infeasible": 10,
+      "send_msg_to_user": 61
+    },
+    "last_nonempty_action_count": 196,
+    "last_nonempty_action_is_success_or_normal_termination": false,
+    "last_nonempty_action_rate": 1.0,
+    "last_nonempty_observation_count": 196,
+    "last_nonempty_observation_rate": 1.0,
+    "legacy_field_alias": "cleaned terminal.termination_signal means explicit_termination_signal",
+    "trajectory_count": 196
+  },
+  "view_audit": {
+    "difference_matches_natural_error_coverage": true,
+    "last_action_error_is_natural_environment_or_tool_feedback": true,
+    "natural_error_steps": 307,
+    "natural_error_trajectories": 86,
+    "natural_error_used_for_sample_or_label_selection": false,
+    "primary_error_ablation_differing_trajectories": 86,
+    "reasoning_primary_baseline_allowed": false,
+    "reasoning_steps": 3616,
+    "reasoning_trajectories": 196,
+    "step_order_source_identical": true,
+    "trajectory_keys_identical": true
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "status": "INVALIDATED",
+  "stage": "A1.3b",
+  "preregistration_commit": "6b98e03537360d8e60e5ccf3ca4c5ea7b51a652d",
+  "failure_phase": "committed_byte_guard_before_run_directory_and_before_any_estimator_fit",
+  "error_type": "IntegrityError",
+  "error": "working a1_3_lobo_inner_folds.csv differs from committed A1.3a bytes",
+  "real_dev_estimator_fit_count": 0,
+  "prediction_count": 0,
+  "partial_results_reused": false,
+  "cause": "CSV working bytes were CRLF while the Git blob was normalized to LF.",
+  "required_action": "Independent correction commit, then rerun all targets, baselines, and held-out groups from the beginning."
+}

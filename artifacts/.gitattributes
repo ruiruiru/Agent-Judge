@@ -1,0 +1,2 @@
+# Preserve Stage A1.10a scientific binary bytes exactly.
+a1_10a_*.npy -text

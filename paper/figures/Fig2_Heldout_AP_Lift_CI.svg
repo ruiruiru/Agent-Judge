@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="3.400in" height="2.400in" viewBox="0 0 244.800 172.800" role="img" aria-labelledby="title desc">
+<title id="title">Held-out AP lift and frozen 95 percent confidence intervals</title>
+<desc id="desc">Frozen Stage A3.1 paper figure rendered from traceable source artifacts.</desc>
+<rect x="0" y="0" width="244.800" height="172.800" fill="#ffffff"/>
+<text x="12.000" y="14.000" text-anchor="start" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="7.500" font-weight="700" fill="#1f4e79">CONFIRMATORY HELD-OUT RESULTS</text>
+<line x1="73.392" y1="130.800" x2="73.392" y2="30.000" stroke="#d9d9d9" stroke-width="0.500"/>
+<text x="73.392" y="140.800" text-anchor="middle" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="6.600" font-weight="400" fill="#111111">0.0</text>
+<line x1="105.352" y1="130.800" x2="105.352" y2="30.000" stroke="#d9d9d9" stroke-width="0.500"/>
+<text x="105.352" y="140.800" text-anchor="middle" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="6.600" font-weight="400" fill="#111111">0.1</text>
+<line x1="137.312" y1="130.800" x2="137.312" y2="30.000" stroke="#d9d9d9" stroke-width="0.500"/>
+<text x="137.312" y="140.800" text-anchor="middle" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="6.600" font-weight="400" fill="#111111">0.2</text>
+<line x1="169.272" y1="130.800" x2="169.272" y2="30.000" stroke="#d9d9d9" stroke-width="0.500"/>
+<text x="169.272" y="140.800" text-anchor="middle" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="6.600" font-weight="400" fill="#111111">0.3</text>
+<line x1="201.232" y1="130.800" x2="201.232" y2="30.000" stroke="#d9d9d9" stroke-width="0.500"/>
+<text x="201.232" y="140.800" text-anchor="middle" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="6.600" font-weight="400" fill="#111111">0.4</text>
+<line x1="73.392" y1="130.800" x2="73.392" y2="30.000" stroke="#111111" stroke-width="1.000"/>
+<line x1="67.000" y1="130.800" x2="226.800" y2="130.800" stroke="#111111" stroke-width="0.800"/>
+<text x="146.900" y="156.800" text-anchor="middle" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="7.200" font-weight="400" fill="#111111">Pooled AP lift (frozen 95% CI)</text>
+<text x="59.000" y="60.800" text-anchor="end" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="7.400" font-weight="700" fill="#111111">Success</text>
+<line x1="177.839" y1="60.800" x2="218.941" y2="60.800" stroke="#1f4e79" stroke-width="1.800"/>
+<line x1="177.839" y1="64.800" x2="177.839" y2="56.800" stroke="#1f4e79" stroke-width="1.000"/>
+<line x1="218.941" y1="64.800" x2="218.941" y2="56.800" stroke="#1f4e79" stroke-width="1.000"/>
+<circle cx="197.898" cy="60.800" r="4.000" fill="#ffffff" stroke="#1f4e79" stroke-width="1.500"/>
+<text x="198.390" y="48.800" text-anchor="middle" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="6.500" font-weight="400" fill="#111111">0.390 [0.327, 0.455]</text>
+<text x="59.000" y="99.800" text-anchor="end" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="7.400" font-weight="700" fill="#111111">Looping</text>
+<line x1="188.756" y1="99.800" x2="210.372" y2="99.800" stroke="#1f4e79" stroke-width="1.800"/>
+<line x1="188.756" y1="103.800" x2="188.756" y2="95.800" stroke="#1f4e79" stroke-width="1.000"/>
+<line x1="210.372" y1="103.800" x2="210.372" y2="95.800" stroke="#1f4e79" stroke-width="1.000"/>
+<rect x="196.079" y="96.300" width="7.000" height="7.000" fill="#1f4e79" stroke="#1f4e79" stroke-width="0.800"/>
+<text x="199.564" y="87.800" text-anchor="middle" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-size="6.500" font-weight="400" fill="#111111">0.395 [0.361, 0.429]</text>
+</svg>

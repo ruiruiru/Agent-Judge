@@ -1,0 +1,26 @@
+check_id,check,status,evidence,scientific
+R01,abstract evidence complete,PASS,FC1;FC2;EFF1 optional,true
+R02,introduction gap verified,PASS,RW_NOVELTY and A3.2 citation registry,true
+R03,contributions frozen,PASS,C1-C4 only,true
+R04,methods provenance complete,PASS,M1-M9,true
+R05,results evidence mapped,PASS,R1-R6,true
+R06,tables placed,PASS,Table 1-5 and Related Work table,true
+R07,figures placed,PASS,"Fig 1-5, Fig S1-S2",true
+R08,discussion claims bounded,PASS,D1-D6 contract,true
+R09,limitations complete,PASS,14 inherited/explicit limitations,true
+R10,related work citations verified,PASS,10 A3.2+addendum citation keys,true
+R11,appendix planned,PASS,Appendix A-K,true
+R12,numeric consistency complete,PASS,150 frozen display-map rows,true
+R13,Side Effect exploratory everywhere,PASS,FE1 and claim/status guards,true
+R14,blind held-out != external validation everywhere,PASS,PROTO_BLIND_SCOPE,true
+R15,no unsupported firstness,PASS,FORBID_FIRST,true
+R16,no unsupported SOTA,PASS,FORBID_SOTA,true
+R17,no unsupported causality,PASS,PO4 and discussion contract,true
+R18,no cross-paper invalid ranking,PASS,DIRECTLY_COMPARABLE=0,true
+R19,A2 diagnostics are post-freeze,PASS,PROTO_A2_POSTFREEZE,true
+R20,relative method comparisons are dev-only,PASS,FD1-FD9,true
+R21,metadata confounding retained,PASS,DIAG_METADATA,true
+R22,efficiency environment qualified,PASS,EFF1,true
+R23,morphology != semantics retained,PASS,DIAG_MORPH_SEM,true
+R24,scientific operation counters zero,PASS,new_model_fits;new_inference_runs;new_embedding_runs;A1_metric_recomputations;bootstrap_reruns;new_significance_tests;threshold_changes;eligibility_changes;final_model_changes;official_test_tuning;external_dataset_downloads;external_dataset_runs;new_literature_searches;new_scientific_figures,true
+R25,manuscript skeleton contains slots only,PASS,purpose/claim/evidence/citation/ref/caveat fields,true

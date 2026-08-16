@@ -1,0 +1,56 @@
+{
+  "batch_size": 1,
+  "cpu": "AMD Ryzen 7 9700X 8-Core Processor",
+  "cuda_runtime": "12.8",
+  "dtype": {
+    "B2_representation": "float64",
+    "B4_inference_weights": "bfloat16",
+    "B4_representation": "float32"
+  },
+  "gpu": "NVIDIA GeForce RTX 5070",
+  "gpu_capability": [
+    12,
+    0
+  ],
+  "gpu_driver": "591.86",
+  "joblib": "1.5.3",
+  "logical_cpu_count": 16,
+  "machine": "AMD64",
+  "memory_measurement": {
+    "cpu": "Windows GetProcessMemoryInfo PeakWorkingSetSize in MiB",
+    "gpu": "torch.cuda reset_peak_memory_stats plus max allocated/reserved in MiB"
+  },
+  "numpy": {
+    "baseline": "2.5.1",
+    "semantic": "2.3.1"
+  },
+  "os": "Windows-11-10.0.26200-SP0",
+  "python": {
+    "baseline_executable": "C:\\Users\\Admin\\Documents\\Agent-Judge\\.venv-baselines\\Scripts\\python.exe",
+    "baseline_version": "3.14.6",
+    "semantic_executable": "C:\\Users\\Admin\\Documents\\Agent-Judge\\.venv-semantic\\Scripts\\python.exe",
+    "semantic_version": "3.12.13"
+  },
+  "ram_bytes": 33460441088,
+  "ram_gib": 31.162464141845703,
+  "scikit_learn": "1.9.0",
+  "semantic_offline_environment": {
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1"
+  },
+  "thread_environment_variables": {
+    "BLIS_NUM_THREADS": null,
+    "CUBLAS_WORKSPACE_CONFIG": null,
+    "MKL_NUM_THREADS": null,
+    "NUMEXPR_NUM_THREADS": null,
+    "OMP_NUM_THREADS": null,
+    "OPENBLAS_NUM_THREADS": null,
+    "VECLIB_MAXIMUM_THREADS": null
+  },
+  "timestamp": "2026-08-09T10:21:45+00:00",
+  "timing_clock": "perf_counter phases; parent wall-clock handshake for process cold start",
+  "tokenizers": "0.21.4",
+  "torch": "2.7.1+cu128",
+  "transformers": "4.53.3"
+}
